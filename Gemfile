@@ -41,4 +41,4 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
-gem 'treyconnell-ruby-aaws'
+gem 'ruby-aaws'
