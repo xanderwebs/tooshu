@@ -1,0 +1,57 @@
+
+	<!-- toolbar -->
+	<% if @current_user.id.eql?(@user.id) %>
+		<%= render :partial => "toolbar" %>
+	<% end %>
+
+	
+
+	<!-- error / alerts -->
+
+	<%= render :partial => "flash_messages" %>
+
+	<% if @current_user.defaultLocation.empty? %>
+		<div class="alert alert-warning">
+			<p>In order to facilitate exchanges, you must set a location so people know where they can borrow books from you.  Click <a href="#location_modal" data-toggle="modal" onclick="l.getModal(<%= @current_user.id %>);">here</a> to get started.</p>
+		</div>
+		<script type="text/javascript">
+			var l = new LocationManager();
+		</script>
+	<% end %>
+<%
+=begin
+%>
+		<% if @current_user.books.empty? %>
+			<div class="alert alert-warning">
+				<p>In order to request books, you add at least one book to your collection.</p>
+			</div>
+		<% end %>
+<%
+=end
+%>
+
+	<!-- main stuff -->
+	<div class="container-fluid" id="profile-container">
+		<div class="row">
+			<!-- left side -->
+			<div class="span3" id="profile-details">
+				<%= render "user_profile_box"%>
+			</div>
+			
+			<!-- right main -->
+			<div class="span8" id="profile-details">
+				<% if @current_user.id.eql?(@user.id) %>
+					<!-- REQUESTS TAKEN OUT FOR NOW
+					 div class="container-fluid text-container">
+						<h3 class="heading">Notifications Bookshelf</h3>
+						<!-- %= render :partial => "/bookshelf/bookshelf" %-->
+					<!-- /div -->
+				<% end %>
+
+				<div class="container-fluid text-container">
+					<%= render :partial => "show_users_books" %>
+				</div>
+			</div>
+		</div>
+	</div>
+

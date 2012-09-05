@@ -1,0 +1,20 @@
+
+	<div class="modal changed-modal">
+		<div class="modal-header bookinfo rejected-color">
+			<%= render :partial => "response_modal_header", :locals => {:status => "Awaiting Response", :title => @request.book.title, :author => @request.book.author, :response_type =>"rejected"} %>	
+			<h4>Rejected</h4>
+		</div>
+		<div class="modalctr">
+			<%= form_for(:request_exchanges, :url => :requests, :method =>:put, :html=>{:class=>"form-horizontal", :id=>"rejected_request_form"}) do |f| %>
+			
+				<label>Reason:</label>
+				<textarea name="comment">insert reason here</textarea>
+				<input type="hidden" name="type" value="deny" />
+			
+			<% end %>
+		</div>
+		<div class="modal-footer">
+			<a href="#" class="btn btn-success" data-dismiss="modal">Cancel</a>
+			<a href="#rejected-request" class="btn btn-danger" data-dismiss="modal" id="rejected_request_deny_button">Deny</a>
+		</div>
+	</div>

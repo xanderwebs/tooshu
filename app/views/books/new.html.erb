@@ -1,0 +1,44 @@
+<div class="container">				
+	<div class="span12 container-fluid" id="search-book">
+		<h3>Search For a Book to Add:</h3>
+		<%= form_for(:book, :url => :books, :method =>:post, :html=>{:class=>"form-horizontal", :id=>"search_form"}) do |f| %>
+			<div class="control-group">
+				<%= label_tag 'title', 'Title', :class=>"control-label", :for=>"book[title]"%>	
+				<div class="controls">
+					<%= text_field :book, :title, :class=>"input-xlarge", :id=>"book_title" %>				
+				</div>
+
+				<%= label_tag 'author', 'Author', :class=>"control-label", :for=>"book[author]"%>	
+				<div class="controls">
+					<%= text_field :book, :author, :class=>"input-xlarge", :id=>"book_author" %>				
+				</div>
+				<h6>or</h6>
+				<%= label_tag 'isbn', 'ISBN', :class=>"control-label", :for=>"book[isbn]"%>	
+				<div class="controls">
+					<%= text_field :book, :isbn, :class=>"input-xlarge", :id=>"book_isbn" %>				
+				</div>
+
+				<div class="controls">
+					<button type="button" class="btn btn-primary" id="search_button">Search</button>				
+				</div>
+				<%= hidden_field :book, :asin, :id=>"book_asin" %>						
+				<%= hidden_field :book, :ean, :id=>"book_ean" %>
+				
+			</div>				
+		<%end%>
+		<%if !flash[:error].nil?%>
+			<div class="alert alert-error">
+				<%= flash[:error] %>
+			</div>
+		<%end%>				
+	
+	</div>	
+</div>
+<div class="row">
+	<div class="span12" id="searchResultsDiv"></div>
+</div>	
+
+<script type="text/javascript">
+	var s = new BookSearch("book_title", "book_author", "book_asin", "book_isbn", "book_ean", "searchResultsDiv", "search_button", "search_form");	
+</script>
+<script type="text/javascript" src="/assets/bookSearch.js" />

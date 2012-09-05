@@ -1,0 +1,10 @@
+<footer class="span12">
+	<ul id="footer-list">
+		<li>&copy; Tooshu, 2012.</li>
+		<li><a href="/about">About</a></li>
+		<li>Help</li>
+		<li>Terms</li>
+		<li>Privacy</li>
+		<li>Contact</li>
+	</ul>
+</footer>

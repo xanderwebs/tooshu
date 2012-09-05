@@ -1,0 +1,21 @@
+<div class="container-fluid" id="profile-container">
+	<!-- div class="container-fluid text-container" -->
+		<div class="row">
+			<!-- left side -->
+			<div class="span3 no-indent" id="book-details">
+				<div class="book-profile">
+				    <a href="<%= @book.link_to_amzn %>" class="thumbnail bookcover">
+	  					<img class="bookcover thumb" src=<%= @book.cover_url %> alt="http://placehold.it/180x260">
+					</a>
+				</div>
+				<br/>
+			</div>
+			
+			<!-- right main -->
+			<div class="span8" id="book-info">
+				<%= render :partial => "book_info" %>
+			</div>
+		</div>
+		<%= render :partial => "book_owners" %>
+	<!--/div -->
+</div>

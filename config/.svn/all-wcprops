@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 30
+/svn/tooshu/!svn/ver/89/config
+END
+routes.rb
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/tooshu/!svn/ver/80/config/routes.rb
+END
+database.yml
+K 25
+svn:wc:ra_dav:version-url
+V 42
+/svn/tooshu/!svn/ver/1/config/database.yml
+END
+application.rb
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/tooshu/!svn/ver/1/config/application.rb
+END
+boot.rb
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/svn/tooshu/!svn/ver/1/config/boot.rb
+END
+environment.rb
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/tooshu/!svn/ver/76/config/environment.rb
+END
+.amazonrc
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/tooshu/!svn/ver/89/config/.amazonrc
+END

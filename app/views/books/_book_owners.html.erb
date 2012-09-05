@@ -1,0 +1,29 @@
+<div class="page-default book-user-table">
+	<h3>Copies Available</h3>
+	<div>
+		<table class="table table-bordered">
+			<tr>
+				<th>Owner</th>
+				<th>Location</th>
+				<!-- REMOVED RIGHT NOW
+				<th>Current Status</th>	
+				-->
+			</tr>
+			<% @copies.each do |c| %>
+				<tr>
+					<td><%= link_to c.first_name + " " + c.last_name, :controller => "users", :action => "show", :id => c.id %></td>
+					<td>
+						<% c.locations.each do |l| %>
+							<% if l.is_default %> 
+								<%= l.city %>,  <%= l.state %>
+							<% end %>
+						<% end %>
+					</td>
+					<!-- REQUESTS REMOVED RIGHT NOW
+					<td>Available</td>
+					-->
+				</tr>
+			<% end %>
+		</table>
+	</div>
+</div>

@@ -1,0 +1,119 @@
+// Place all the styles related to the books controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body{
+  font-family:verdana;
+}
+.button{
+  height:30px;
+  border: solid 1px #CCCCCC;
+  font-family:verdana;
+  margin: 0px 5px 0px 5px;
+}
+
+.book_text_input{
+  width:200px;
+  padding:5px;
+  margin: 0px 5px 0px 5px;
+  font-family:verdana;
+}
+
+.pull-right {
+  max-height: 50px;
+}
+
+.search_results_table{
+  font-family:verdana;
+  border:solid 1px;
+  border-color:#CCCCCC;
+  padding:0px;
+  border-collapse:collapse;
+}
+
+.search_results_row:hover{
+  background-color:#AFAFAF;
+}
+
+.search_results_cell{
+  width:200px;
+  padding:5px;
+  border:solid 1px #CCCCCC;
+}
+
+.search_results_title_div{
+  font-size:10px;
+  width:200px;
+  
+}
+
+.search_results_author_div{
+  font-size:8px;
+}
+
+.search_results_div{
+  padding:0px;
+}
+
+.search_results_link{
+  text-decoration:none;
+  color:#000000;
+}
+
+// Books Index page
+
+.bookcover {
+  background-color: white;
+  max-width: 180px;
+  border: 1px solid silver;
+}
+
+.book-profile {
+  background-color: white;
+  border-radius: 3px;
+  margin: 5px;
+  padding: 5px;
+}
+
+.no-indent {
+  margin-left: 5px;
+}
+
+// Book info
+
+.book-header {
+  padding-bottom: 20px;
+
+  h4 {
+    margin: 5px 0px;
+    font-style: italic;
+  }
+
+  p {
+    color: #999;
+  }
+}
+
+.page-default, .book-header.page-default {
+  margin: 15px;
+  border-bottom: 1px double silver;
+}
+
+#search-book {
+  margin-top: 10px;
+}
+
+// Book things
+.book-user-table {
+  padding-top: 15px;
+  margin-top: 0;
+  border-top: 1px dashed gray;
+}
+
+.bookcover.thumb {
+  // probably not the best way, but this ensures pages are consistent
+  width: 180px;
+  height: 260px;
+}
+
+

@@ -1,0 +1,286 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+.controls{
+  margin-top:10px;
+}
+
+.control-label{
+  margin-top:10px;
+}
+
+
+// flash warnings
+.alert {
+  text-align:center;
+  margin: 10px 20px;
+  p {
+  	margin: 0;
+  }
+}
+
+.span8 {
+	width: 660px;
+}
+
+#main-inner { // this should be in application.. but oh well.
+	background-color: white;
+	border-radius: 5px;
+	border: 1px solid black; // set to 0 px if want gray.
+	padding: 0px;
+	/*min-height: 600px;*/
+}
+
+#profile-container {
+	padding-bottom: 10px;
+}
+
+
+#options {
+	margin: 10px 20px;
+	border-radius: 5px;
+	padding: 5px;
+}
+
+#menu-opts {
+	margin-bottom: 0;
+	font-size: 24px;
+	font-family: "Helvetica Neue", Arial, sans-serif;
+	font-weight: bold;
+	color: Gainsboro;
+}
+
+.testing {
+	border: 2px dashed green;
+}
+
+.text-container {
+	background-color: white; // to revert -> switch to Gainsboro
+	border: 1px solid #434D51;
+	border-radius: 5px;
+	box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.85); // to revert -> switch to 0.15
+	margin-bottom: 10px;
+}
+
+.heading {
+	margin-top: 2px;
+	padding-bottom: 8px;
+	padding-top: 5px;
+}
+
+.profile-img {
+	width: 180px;
+	margin: 10px auto 3px auto;
+}
+
+.profile-box {
+	display: inline-block;
+}
+
+
+.inline-fix {
+	display: inline-block;
+	padding: 0;
+	margin: 0;
+	* {
+		display: inline;
+	}
+	margin-bottom: 15px;
+}
+
+// THIS IS THE BOOK COVER + STUFF
+
+// book cover 
+
+.standard {
+	padding: 3px;
+	margin: 5px;
+}
+
+.book-container {
+	border: 2px solid rgba(0, 0, 0, 0.3);
+	border-radius: 6px;
+	background-color: #FAA732;
+	box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+	width: 125px;
+	display: inline-block;
+
+	h4, em { 
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+	}
+}
+
+.cover {
+	height: 160px;
+	width: 110px;
+	padding: 5px;
+}
+
+.cover-image {
+	border: 1px solid gray;
+	height: 160px;
+}
+
+
+
+// alerts
+
+.bookinfo {
+	margin: 0;
+	padding: 8px;
+	border-bottom: 1px solid gray;
+	background-color: #FAA732; // orange
+	color: white;
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+}
+
+.modalctr {
+	padding: 8px;	
+	display: block;
+}
+
+.accepted-request {
+	background-color: #5BB75B; // green
+	// opacity: 0.5; // add buttons here
+}
+
+.rejected-color {
+	background-color: #DA4F49; // red
+}
+
+.scheduled-color {
+	background-color: #0000FF; // blue
+}
+
+
+.changed-modal {
+	max-width: 548px;
+	position: static;
+	margin: 5px;
+	display: inline-block;
+}
+
+.modal {
+	left: 50%;
+	top: 50%;
+}
+
+.bookshelf {
+	list-style: none;
+	display: inline-block;
+	margin: 5px;
+	white-space: nowrap;
+	overflow: auto;
+	overflow-y: hidden;
+	max-height: 250px;
+	max-width: 555px;
+	li {
+		display: inline;
+		a {
+			text-decoration: none;
+		}
+	}
+}
+
+// dialogs
+.reason {
+	width: auto;
+}
+
+.exchangehdr {
+	background-color: #5BB75B;
+	color: white;
+}
+
+.date {
+	display: inline-block;
+}
+
+.thumbnail {
+	background-color:#FFFFFF; 
+}
+
+.thumbnail > img{
+	border:1px solid #000000;
+}
+
+// users/books
+
+.bookobj {
+	margin: 10px;
+	padding: 10px 5px;
+	border-top: 1px solid #E8E8E8;
+	div {
+		display: inline-block;
+	}
+
+	.link {
+		text-decoration: none;
+		color: black;
+	}
+}
+
+.thumb {
+	width: 50px;
+}
+
+.btn-adjust {
+	margin: 10px;
+}
+
+.favorite-button {
+	margin-bottom: 10px;
+	font-size: 11px;
+	width: 198px;
+	height: 22px;
+	vertical-align: middle;
+}
+
+.userlist {
+	text-decoration: none;
+	list-style: none;
+	margin: 0 0 10px 10px;
+	li {
+		margin-bottom: 5px;
+	}
+}
+
+.modal {
+	form {
+		margin-bottom: 0;
+	}
+}
+
+.empty-warning {
+	margin-top: 5px;
+	border-top: 1px solid #ccc;
+	padding: 10px;
+	p {
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+	}
+}
+
+
+/* CLEARFIX PROBLEM */
+
+/* For modern browsers */
+.clearfix:before,
+.clearfix:after {
+    content:"";
+    display:table;
+}
+.clearfix:after {
+    clear:both;
+}
+/* For IE 6/7 (trigger hasLayout) */
+.clearfix {
+    zoom:1;
+}

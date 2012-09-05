@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/tooshu/!svn/ver/40/app/views/bookshelf
+END
+_accepted_response.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/tooshu/!svn/ver/30/app/views/bookshelf/_accepted_response.html.erb
+END
+_bookshelf_books.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/tooshu/!svn/ver/32/app/views/bookshelf/_bookshelf_books.html.erb
+END
+_bookshelf.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/tooshu/!svn/ver/20/app/views/bookshelf/_bookshelf.html.erb
+END
+_rejected_request.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/tooshu/!svn/ver/30/app/views/bookshelf/_rejected_request.html.erb
+END
+_book_display.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/tooshu/!svn/ver/40/app/views/bookshelf/_book_display.html.erb
+END
+_accepted_request.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/tooshu/!svn/ver/34/app/views/bookshelf/_accepted_request.html.erb
+END
+_scheduled.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/tooshu/!svn/ver/30/app/views/bookshelf/_scheduled.html.erb
+END
+_awaiting_response.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/tooshu/!svn/ver/34/app/views/bookshelf/_awaiting_response.html.erb
+END
+_response_modal_header.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/tooshu/!svn/ver/16/app/views/bookshelf/_response_modal_header.html.erb
+END
+_rejected_response.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/tooshu/!svn/ver/30/app/views/bookshelf/_rejected_response.html.erb
+END

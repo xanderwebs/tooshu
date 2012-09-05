@@ -1,0 +1,129 @@
+
+	<!-- toolbar -->
+	<% if @current_user.id.eql?(@user.id) %>
+		<%= render :partial => "toolbar" %>
+	<% end %>
+
+	<%= render :partial => "flash_messages" %>
+
+	<!-- main stuff -->
+	<div class="container-fluid" id="profile-container">
+		<div class="row-fluid">
+			<div class="span12 container-fluid text-container" id="profile-details">
+
+				    <div class="tabbable"> <!-- Only required for left/right tabs -->
+					    <ul class="nav nav-pills">
+					    	<li class="active"><a href="#basic" data-toggle="tab">Basic Info</a></li>
+					    	<li><a href="#location" data-toggle="tab">Location</a></li>
+					    	<li><a href="#security" data-toggle="tab">Security</a></li>
+					    </ul>
+					    <div class="tab-content">
+					    	<div class="tab-pane active" id="basic">
+					    		<%= form_for :user, :url=>"/users/" + @current_user.id.to_s, :method=>"put",  :html => {:class => "form-horizontal"} do |f| %> 
+									<% {:first_name=>"First Name", :last_name=>"Last Name", :email=>"Email"}.each do |k,v| %>
+										<div class="control-group">
+											<label class="control-label"><%= v %></label>
+											<div class="controls">
+												<% if k.eql?(:password_confirmation) || k.eql?(:password) %>
+													<%= f.password_field k, :class=>"input-xlarge" %>
+												<% else %>
+													<%= f.text_field k, :class=>"input-xlarge" %>
+												<% end %>
+
+											</div>
+
+										</div>
+									<% end %>
+									<%= f.hidden_field :id %>
+									<div class="control-group">
+										<div class="controls">
+											<%= f.submit :class=>"btn btn-primary" %>
+										</div>
+									</div>
+								<% end %>
+					    	</div>
+					    	<div class="tab-pane" id="location">
+
+					    		<% if !@location.nil? && !@location.id.nil? %>
+					    			<%= form_for :location, :url=>"/locations/" + @location.id.to_s, :method=>"put", :html => {:class => "form-horizontal"} do |f| %> 
+										<% {:address1=>"Address 1", :address2 => "Address 2", :city => "City", :state => "State", :zipcode =>"Zip Code"}.each do |k,v| %>
+											<div class="control-group">
+												<label class="control-label"><%= v %></label>										
+												<div class="controls">
+													<% if k.eql?(:state) %>		
+														<%= f.select k, [['CA', 'CA']] %>
+													<% else %>
+														<%= f.text_field k, :class=>"input-xlarge" %>
+													<% end %>
+
+												</div>
+
+											</div>
+										<% end %>
+										<%= f.hidden_field :id %>
+										
+
+										<div class="control-group">
+											<div class="controls">
+												<%= f.submit :class=>"btn btn-primary" %>
+											</div>
+										</div>
+									<% end %>
+					    		<% else %>
+					    			<%= form_for :location, :url=>"/locations", :method=>"post", :html => {:class => "form-horizontal"} do |f| %> 
+										<% {:address1=>"Address 1", :address2 => "Address 2", :city => "City", :state => "State", :zipcode =>"Zip Code"}.each do |k,v| %>
+											<div class="control-group">
+												<label class="control-label"><%= v %></label>
+												<div class="controls">
+													<% if k.eql?(:state) %>		
+														<%= f.select k, [['CA', 'CA']] %>
+													<% else %>
+														<%= f.text_field k, :class=>"input-xlarge" %>
+													<% end %>
+
+												</div>
+
+											</div>
+										<% end %>
+										<div class="control-group">
+											<div class="controls">
+												<%= f.submit :class=>"btn btn-primary" %>
+											</div>
+										</div>
+									<% end %>
+
+					    		<% end %>
+
+					    		
+					    		
+					    	</div>
+					    	<div class="tab-pane" id="security">
+					    		<%= form_for :user, :url=>"/users/" + @current_user.id.to_s, :method=>"put", :html => {:class => "form-horizontal"} do |f| %> 
+									<% {:old_password=>"Old Password", :password=>"New Password", :password_confirmation=>"Confirm New Password"}.each do |k,v| %>
+										<div class="control-group">
+											<label class="control-label"><%= v %></label>
+											<div class="controls">
+											<%= f.password_field k, :class=>"input-xlarge" %>
+											</div>
+
+										</div>
+									<% end %>
+									<div class="control-group">
+										<div class="controls">
+											<%= f.submit :class=>"btn btn-primary", :value=>"Save Password" %>
+										</div>
+									</div>
+								<% end %>
+					    	</div>
+					    </div>
+				    </div>	
+				
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+	 	$(document).ready(function() {
+			$('[data-toggle=tab][href=#<%=@active_tab%>]').click();
+		})
+	</script>

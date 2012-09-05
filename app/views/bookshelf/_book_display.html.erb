@@ -1,0 +1,9 @@
+<a href="#<%= modal_name %>" data-toggle="modal">
+	<div class="book-container standard <%= color_class %>">
+		<div class="thumbnail">
+			<%= image_tag cover_link %>
+		</div>
+		<h4><%= title %></h4>
+		<% if !author.blank? %><em><%= author %></em><% else %> <br /> <% end %>
+	</div>
+</a>

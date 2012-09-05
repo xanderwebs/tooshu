@@ -1,0 +1,11 @@
+<div class="hero-unit" style="margin-left:10px;">
+	<h3>Tooshu: A Distributed Library</h3>	
+	<p>
+		Lend books to your friends and borrow books they're done reading.  
+	</p>					
+	<p>
+		Share texts.  Save money.
+	</p>
+	<a class="btn btn-primary btn-large" href="/about">Learn more</a>
+
+</div>

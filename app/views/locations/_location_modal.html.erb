@@ -1,0 +1,61 @@
+<%= form_for(:location, :url => :locations, :method =>:post, :html=>{:class=>"form-horizontal", :id=>"location_form"}) do |f| %>
+	<div class="modal-header">  
+		<a class="close" data-dismiss="modal">×</a>  
+		<% if location.nil? %>
+			<h3>Create a Location</h3>  
+		<% else %>
+			<h3>Edit Location</h3>  
+		<% end %>
+	</div>  
+	<div class="modal-body">  	
+		
+		<% if !flash[:error].nil? %>
+			<div class="alert alert-error">
+				<%= flash[:error] %>
+			</div>
+		<% end %>
+
+		<%= label_tag 'short_name', 'Name', :class=>"control-label", :for=>"location[short_name]"%>
+		<div class="controls">
+			<%= f.text_field :short_name, :class=>"input-xlarge", :id=>"location[short_name]" %>				
+		</div>
+
+		<%= label_tag 'address1', 'Address 1', :class=>"control-label", :for=>"location[address1]"%>
+		<div class="controls">
+			<%= f.text_field :address1, :class=>"input-xlarge", :id=>"location[address1]" %>				
+		</div>
+
+		<%= label_tag 'address2', 'Address 2', :class=>"control-label", :for=>"location[address2]"%>
+		<div class="controls">
+			<%= f.text_field :address2, :class=>"input-xlarge", :id=>"location[address2]" %>				
+		</div>
+
+		<%= label_tag 'city', 'City', :class=>"control-label", :for=>"location[city]"%>
+		<div class="controls">
+			<%= f.text_field :city, :class=>"input-xlarge", :id=>"location[city]" %>				
+		</div>
+
+		<%= label_tag 'state', 'State', :class=>"control-label", :for=>"location[state]"%>
+		<div class="controls">
+			<select name="location[state]">
+				<option></option>
+				<option>CA</option>
+			</select>				
+		</div>
+
+		<%= label_tag 'zipcode', 'Zip Code', :class=>"control-label", :for=>"location[zipcode]"%>
+		<div class="controls">
+			<%= f.text_field :zipcode, :class=>"input-xlarge", :id=>"location[zipcode]" %>				
+		</div>
+
+		<input type="hidden" name="location[is_default]" value="true" />
+		<input type="hidden" name="location[user_id]" value="<%= @current_user.id %>" />
+		<input type="hidden" name="from_modal" value="true" />
+
+	</div>  
+	<div class="modal-footer">  
+		<a href="#" id="save_button" class="btn btn-success">Save</a>  
+		<a href="#" class="btn" data-dismiss="modal">Cancel</a>  
+	</div>  
+<%end%>
+					

@@ -1,0 +1,43 @@
+<div class="container-fluid text-container profile-box">
+	<%= image_tag "user.png", :class=>"profile-img" %>
+	<% if (@current_user.id.to_i.eql?(@user.id.to_i)) %>
+		<div class="inline-fix">
+			<h3 class="heading"><%= @current_user.first_name %></h3>
+			<%= link_to "Edit Profile", edit_user_path(@current_user.id) %>
+		</div>
+	<% else %>
+		<h3 class="heading"><%= @user.first_name %></h3>
+	<% end %>
+</div>
+
+<% if !@current_user.id.eql?(@user.id) %>
+	<% if !@current_user.favorites.contains_favorite?(@current_user.id, @user.id) %>
+		<%= link_to "Add " + @user.first_name + " to your favorites." , favorites_path(:favorite_user_id => @user.id), :class => "btn btn-info favorite-button", :method => :post %>
+	<% else %>
+		<%= link_to "Remove " + @user.first_name + " from your favorites.", @current_user.favorites.first_entry(@current_user.id, @user.id), :class => "btn btn-danger favorite-button", :method => :delete %>
+	<% end %>
+<% end %>
+
+
+<div class="container-fluid text-container">
+	<h3 class="heading">About <%= (!@current_user.id.eql?(@user.id) ? @user.first_name : "Me" ) %></h3>
+</div>
+
+<div class="container-fluid text-container">
+	<h3 class="heading"><%= (!@current_user.id.eql?(@user.id) ? @user.possessive : "My" ) %> Favorites</h3>
+	<% if !@user.favorite_users.nil? && !@user.favorites.blank? %>
+		<% if @user.books.empty? && @current_user.id.eql?(@user.id)%>
+			<div class="empty-warning">
+				<p>
+					You don't have any favorites. Add some!
+				</p>
+			</div>
+		<% else %>
+			<ul class="userlist">
+				<% @user.favorite_users.each do |f| %>
+					<li><%=link_to f.full_name, {:controller => "users", :action => "show", :id => f.id} %></li>
+				<% end %>
+			</ul>
+		<% end %>
+	<% end %>
+</div>

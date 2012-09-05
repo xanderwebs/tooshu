@@ -1,0 +1,112 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+*/
+
+#resultsDiv{
+	background-color: #FFFFFF;
+}
+
+#resultsDiv .results-list {
+	margin: 0px;	
+}
+
+#navcontainer .navbar {
+	margin-bottom: 10px;
+}
+
+/* offset bootstrap option */
+.nav-tabs.nav-stacked.results-list > li:last-child > a {
+	border-radius: 0; 
+}
+
+#searchbarcontainer {
+	display: inline;
+	padding: 0 5px;
+}
+
+.empty-search {
+	color: rgba(0,0,0,0.20);
+	text-align: center;
+	font-weight: bold;
+}
+
+
+.nav-header {
+	background-color: #F5F5F5;
+}
+
+.container > div, .container > footer {
+	margin-left: 0;
+}
+
+.main-page {
+	background-color: #F0F0F0; /* #414954 for darker bg */
+}
+
+footer {
+	border-top: 2px solid gainsboro;
+	float: left;
+	margin-top: 15px;
+	padding-top: 10px;
+	display: inline-block;
+}
+
+#footer-list {
+	list-style: none;
+	display: inline-block;
+	margin-left: 0;
+	padding-left: 0;
+}
+
+#footer-list li {
+	display: inline;
+}
+
+footer .divider-vertical {
+	background-color: #222222;
+    border-right: 1px solid #333333;
+    height: 40px;
+    margin: 0 9px;
+    overflow: hidden;
+    width: 1px;
+}
+
+/* Firefox is fricken annoying! */
+@-moz-document url-prefix() {
+    #searchbarcontainer {
+    	display: inline-block;
+    }
+}
+
+.dropdown-alert{
+	color:#0088CC;
+	padding: 5px;
+/*	padding-left: 10px;*/
+}
+
+.dropdown-menu li > a.dropdown-alert-link{
+	color:#0088CC;
+	background-color: #FFFFFF;
+	padding: 5px;
+	padding-left: 10px;
+}
+
+.dropdown-menu li > a.dropdown-alert-link:hover{
+	color:#0088CC;
+	background-color: #FFFFFF;
+}
+
+.validation-error{
+	color:red;
+	font-size: 11px;
+}

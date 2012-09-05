@@ -1,0 +1,13 @@
+<div class="modal changed-modal">
+	<div class="modal-header exchangehdr">  
+		<a class="close" data-dismiss="modal">×</a>  
+		<h3>Book Removed!</h3>  
+	</div>  
+	<div class="modal-body">  		  
+		<p>The Book was successfully removed from your collection.</p> 				
+	</div>  
+	<div class="modal-footer">  		
+		<a href="#" class="btn" data-dismiss="modal" id="remove_saved_close">Close</a>  
+	</div>  
+</div>
+					

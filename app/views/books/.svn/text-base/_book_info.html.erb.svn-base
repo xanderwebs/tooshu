@@ -1,0 +1,13 @@
+<div class="page-header book-header page-default">
+	<h1><%=@book.title%></h1>
+	<h4><%=@book.author%></h4>
+	<p>ISBN: <%= @book.isbn %> • (more info needed!)</p>
+<!--
+	<p>Adventure • 1964 • ISBN: <%= @book.isbn %> • (more info needed!)</p>
+-->
+</div>
+
+<div class="synopsis page-default">
+	<h3>Synopsis</h3>
+	<p><%= @book.synopsis.to_s.html_safe %></p>
+</div>

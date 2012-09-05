@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/svn/tooshu/!svn/ver/71/test/fixtures
+END
+amazon_catalogs.yml
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/tooshu/!svn/ver/1/test/fixtures/amazon_catalogs.yml
+END
+exchange_proposals.yml
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/tooshu/!svn/ver/1/test/fixtures/exchange_proposals.yml
+END
+.gitkeep
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/tooshu/!svn/ver/1/test/fixtures/.gitkeep
+END
+application_feedbacks.yml
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/tooshu/!svn/ver/71/test/fixtures/application_feedbacks.yml
+END
+locations.yml
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/tooshu/!svn/ver/37/test/fixtures/locations.yml
+END
+requests.yml
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/tooshu/!svn/ver/1/test/fixtures/requests.yml
+END

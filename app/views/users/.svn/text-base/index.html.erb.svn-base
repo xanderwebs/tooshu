@@ -1,0 +1,5 @@
+<% if flash[:notice] %>
+	<%= flash[:notice] %>
+<% end %>
+
+<%= render :partial => "user_profile" %>

@@ -1,0 +1,54 @@
+
+	<% if !@users.nil? %>
+		<ul id="result-users" class="nav nav-tabs nav-stacked results-list">
+			<li class="nav-header">Users</li>
+			<% if !@users.empty? %>
+				<% @users.each do |u| %>
+					<li>
+						<%= link_to u.first_name + " " + u.last_name, :controller => "users", :action => "show", :id => u.id %>				
+					</li>
+				<% end %>
+			<% else %>
+				<li><a class="empty-search">Sorry, there are no results matching your query.</a></li>
+			<% end %>
+		</ul>
+	<% end %>
+
+
+	<% if !@books.nil? %>
+		<ul id="result-books" class="nav nav-tabs nav-stacked results-list">
+			<li class="nav-header">Books</li>
+			<% if !@books.empty? %>
+				<% @books.each do |b| %>
+					<li>					
+						<a href="/books/<%=b.id%>">
+							<%= b.title %> - <em><%= b.author %></em>
+						</a>
+					</li>
+				<% end %>
+			<% else %>
+				<li><a class="empty-search">Sorry, there are no results matching your query.</a></li>
+			<% end %>
+		</ul>
+	<% end %>
+
+
+	<% if !@authors.nil? %>
+		<ul id="result-authors" class="nav nav-tabs nav-stacked results-list">
+			<li class="nav-header">Author</li>
+			<% if !@authors.empty? %>
+				<% @authors.each do |b| %>
+					<li>					
+						<a href="/books/<%=b.id%>">
+							<%= b.title %> - <em><%= b.author %></em>
+						</a>
+					</li>
+				<% end %>
+			<% else %>
+				<li><a class="empty-search">Sorry, there are no results matching your query.</a></li>
+			<% end %>
+		</ul>
+	<% end %>
+
+
+

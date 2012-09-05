@@ -1,0 +1,27 @@
+<% @current_user.received_requests.each do |rr| %>
+	<% if rr.status.eql?("Awaiting Response") %>
+		<li class="awaiting" id="request_li_<%=rr.id%>">
+			<%= render :partial=>"bookshelf/book_display", :locals => {:modal_name => "awaiting_response", :title => rr.book.title , :author => rr.book.author, :cover_link => rr.book.thumbnail_link, :color_class => ""} %>	
+		</li>	
+	<% elsif rr.status.eql?("Scheduled") %>
+		<li class="scheduled" id="request_li_<%=rr.id%>">
+			<%= render :partial => "bookshelf/book_display", :locals => {:modal_name => "rejected_request", :title => rr.book.title , :author => rr.book.author, :cover_link => rr.book.thumbnail_link, :color_class => "scheduled-color"} %>
+		</li>	
+	<%end%>
+<% end %>
+<% @current_user.submitted_requests.each do |rr| %>
+	<% if rr.status.eql?("Accepted") %>
+		<li class="accepted" id="request_li_<%=rr.id%>">
+			<%= render :partial => "bookshelf/book_display", :locals => {:modal_name => "accepted_request", :title => rr.book.title , :author => rr.book.author, :cover_link => rr.book.thumbnail_link, :color_class => "accepted-request"} %>
+		</li>
+	<% elsif rr.status.eql?("Rejected") %>
+		<li class="rejected" id="request_li_<%=rr.id%>">
+			<%= render :partial => "bookshelf/book_display", :locals => {:modal_name => "rejected_request", :title => rr.book.title , :author => rr.book.author, :cover_link => rr.book.thumbnail_link, :color_class => "rejected-color"} %>
+		</li>
+	<% elsif rr.status.eql?("Scheduled") %>
+		<li class="scheduled" id="request_li_<%=rr.id%>">
+			<%= render :partial => "bookshelf/book_display", :locals => {:modal_name => "rejected_request", :title => rr.book.title , :author => rr.book.author, :cover_link => rr.book.thumbnail_link, :color_class => "scheduled-color"} %>
+		</li>
+	<% end %>
+<% end %>	
+

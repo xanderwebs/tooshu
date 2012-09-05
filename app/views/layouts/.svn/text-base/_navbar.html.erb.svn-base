@@ -1,0 +1,94 @@
+<div class="navbar">
+	<div class="navbar-inner">
+		<div class="container">
+			<!-- components here -->
+			<a id="brand" href="/users" class="brand">tooshu</a>
+
+
+
+
+			<!-- right side optiopns -->
+
+			<%if @current_user.nil?%>
+				<ul class="nav pull-right">
+					<li><a href="/login">Login</a></li>
+					<li class="divider-vertical"></li>
+					<li><a href="/users/new">Register</a></li>
+				</ul>
+			<%else%>
+				<form class="navbar-search pull-left" id="searchForm">
+					<div class="btn-group webkitfix" id="searchbarcontainer">								
+						<a class="btn dropdown-toggle" href="#" data-toggle="dropdown">
+							<i id="searchTypeIcon" class="icon-search"></i>									
+						</a>
+						<ul class="dropdown-menu" id="searchTypeSelectorList">
+							<li>
+								<a href="#">
+									<i class="icon-search"></i>
+									All
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<i class="icon-book"></i>
+									Title
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<i class="icon-pencil"></i>
+									Author
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<i class="icon-user"></i>
+									User
+								</a>
+							</li>
+						</ul>	
+						<input type="text" class="search-query" id="searchFieldInput" autocomplete="off"/>
+						<input type="hidden" id="searchTypeInput" value="all" %>
+					</div>
+				</form>
+				<ul class="nav pull-right">
+					<li><a href="/users"><%= @current_user.first_name %></a></li>
+					<li class="divider-vertical"></li>
+<!--				
+					<li><a href="#">Browse</a></li>
+-->					
+					<li id="#feedback" class="dropdown">
+						<a id="feedback_button" class="dropdown-toggle"href="#">Feedback</a>
+						<ul class="dropdown-menu" id="feedback_alert">
+							<li class="dropdown-alert"><a herf="#" class="dropdown-alert-link">Tell us what you think!</a></li>							
+						</ul>
+					</li>
+
+					<li class="divider-vertical"></li>
+					<li><a href="/logout">Logout</a></li>
+				</ul>
+				
+			<%end%>		
+		</div>
+	</div>
+</div>
+  
+
+<script type="text/javascript">  
+	
+	var toggleCleared = true;
+	$('#feedback_button').click(function(){if (!toggleCleared){$('#feedback_alert').toggle(); toggleCleared=true;}})
+	if(Math.random() < .10){
+		$('#feedback_alert').toggle();
+		var toggleCleared = false;
+
+	}
+	
+</script>  
+<script type="text/javascript">
+	var s = new SearchBar("searchTypeIcon", "searchTypeInput", "searchFieldInput", "searchTypeSelectorList", "resultsDiv", "searchForm");	
+</script>
+
+<script type="text/javascript">
+	var f = new FeedbackCollector('feedback_button', '<%= request.fullpath %>');	
+</script>

@@ -1,0 +1,23 @@
+
+	<div class="modal changed-modal">
+		<div class="modal-header bookinfo">
+			<%= render :partial => "response_modal_header", :locals => {:status => "Awaiting Response", :title => @request.book.title, :author => @request.book.author, :response_type =>"awaiting"} %>				
+		</div>
+		<div class="modalctr">
+			<form id="awaiting_response_form">
+				<p>User: <span id="awaiting_response_user_name"><%=@request.requester.first_name + " " + @request.requester.last_name %> </span></p>
+				<p>Duration: <span id="awaiting_response_duration"><%=@request.requested_days %> Days</span></p>
+				<% @request.request_comments.each do |rc| %>
+					<%= rc.user.first_name + " " + rc.user.last_name %>:
+					<p><em><%= rc.comment %></em></p>
+				<%end%>
+				
+			</form>
+		</div>
+		<div class="modal-footer">
+			<a href="#accepted-form" class="btn btn-success" id="awaiting_response_accept_button">Accept</a>
+			<a href="#rejected-request" class="btn btn-danger" id="awaiting_response_deny_button">Deny</a>
+		</div>
+	</div>
+
+

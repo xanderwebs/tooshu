@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/tooshu/!svn/ver/85/app/views/books
+END
+_booklist.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/tooshu/!svn/ver/71/app/views/books/_booklist.html.erb
+END
+_book_owners.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/tooshu/!svn/ver/66/app/views/books/_book_owners.html.erb
+END
+_searchResults.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/tooshu/!svn/ver/59/app/views/books/_searchResults.html.erb
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/tooshu/!svn/ver/42/app/views/books/index.html.erb
+END
+_remove_book_saved.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/tooshu/!svn/ver/59/app/views/books/_remove_book_saved.html.erb
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/tooshu/!svn/ver/92/app/views/books/new.html.erb
+END
+show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/tooshu/!svn/ver/44/app/views/books/show.html.erb
+END
+_remove_book_modal.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/tooshu/!svn/ver/59/app/views/books/_remove_book_modal.html.erb
+END
+_book_info.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/tooshu/!svn/ver/71/app/views/books/_book_info.html.erb
+END

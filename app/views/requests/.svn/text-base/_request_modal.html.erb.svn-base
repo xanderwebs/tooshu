@@ -1,0 +1,30 @@
+<%= form_for(:request, :url => :requests, :method =>:post, :html=>{:class=>"form-horizontal", :id=>"request_form"}) do |f| %>
+	<div class="modal-header">  
+		<a class="close" data-dismiss="modal">×</a>  
+		<h3>Make a request for this book now?</h3>  
+	</div>  
+	<div class="modal-body">  
+		
+		
+		<% if !flash[:error].nil? %>
+			<div class="alert alert-error">
+				<%= flash[:error] %>
+			</div>
+		<% end %>
+		<p>How many days do you want to borrow this book for?</p> 		
+			<%= hidden_field :request, :requester_user_id, :id=>"requester_user_id", :value => requester_user_id %>
+			<%= hidden_field :request, :owner_user_id, :id=>"owner_user_id", :value=> owner_user_id%>
+			<%= hidden_field :request, :book_id, :id=>"book_id", :value=> book_id %>
+			<%= f.text_field :requested_days, :class=>"input-small", :id=>"return_date" %>					
+		<br />
+		<p>Leave a personal message? (optional)</p> 			
+		<%= text_area :request_comment, :comment, :id=>"comment", :class=>"input-xlarge", :rows=>4%>
+		<%= hidden_field :request_comment, :user_id, :id=>"request_comment_user_id", :value => requester_user_id %>
+		
+	</div>  
+	<div class="modal-footer">  
+		<a href="#" id="request_button" class="btn btn-success">Request</a>  
+		<a href="#" class="btn" data-dismiss="modal">Cancel</a>  
+	</div>  
+<%end%>
+					

@@ -1,0 +1,32 @@
+	<!-- toolbar -->
+	<%= render :partial => "toolbar" %>
+
+	<!-- main stuff -->
+	<%= render :partial => "flash_messages" %>
+	
+	<div class="container-fluid" id="profile-container">
+		<div class="row-fluid">
+			<div class="span12 container-fluid text-container" id="profile-details">
+				<% if @current_user.id.to_i.eql?(@user.id.to_i) %>
+					<div class="pull-right">
+						<form action="/books/new">			    	
+					    	<button type="submit" class="btn btn-primary btn-adjust">Add to Library</button>
+					    </form>
+					</div>	
+					<h3 class="heading"><%= (!@current_user.id.eql?(@user.id)) ? @name : "My " %>Library</h3>
+				<% else %>
+					<h3 class="heading"><%= @user.possessive %> Library</h3>
+				<% end %>
+				
+				<div class="row-fluid">			
+					<% if !@books.nil? && !@books.empty? %>	
+						<%= render :partial => "/books/booklist", :locals => {:books => @books, :searching => false} %>				
+					<% else %>
+						<div class="empty-warning">
+							<p>You don't seem to have any books in your library, add some books <%= link_to "here", :controller => "books", :action => "new" %>!</p>
+						</div>
+					<% end %>
+				</div>
+			</div>
+		</div>
+	</div>

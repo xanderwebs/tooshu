@@ -1,0 +1,9 @@
+<%if @books.empty?%>
+	<div class="alert alert-error">
+		Unable to find the book you searched for.  Try searching again.
+	</div>	
+<%else%>
+	<div class="row-fluid">
+		<%= render :partial => "/books/booklist", :locals => {:books => @books, :searching => true} %>		
+	</div>
+<%end%>

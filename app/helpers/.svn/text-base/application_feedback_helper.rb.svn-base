@@ -1,0 +1,2 @@
+module ApplicationFeedbackHelper
+end

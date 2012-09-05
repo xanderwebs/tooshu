@@ -1,0 +1,30 @@
+	<div class="modal changed-modal">
+		<%= form_for(:request_exchanges, :url => :requests, :method =>:put, :html=>{:class=>"form-horizontal", :id=>"accepted_response_form"}) do |f| %>
+			<div class="modal-header exchangehdr">
+				<%= render :partial => "response_modal_header", :locals => {:status => "Scheduled", :title => @request.book.title, :author => @request.book.author, :response_type =>"scheduled"} %>							
+			</div>
+			<div class="modalctr">
+				<p>Owner: <span id="accepted_response_owner"><%=@request.owner.first_name + " " + @request.owner.last_name %></span></p>
+				<p>Requester: <span id="accepted_response_owner"><%=@request.requester.first_name + " " + @request.requester.last_name %></span></p>
+				
+					
+					
+					<% @request.exchange_proposals.each do |ep| %>
+						<% if(ep.status.eql?("Accepted")) %>
+
+							<label>Pick Up Time:</label>
+							<%= ep.exchange_start.strftime("%m-%d-%Y %l:%M %p") %>
+
+							<label>Location:</label>
+							<%= ep.location %>
+						<%end%>
+					<% end %>
+				
+				
+			</div>
+			<div class="modal-footer">				
+				<a href="#" class="btn" data-dismiss="modal">Close</a>
+			</div>
+			
+		<%end%>
+	</div>

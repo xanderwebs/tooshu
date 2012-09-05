@@ -1,0 +1,78 @@
+
+	<div class="modal changed-modal">
+		<div class="modal-header exchangehdr">
+			<button type="button" class="close" data-dismiss="modal">×</button>
+			<h4>Make the exchange!</h4>
+			<br />
+		</div>
+		<%= form_for(:request_exchanges, :url => :requests, :method =>:put, :html=>{:class=>"form-horizontal", :id=>"accepted_request_form"}) do |f| %>
+			<div class="modalctr">
+				
+					<label>When: </label>
+					<div class="manydates">
+						<div class="date">
+							<table id="eecTable">
+								<!--<tr>
+									<td>
+										<input type"text" id="date1" name="date1" class="input" placeholder="7/18/12" readonly/>
+									</td>
+									<td>
+										<select class="hour span1" name="hour1">
+											<% for i in 0..11 do %>
+												<option><%= (i == 0) ? 12 : i %></option>
+											<% end %>
+								 		</select>
+									</td>
+									<td>
+										<select class="minute span1" name="minute1">
+											<% for i in 0..3 do %>
+												<option>:<%= (i == 0) ? "00" : i*15 %></option>
+											<% end %>
+								 		</select>
+									</td>
+									<td>
+										<select class="minute span1" name="ampm1">
+											<option>am</option>
+											<option>pm</option>
+								 		</select>
+									</td>
+									<td>
+										<a class="btn btn-success request_button">+</a>
+									</td>
+									<td>&nbsp;</td>
+								</tr>-->
+							</table>
+							<script type="text/javascript">
+								var t = new ExpandingExchangeChooser("eecTable");
+							</script>
+					 		
+					 		
+					 		
+					 		
+					 		
+				 		</div>
+				 	</div>
+				 	<label>Where: </label>
+				 	<input type"text" id="location" class="input" name="location">
+				 	<!--<select id="saved-locations">
+				 		<option>My address #1</option>
+				 		<option>My address #2</option>
+				 		<option>Add new...</option>
+				 	</select>-->
+				 	<h4>How long can <span id="accepted_request_username1"><%= @request.requester.first_name %></span>  have <span id="accepted_request_title"><%= @request.book.title %></span>?</h4>
+				 	<p><span id="accepted_request_username2"><%= @request.requester.first_name %></span> requested the book for <span id="accepted_request_duration"><%= @request.requested_days %></span> days</p>
+				 	<label for="due-date">Choose due date: </label>
+				 	<input type"text" id="return_date" name="return_date" class="input" placeholder="7/18/12" readonly/>
+					<script type="text/javascript">
+						$("#return_date").datepicker({minDate: new Date()});					
+					</script>
+					<input type="hidden" name="type" value="accepted" />
+				
+			</div>
+			<div class="modal-footer">				
+				<a href="#" class="btn btn-success" id="accepted_request_arrange_button">Arrange</a>
+				<a href="#" class="btn btn-danger" data-dismiss="modal">Cancel</a>
+			</div>
+			<input type="hidden" id="accepted_request_id" name="id" value="<%= @request.id%>"/>
+		<%end%>	
+	</div>

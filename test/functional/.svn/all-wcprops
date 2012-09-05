@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/tooshu/!svn/ver/80/test/functional
+END
+info_controller_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/tooshu/!svn/ver/80/test/functional/info_controller_test.rb
+END
+requests_controller_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/tooshu/!svn/ver/1/test/functional/requests_controller_test.rb
+END
+.gitkeep
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/tooshu/!svn/ver/1/test/functional/.gitkeep
+END
+application_feedback_controller_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/tooshu/!svn/ver/71/test/functional/application_feedback_controller_test.rb
+END
+location_controller_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/tooshu/!svn/ver/37/test/functional/location_controller_test.rb
+END
+login_controller_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/tooshu/!svn/ver/1/test/functional/login_controller_test.rb
+END

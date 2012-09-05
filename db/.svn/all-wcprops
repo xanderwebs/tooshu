@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 26
+/svn/tooshu/!svn/ver/89/db
+END
+schema.rb
+K 25
+svn:wc:ra_dav:version-url
+V 36
+/svn/tooshu/!svn/ver/73/db/schema.rb
+END
+test.sqlite3
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/tooshu/!svn/ver/71/db/test.sqlite3
+END
+seeds.rb
+K 25
+svn:wc:ra_dav:version-url
+V 34
+/svn/tooshu/!svn/ver/1/db/seeds.rb
+END

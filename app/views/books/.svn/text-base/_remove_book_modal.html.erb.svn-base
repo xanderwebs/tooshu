@@ -1,0 +1,29 @@
+<div class="modal changed-modal">
+	<%= form_for(:book_user, :url => :requests, :method =>:put, :html=>{:class=>"form-horizontal", :id=>"remove_form"}) do |f| %>
+		<div class="modal-header rejected-color">
+			<button type="button" class="close" data-dismiss="modal">×</button>
+			<h4>Remove from collection?</h4>			
+		</div>
+		
+		<div class="modal-body">
+			<div class="row-fluid">
+				<%= image_tag book.thumbnail_link, :class => "thumb span1" %>
+				<div class="book-info offset1">
+					<h4><%= book.title %></h4>
+					<em><%= book.author %></em>		
+					<br />	
+					<br />
+					<p>Are you sure you want to remove this from your collection?</p>	
+				</div>
+			</div>
+			
+			<input type="hidden" name="bookId" value="<%= book.id %>" />
+			<input type="hidden" name="userId" value="<%= @current_user.id %>" />
+			
+		</div>
+		<div class="modal-footer">
+			<a href="#" class="btn btn-danger" id="remove_book_remove_button">Remove</a>
+			<a href="#" class="btn" id="remove_book_cancel_button" data-dismiss="modal">Cancel</a>
+		</div>
+	<% end %>
+</div>

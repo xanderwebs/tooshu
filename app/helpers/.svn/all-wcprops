@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 35
+/svn/tooshu/!svn/ver/80/app/helpers
+END
+users_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/tooshu/!svn/ver/1/app/helpers/users_helper.rb
+END
+application_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/tooshu/!svn/ver/1/app/helpers/application_helper.rb
+END
+favoriteships_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/tooshu/!svn/ver/47/app/helpers/favoriteships_helper.rb
+END
+application_feedback_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/tooshu/!svn/ver/71/app/helpers/application_feedback_helper.rb
+END
+location_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/tooshu/!svn/ver/37/app/helpers/location_helper.rb
+END
+login_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/tooshu/!svn/ver/1/app/helpers/login_helper.rb
+END
+info_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/tooshu/!svn/ver/80/app/helpers/info_helper.rb
+END
+requests_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/tooshu/!svn/ver/1/app/helpers/requests_helper.rb
+END
+books_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/tooshu/!svn/ver/1/app/helpers/books_helper.rb
+END
