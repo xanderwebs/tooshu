@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 46
-/svn/tooshu/!svn/ver/80/app/assets/javascripts
+/svn/tooshu/!svn/ver/92/app/assets/javascripts
 END
 bookshelfManager.js
 K 25
@@ -45,17 +45,17 @@ svn:wc:ra_dav:version-url
 V 61
 /svn/tooshu/!svn/ver/1/app/assets/javascripts/users.js.coffee
 END
-searchBar.js
-K 25
-svn:wc:ra_dav:version-url
-V 59
-/svn/tooshu/!svn/ver/62/app/assets/javascripts/searchBar.js
-END
 bookRemover.js
 K 25
 svn:wc:ra_dav:version-url
 V 61
 /svn/tooshu/!svn/ver/59/app/assets/javascripts/bookRemover.js
+END
+searchBar.js
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/tooshu/!svn/ver/62/app/assets/javascripts/searchBar.js
 END
 feedbackCollector.js
 K 25
@@ -69,17 +69,17 @@ svn:wc:ra_dav:version-url
 V 77
 /svn/tooshu/!svn/ver/71/app/assets/javascripts/application_feedback.js.coffee
 END
-location.js.coffee
-K 25
-svn:wc:ra_dav:version-url
-V 65
-/svn/tooshu/!svn/ver/37/app/assets/javascripts/location.js.coffee
-END
 login.js.coffee
 K 25
 svn:wc:ra_dav:version-url
 V 61
 /svn/tooshu/!svn/ver/1/app/assets/javascripts/login.js.coffee
+END
+location.js.coffee
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/tooshu/!svn/ver/37/app/assets/javascripts/location.js.coffee
 END
 requests.js.coffee
 K 25
