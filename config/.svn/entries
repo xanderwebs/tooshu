@@ -1,15 +1,15 @@
 10
 
 dir
-93
+94
 https://tooshu.dyndns.org/svn/tooshu/config
 https://tooshu.dyndns.org/svn/tooshu
 
 
 
-2012-09-04T05:42:17.359375Z
-89
-acheng
+2012-09-05T05:27:08.687500Z
+94
+dennisli
 
 
 
@@ -69,10 +69,10 @@ file
 
 
 
-2012-09-05T04:32:50.000000Z
-cf7682f83e4fd2d8a7f65b8b5e738063
-2012-07-28T17:39:50.577500Z
-1
+2012-09-05T05:42:34.000000Z
+775f870c37a25157b08ab5cb9595d28d
+2012-09-05T05:27:08.687500Z
+94
 dennisli
 
 
@@ -95,7 +95,7 @@ dennisli
 
 
 
-576
+641
 
 application.rb
 file

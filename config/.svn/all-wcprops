@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 30
-/svn/tooshu/!svn/ver/89/config
+/svn/tooshu/!svn/ver/94/config
 END
 routes.rb
 K 25
@@ -12,8 +12,8 @@ END
 database.yml
 K 25
 svn:wc:ra_dav:version-url
-V 42
-/svn/tooshu/!svn/ver/1/config/database.yml
+V 43
+/svn/tooshu/!svn/ver/94/config/database.yml
 END
 application.rb
 K 25
