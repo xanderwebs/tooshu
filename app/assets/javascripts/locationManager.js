@@ -10,15 +10,19 @@
 	this.modal.css("display", "none");
 	this.modal.appendTo("body");	
 
+	console.log("this is working!");
 }
 
 LocationManager.prototype.getModal = function(userId, locationId){
 	var obj = this;
 
+	console.log("and this");
+
 	$.get('/locations/modal?userId=' + userId, function(data) {
 			
 		obj.setModalContentAndAction(data);		
 		
+		console.log("this?");
 	})
 }
 
@@ -41,7 +45,8 @@ LocationManager.prototype.setModalContentAndAction = function(data){
 	if($('#close_button').size() > 0){
 		$('#close_button').click(
 			function(){
-				window.location.reload();		
+				window.location.reload();	
+				console.log("should this?");	
 			}
 		);	
 	}

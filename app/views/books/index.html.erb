@@ -1,20 +1,24 @@
-<div class="container-fluid" id="main-inner">
+<div class="container-fluid" id="profile-container">
 	<div class="row">
 		<!-- left side -->
 		<div class="span3 no-indent" id="book-details">
 			<div class="book-profile">
-			    <a href="#" class="thumbnail bookcover">
-  					<img src="http://placehold.it/180x260" alt="">
+			    <a href="<%= @book.link_to_amzn %>" class="thumbnail bookcover">
+  					<img class="bookcover thumb" src=<%= @book.cover_url %> alt="http://placehold.it/180x260">
 				</a>
+				<% if !@book.id %>
+					<%= link_to "Add this book to your library." , book_path(@book.asin), :class => "btn btn-info book-button", :method => :post %>
+				<% end %>
 			</div>
 			<br/>
 		</div>
 		
 		<!-- right main -->
 		<div class="span8" id="book-info">
-			This page is porbably not necessary anymore. (this is books/index)
-			<!-- %= render :partial => "book_info" %-->
+			<%= render :partial => "book_info" %>
 		</div>
 	</div>
-	<!-- %= render :partial => "book_owners" % -->
+	<%= render :partial => "book_owners" %>
 </div>
+
+

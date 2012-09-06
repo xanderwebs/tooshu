@@ -12,10 +12,7 @@ class BooksController < ApplicationController
   
   def create
     
-    @book = AmazonCatalog.asinLookup(params[:book][:asin]);
-
-  	
-  	
+    @book = AmazonCatalog.asinLookup(params[:book][:asin])  	
   	#check if the book exists (by isbn)
     if(Book.find_by_asin(@book.asin).nil?)  	
   		#try to save it, and render an error if it doesn't work
@@ -88,6 +85,7 @@ class BooksController < ApplicationController
 
   # Added 7/28/12 by alex
   def index
+    @book = Book.find_by_asin(params[:id]) || AmazonCatalog.asinLookup(params[:id])
   end
 
   def show

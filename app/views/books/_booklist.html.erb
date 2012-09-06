@@ -1,6 +1,6 @@
 <% books.each do |b| %>
 	<div class="bookobj clearfix">
-		<a href="/books/<%= b.id %>" class="link">
+		<a href="/books<%= (!searching) ? '/' + b.id.to_s : '?id=' + b.asin.to_s %>" class="link">
 			<%= image_tag b.thumbnail_link, :class => "thumb span1" %>
 			<div class="book-info span9 offset1">
 				<h4><%= b.title %></h4>

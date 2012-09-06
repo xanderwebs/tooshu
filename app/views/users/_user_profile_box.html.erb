@@ -25,19 +25,18 @@
 
 <div class="container-fluid text-container">
 	<h3 class="heading"><%= (!@current_user.id.eql?(@user.id) ? @user.possessive : "My" ) %> Favorites</h3>
-	<% if !@user.favorite_users.nil? && !@user.favorites.blank? %>
-		<% if @user.books.empty? && @current_user.id.eql?(@user.id)%>
-			<div class="empty-warning">
-				<p>
-					You don't have any favorites. Add some!
-				</p>
-			</div>
-		<% else %>
-			<ul class="userlist">
-				<% @user.favorite_users.each do |f| %>
-					<li><%=link_to f.full_name, {:controller => "users", :action => "show", :id => f.id} %></li>
-				<% end %>
-			</ul>
-		<% end %>
+	<% if @user.favorite_users.empty? && @current_user.id.eql?(@user.id)%>
+
+		<div class="empty-warning">
+			<p>
+				You don't have any favorites. Add some!
+			</p>
+		</div>
+	<% else %>
+		<ul class="userlist">
+			<% @user.favorite_users.each do |f| %>
+				<li><%=link_to f.full_name, {:controller => "users", :action => "show", :id => f.id} %></li>
+			<% end %>
+		</ul>
 	<% end %>
 </div>
