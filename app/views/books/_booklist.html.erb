@@ -14,7 +14,7 @@
 
 		<div class="span2 offset10">
 			<% if searching %>
-				<a class="btn btn-primary add_book_button" data-toggle="modal" href="#request_maker_modal" id="<%= b.asin %>">Add Book</a>
+				<a class="btn btn-primary add_book_button" href="#" id="<%= b.asin %>">Add Book</a>
 			<% elsif !@user.id.eql?(@current_user.id) %> 
 				<!-- REQUESTS [commented out]
 				a href="#request_maker_modal" class="btn btn-success" data-toggle="modal" onclick="r.getModal(<%=@current_user.id%>,<%=@user.id%>,<%=b.id%>)">Request</a -->

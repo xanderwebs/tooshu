@@ -37,7 +37,7 @@ BookSearch.prototype.search = function(event){
 	
 	var xhr = new XMLHttpRequest();
  	var obj = this;
- 	obj.results.innerHTML = "<img src='/assets/loading.gif'>"
+ 	obj.results.innerHTML = "<div class='span12'><p class='loading-text'>loading... <img src='/assets/loading.gif' /></p></div>"
 
 	xhr.onreadystatechange = function (){
 		if (xhr.readyState==4 && xhr.status==200){

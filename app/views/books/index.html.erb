@@ -7,7 +7,7 @@
   					<img class="bookcover thumb" src=<%= @book.cover_url %> alt="http://placehold.it/180x260">
 				</a>
 				<% if !@book.id %>
-					<%= link_to "Add this book to your library." , book_path(@book.asin), :class => "btn btn-info book-button", :method => :post %>
+					<%= button_to "Add this book to your library." , {:action => "create", :asin => @book.asin }, :class => "btn btn-info book-button", :method => :post, %>
 				<% end %>
 			</div>
 			<br/>

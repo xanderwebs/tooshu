@@ -11,8 +11,8 @@ class BooksController < ApplicationController
   end
   
   def create
-    
-    @book = AmazonCatalog.asinLookup(params[:book][:asin])  	
+    asin = params[:asin] || params[:book][:asin]
+    @book = AmazonCatalog.asinLookup(asin)  	
   	#check if the book exists (by isbn)
     if(Book.find_by_asin(@book.asin).nil?)  	
   		#try to save it, and render an error if it doesn't work
@@ -28,11 +28,7 @@ class BooksController < ApplicationController
         Book.find_by_asin(@book.asin).update_from_amazon(@book)        
       end
 		  #retrieve the existing book from the database
-      @book = Book.find_by_asin(@book.asin)
-
-
-
-    	
+      @book = Book.find_by_asin(@book.asin)    	
   	end
   	
   	if(@current_user.books.nil?)
@@ -41,7 +37,7 @@ class BooksController < ApplicationController
            
     @current_user.books.push(@book)
                 
-    redirect_to :controller => :users, :action => :index, :id => @current_user.id
+    redirect_to users_path, :flash => {:notice => "Book added!"}
 
     
   end
