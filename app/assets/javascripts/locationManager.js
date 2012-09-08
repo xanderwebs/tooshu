@@ -9,8 +9,6 @@
 	this.modal.addClass("modal hide fade in");
 	this.modal.css("display", "none");
 	this.modal.appendTo("body");	
-
-	console.log("this is working!");
 }
 
 LocationManager.prototype.getModal = function(userId, locationId){
