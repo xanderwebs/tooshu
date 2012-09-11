@@ -2,10 +2,7 @@
 	<div class="navbar-inner">
 		<div class="container">
 			<!-- components here -->
-			<a id="brand" href="/users" class="brand">tooshu</a>
-
-
-
+			<a id="brand" href="/users" class="brand">freestacks</a>
 
 			<!-- right side optiopns -->
 
@@ -22,6 +19,7 @@
 							<i id="searchTypeIcon" class="icon-search"></i>									
 						</a>
 						<ul class="dropdown-menu" id="searchTypeSelectorList">
+							<!-- this needs to be streamlined -->
 							<li>
 								<a href="#">
 									<i class="icon-search"></i>
@@ -86,7 +84,6 @@
 <script type="text/javascript">
 	var s = new SearchBar("searchTypeIcon", "searchTypeInput", "searchFieldInput", "searchTypeSelectorList", "resultsDiv", "searchForm");	
 </script>
-
 <script type="text/javascript">
 	var f = new FeedbackCollector('feedback_button', '<%= request.fullpath %>');	
 </script>
