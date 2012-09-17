@@ -1,13 +1,13 @@
 K 25
 svn:wc:ra_dav:version-url
 V 35
-/svn/tooshu/!svn/ver/80/app/helpers
+/svn/tooshu/!svn/ver/96/app/helpers
 END
 users_helper.rb
 K 25
 svn:wc:ra_dav:version-url
-V 50
-/svn/tooshu/!svn/ver/1/app/helpers/users_helper.rb
+V 51
+/svn/tooshu/!svn/ver/96/app/helpers/users_helper.rb
 END
 application_helper.rb
 K 25

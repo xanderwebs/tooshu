@@ -1,55 +1,55 @@
 K 25
 svn:wc:ra_dav:version-url
 V 39
-/svn/tooshu/!svn/ver/83/app/views/users
+/svn/tooshu/!svn/ver/96/app/views/users
 END
 _user_profile_box.html.erb
 K 25
 svn:wc:ra_dav:version-url
 V 66
-/svn/tooshu/!svn/ver/83/app/views/users/_user_profile_box.html.erb
+/svn/tooshu/!svn/ver/96/app/views/users/_user_profile_box.html.erb
 END
 edit.html.erb
 K 25
 svn:wc:ra_dav:version-url
 V 53
-/svn/tooshu/!svn/ver/76/app/views/users/edit.html.erb
+/svn/tooshu/!svn/ver/96/app/views/users/edit.html.erb
 END
 index.html.erb
 K 25
 svn:wc:ra_dav:version-url
 V 54
-/svn/tooshu/!svn/ver/49/app/views/users/index.html.erb
+/svn/tooshu/!svn/ver/96/app/views/users/index.html.erb
 END
 new.html.erb
 K 25
 svn:wc:ra_dav:version-url
 V 52
-/svn/tooshu/!svn/ver/80/app/views/users/new.html.erb
+/svn/tooshu/!svn/ver/96/app/views/users/new.html.erb
 END
 _hero.html.erb
 K 25
 svn:wc:ra_dav:version-url
 V 54
-/svn/tooshu/!svn/ver/80/app/views/users/_hero.html.erb
+/svn/tooshu/!svn/ver/96/app/views/users/_hero.html.erb
 END
 _show_users_books.html.erb
 K 25
 svn:wc:ra_dav:version-url
 V 66
-/svn/tooshu/!svn/ver/83/app/views/users/_show_users_books.html.erb
+/svn/tooshu/!svn/ver/96/app/views/users/_show_users_books.html.erb
 END
 _user_profile.html.erb
 K 25
 svn:wc:ra_dav:version-url
 V 62
-/svn/tooshu/!svn/ver/69/app/views/users/_user_profile.html.erb
+/svn/tooshu/!svn/ver/96/app/views/users/_user_profile.html.erb
 END
 books.html.erb
 K 25
 svn:wc:ra_dav:version-url
 V 54
-/svn/tooshu/!svn/ver/83/app/views/users/books.html.erb
+/svn/tooshu/!svn/ver/96/app/views/users/books.html.erb
 END
 _book_display.html.erb
 K 25
@@ -74,12 +74,6 @@ K 25
 svn:wc:ra_dav:version-url
 V 55
 /svn/tooshu/!svn/ver/82/app/views/users/update.html.erb
-END
-_flash_messages.html.erb
-K 25
-svn:wc:ra_dav:version-url
-V 64
-/svn/tooshu/!svn/ver/82/app/views/users/_flash_messages.html.erb
 END
 create.html.erb
 K 25

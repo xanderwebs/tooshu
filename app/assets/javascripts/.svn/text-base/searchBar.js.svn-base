@@ -92,8 +92,8 @@ SearchBar.prototype.search = function(){
 
  	xhr.onreadystatechange = function (){
  		obj.resultsDiv.style.position = "absolute";
- 		obj.resultsDiv.style.top = ($('#' + s.searchFieldInput.id).offset().top + obj.searchFieldInput.offsetHeight) + "px";
- 		obj.resultsDiv.style.left = $('#' + s.searchFieldInput.id).offset().left + "px"; 		
+ 		obj.resultsDiv.style.top = ($('#' + obj.searchFieldInput.id).offset().top + obj.searchFieldInput.offsetHeight) + "px";
+ 		obj.resultsDiv.style.left = $('#' + obj.searchFieldInput.id).offset().left + "px"; 		
  		if(obj.searchTypeInput.value == "user")
  			obj.resultsDiv.style.width = obj.searchFieldInput.offsetWidth + "px"; 		
  		else

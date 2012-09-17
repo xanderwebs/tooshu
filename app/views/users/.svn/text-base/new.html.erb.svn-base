@@ -1,15 +1,6 @@
 <div class="row-fluid">
 	<div class="span12">
-		<% if !flash[:notice].nil?%>
-			<div class="alert alert-success">
-				<%= flash[:notice] %>
-			</div>	
-		<%end%>
-		<% if !flash[:error].nil?%>
-			<div class="alert alert-error">
-				<%= flash[:error] %>
-			</div>	
-		<%end%>
+		<%= render :partial => "layouts/flash_messages" %>
 	</div>
 </div>
 

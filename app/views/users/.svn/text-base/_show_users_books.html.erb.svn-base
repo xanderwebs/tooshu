@@ -1,3 +1,5 @@
+
+
 <% if @current_user.id.to_i.eql?(@user.id.to_i) %>
 	<div class="pull-right btn-adjust">		    	
 	    <%= link_to "Edit Library", {:controller => "users", :action => "books"}, :class => "btn btn-primary" %>

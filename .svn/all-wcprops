@@ -5,13 +5,13 @@ V 21
 K 25
 svn:wc:ra_dav:version-url
 V 23
-/svn/tooshu/!svn/ver/95
+/svn/tooshu/!svn/ver/97
 END
 Gemfile.lock
 K 25
 svn:wc:ra_dav:version-url
 V 36
-/svn/tooshu/!svn/ver/95/Gemfile.lock
+/svn/tooshu/!svn/ver/96/Gemfile.lock
 END
 Rakefile
 K 25
@@ -29,7 +29,7 @@ Gemfile
 K 25
 svn:wc:ra_dav:version-url
 V 31
-/svn/tooshu/!svn/ver/95/Gemfile
+/svn/tooshu/!svn/ver/96/Gemfile
 END
 config.ru
 K 25

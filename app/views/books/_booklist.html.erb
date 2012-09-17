@@ -1,29 +1,29 @@
 <% books.each do |b| %>
-	<div class="bookobj clearfix">
-		<a href="/books<%= (!searching) ? '/' + b.id.to_s : '?id=' + b.asin.to_s %>" class="link">
-			<%= image_tag b.thumbnail_link, :class => "thumb span1" %>
-			<div class="book-info span9 offset1">
-				<h4><%= b.title %></h4>
-				<em><%= b.author %></em>
-<!--
-				<p>Status: Available</p>
--->
-				<% if searching %><p>ISBN: <%= b.isbn %></p> <% end %>
-			</div>
-		</a>
+	<% if b.title && b.author && b.isbn && b.asin && b.thumbnail_link %>
+		<div class="bookobj clearfix">
+			<a href="/books<%= (!searching) ? '/' + b.id.to_s : '?id=' + b.asin.to_s %>" class="link">
+				<%= image_tag b.thumbnail_link, :class => "thumb span1" %>
+				<div class="book-info span9 offset1">
+					<h4><%= b.title %></h4>
+					<em><%= b.author %></em>
+					<% # <p>Status: Available</p> %>
+					<% if searching %><p>ISBN: <%= b.isbn %></p> <% end %>
+				</div>
+			</a>
 
-		<div class="span2 offset10">
-			<% if searching %>
-				<a class="btn btn-primary add_book_button" href="#" id="<%= b.asin %>">Add Book</a>
-			<% elsif !@user.id.eql?(@current_user.id) %> 
-				<!-- REQUESTS [commented out]
-				a href="#request_maker_modal" class="btn btn-success" data-toggle="modal" onclick="r.getModal(<%=@current_user.id%>,<%=@user.id%>,<%=b.id%>)">Request</a -->
-			<% else %>
-				<a class="btn btn-danger" data-toggle="modal" href="#remove_book_modal" onclick="br.getModal(<%= b.id %>)">Remove Book</a>
-			<% end %>
+			<div class="span2 offset10">
+				<% if searching %>
+					<a class="btn btn-primary add_book_button" href="#" id="<%= b.asin %>">Add Book</a>
+				<% elsif !@user.id.eql?(@current_user.id) %> 
+					<% # requests were here, but are no longer an option %>
+				<% else %>
+					<a class="btn btn-danger" data-toggle="modal" href="#remove_book_modal" onclick="br.getModal(<%= b.id %>)">Remove Book</a>
+				<% end %>
+			</div>
 		</div>
-	</div>
+	<% end %>
 <% end %>
+
 <% if !searching %>
 <script type="text/javascript">
 	var br = new BookRemover(<%= @current_user.id %>);

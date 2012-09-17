@@ -1,13 +1,19 @@
 K 25
 svn:wc:ra_dav:version-url
 V 46
-/svn/tooshu/!svn/ver/86/app/assets/stylesheets
+/svn/tooshu/!svn/ver/97/app/assets/stylesheets
 END
 users.css.scss
 K 25
 svn:wc:ra_dav:version-url
 V 61
 /svn/tooshu/!svn/ver/83/app/assets/stylesheets/users.css.scss
+END
+bootstrap_and_overrides.css.scss
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/tooshu/!svn/ver/96/app/assets/stylesheets/bootstrap_and_overrides.css.scss
 END
 favoriteships.css.scss
 K 25
@@ -55,5 +61,5 @@ books.css.scss
 K 25
 svn:wc:ra_dav:version-url
 V 61
-/svn/tooshu/!svn/ver/86/app/assets/stylesheets/books.css.scss
+/svn/tooshu/!svn/ver/96/app/assets/stylesheets/books.css.scss
 END
