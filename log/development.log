@@ -80903,3 +80903,254 @@ ActionController::RoutingError (No route matches [GET] "/assets/favicon.ico"):
 
 
   Rendered /Users/xanderwebs/.rvm/gems/ruby-1.9.2-p318/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-09-17 21:47:20 -0700
+Processing by UsersController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Redirected to http://localhost:3000/users
+Completed 302 Found in 87ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2012-09-17 21:47:21 -0700
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Rendered users/_toolbar.html.erb (1.8ms)
+  Rendered layouts/_flash_messages.html.erb (0.6ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "locations" WHERE "locations"."user_id" = 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users" INNER JOIN "favorites" ON "users"."id" = "favorites"."favorite_user_id" WHERE "favorites"."user_id" = 1
+  Rendered users/_user_profile_box.html.erb (86.7ms)
+  [1m[36mBook Load (0.3ms)[0m  [1mSELECT "books".* FROM "books" INNER JOIN "books_users" ON "books"."id" = "books_users"."book_id" WHERE "books_users"."user_id" = 1 ORDER BY title ASC[0m
+  Rendered users/_show_users_books.html.erb (24.3ms)
+  Rendered users/_user_profile.html.erb (125.9ms)
+  Rendered users/index.html.erb within layouts/application (136.7ms)
+Compiled application_feedback.css  (33ms)  (pid 83963)
+Compiled books.css  (12ms)  (pid 83963)
+Compiled bootstrap_and_overrides.css  (704ms)  (pid 83963)
+Compiled favoriteships.css  (0ms)  (pid 83963)
+Compiled info.css  (1ms)  (pid 83963)
+Compiled location.css  (0ms)  (pid 83963)
+Compiled login.css  (0ms)  (pid 83963)
+Compiled requests.css  (0ms)  (pid 83963)
+Compiled ui-lightness/jquery-ui-1.8.21.custom.css  (0ms)  (pid 83963)
+Compiled users.css  (29ms)  (pid 83963)
+Compiled application.css  (824ms)  (pid 83963)
+Compiled jquery.js  (2ms)  (pid 83963)
+Compiled jquery_ujs.js  (0ms)  (pid 83963)
+Compiled bootstrap-transition.js  (0ms)  (pid 83963)
+Compiled bootstrap-alert.js  (0ms)  (pid 83963)
+Compiled bootstrap-button.js  (0ms)  (pid 83963)
+Compiled bootstrap-carousel.js  (0ms)  (pid 83963)
+Compiled bootstrap-collapse.js  (0ms)  (pid 83963)
+Compiled bootstrap-dropdown.js  (0ms)  (pid 83963)
+Compiled bootstrap-modal.js  (0ms)  (pid 83963)
+Compiled bootstrap-scrollspy.js  (0ms)  (pid 83963)
+Compiled bootstrap-tab.js  (1ms)  (pid 83963)
+Compiled bootstrap-tooltip.js  (0ms)  (pid 83963)
+Compiled bootstrap-popover.js  (0ms)  (pid 83963)
+Compiled bootstrap-typeahead.js  (0ms)  (pid 83963)
+Compiled bootstrap.js  (69ms)  (pid 83963)
+Compiled application_feedback.js  (110ms)  (pid 83963)
+Compiled bookRemover.js  (0ms)  (pid 83963)
+Compiled bookSearch.js  (0ms)  (pid 83963)
+Compiled books.js  (78ms)  (pid 83963)
+Compiled bookshelfManager.js  (0ms)  (pid 83963)
+Compiled favoriteships.js  (79ms)  (pid 83963)
+Compiled feedbackCollector.js  (0ms)  (pid 83963)
+Compiled info.js  (77ms)  (pid 83963)
+Compiled location.js  (76ms)  (pid 83963)
+Compiled locationManager.js  (0ms)  (pid 83963)
+Compiled login.js  (78ms)  (pid 83963)
+Compiled requestMaker.js  (0ms)  (pid 83963)
+Compiled requestManager.js  (0ms)  (pid 83963)
+Compiled requests.js  (74ms)  (pid 83963)
+Compiled searchBar.js  (0ms)  (pid 83963)
+Compiled users.js  (74ms)  (pid 83963)
+Compiled application.js  (844ms)  (pid 83963)
+  Rendered layouts/_navbar.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 1913ms (Views: 1909.8ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-17 21:47:23 -0700
+Served asset /application.css - 304 Not Modified (75ms)
+
+
+Started GET "/assets/application_feedback.css?body=1" for 127.0.0.1 at 2012-09-17 21:47:23 -0700
+Served asset /application_feedback.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2012-09-17 21:47:23 -0700
+Served asset /books.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-09-17 21:47:23 -0700
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/favoriteships.css?body=1" for 127.0.0.1 at 2012-09-17 21:47:23 -0700
+Served asset /favoriteships.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/info.css?body=1" for 127.0.0.1 at 2012-09-17 21:47:23 -0700
+Served asset /info.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/location.css?body=1" for 127.0.0.1 at 2012-09-17 21:47:23 -0700
+Served asset /location.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2012-09-17 21:47:23 -0700
+Served asset /login.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/requests.css?body=1" for 127.0.0.1 at 2012-09-17 21:47:23 -0700
+Served asset /requests.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/ui-lightness/jquery-ui-1.8.21.custom.css?body=1" for 127.0.0.1 at 2012-09-17 21:47:23 -0700
+Served asset /ui-lightness/jquery-ui-1.8.21.custom.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-09-17 21:47:23 -0700
+Served asset /users.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-17 21:47:23 -0700
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-17 21:47:23 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-09-17 21:47:23 -0700
+Served asset /bootstrap-transition.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-09-17 21:47:23 -0700
+Served asset /bootstrap-alert.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-09-17 21:47:23 -0700
+Served asset /bootstrap-button.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-09-17 21:47:23 -0700
+Served asset /bootstrap-carousel.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-09-17 21:47:23 -0700
+Served asset /bootstrap-collapse.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-09-17 21:47:23 -0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-09-17 21:47:23 -0700
+Served asset /bootstrap-modal.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-09-17 21:47:23 -0700
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-09-17 21:47:23 -0700
+Served asset /bootstrap-tab.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-09-17 21:47:23 -0700
+Served asset /bootstrap-tooltip.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-09-17 21:47:23 -0700
+Served asset /bootstrap-popover.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-09-17 21:47:23 -0700
+Served asset /bootstrap-typeahead.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-09-17 21:47:23 -0700
+Served asset /bootstrap.js - 304 Not Modified (23ms)
+
+
+Started GET "/assets/application_feedback.js?body=1" for 127.0.0.1 at 2012-09-17 21:47:23 -0700
+Served asset /application_feedback.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bookRemover.js?body=1" for 127.0.0.1 at 2012-09-17 21:47:23 -0700
+Served asset /bookRemover.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bookSearch.js?body=1" for 127.0.0.1 at 2012-09-17 21:47:23 -0700
+Served asset /bookSearch.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2012-09-17 21:47:23 -0700
+Served asset /books.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bookshelfManager.js?body=1" for 127.0.0.1 at 2012-09-17 21:47:23 -0700
+Served asset /bookshelfManager.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/favoriteships.js?body=1" for 127.0.0.1 at 2012-09-17 21:47:23 -0700
+Served asset /favoriteships.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/feedbackCollector.js?body=1" for 127.0.0.1 at 2012-09-17 21:47:23 -0700
+Served asset /feedbackCollector.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/info.js?body=1" for 127.0.0.1 at 2012-09-17 21:47:23 -0700
+Served asset /info.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/location.js?body=1" for 127.0.0.1 at 2012-09-17 21:47:23 -0700
+Served asset /location.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/locationManager.js?body=1" for 127.0.0.1 at 2012-09-17 21:47:23 -0700
+Served asset /locationManager.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2012-09-17 21:47:23 -0700
+Served asset /login.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/requestMaker.js?body=1" for 127.0.0.1 at 2012-09-17 21:47:23 -0700
+Served asset /requestMaker.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/requestManager.js?body=1" for 127.0.0.1 at 2012-09-17 21:47:23 -0700
+Served asset /requestManager.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/requests.js?body=1" for 127.0.0.1 at 2012-09-17 21:47:23 -0700
+Served asset /requests.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/searchBar.js?body=1" for 127.0.0.1 at 2012-09-17 21:47:23 -0700
+Served asset /searchBar.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-09-17 21:47:23 -0700
+Served asset /users.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-17 21:47:23 -0700
+Served asset /application.js - 304 Not Modified (77ms)
+
+
+Started GET "/assets/glyphicons-halflings.png" for 127.0.0.1 at 2012-09-17 21:47:23 -0700
+Served asset /glyphicons-halflings.png - 304 Not Modified (6ms)
+
+
+Started GET "/assets/user.png" for 127.0.0.1 at 2012-09-17 21:47:23 -0700
+Served asset /user.png - 304 Not Modified (3ms)
+
+
+Started GET "/assets/favicon.ico" for 127.0.0.1 at 2012-09-17 21:47:23 -0700
+Served asset /favicon.ico - 200 OK (6ms)
