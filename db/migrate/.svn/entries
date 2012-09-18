@@ -1,7 +1,7 @@
 10
 
 dir
-97
+100
 https://tooshu.dyndns.org/svn/tooshu/db/migrate
 https://tooshu.dyndns.org/svn/tooshu
 
@@ -26,17 +26,17 @@ acheng
 
 0e97d490-3e82-d94e-860c-ad8566961471
 
-20120809044516_create_favoriteships.rb
+20120619072217_create_checkouts.rb
 file
 
 
 
 
 2012-09-05T04:32:50.000000Z
-72c453dc4c404a069b8b51b8dc22416b
-2012-08-09T06:46:03.638750Z
-48
-acheng
+9572a3f57551ac60e48004cd6a28efab
+2012-07-28T17:39:50.577500Z
+1
+dennisli
 
 
 
@@ -58,7 +58,7 @@ acheng
 
 
 
-239
+283
 
 20120625052126_create_books_users.rb
 file
@@ -94,17 +94,17 @@ dennisli
 
 220
 
-20120619072217_create_checkouts.rb
+20120809044516_create_favoriteships.rb
 file
 
 
 
 
 2012-09-05T04:32:50.000000Z
-9572a3f57551ac60e48004cd6a28efab
-2012-07-28T17:39:50.577500Z
-1
-dennisli
+72c453dc4c404a069b8b51b8dc22416b
+2012-08-09T06:46:03.638750Z
+48
+acheng
 
 
 
@@ -126,7 +126,7 @@ dennisli
 
 
 
-283
+239
 
 20120803203655_fix_html_safe_synopsis.rb
 file
@@ -264,40 +264,6 @@ dennisli
 
 224
 
-20120802044612_add_details_to_books.rb
-file
-
-
-
-
-2012-09-05T04:32:50.000000Z
-0e94c26dabfbcdda49f5cfe56aca71d1
-2012-08-02T10:32:57.687500Z
-19
-acheng
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-720
-
 20120619071722_create_users.rb
 file
 
@@ -331,6 +297,40 @@ dennisli
 
 
 261
+
+20120802044612_add_details_to_books.rb
+file
+
+
+
+
+2012-09-05T04:32:50.000000Z
+0e94c26dabfbcdda49f5cfe56aca71d1
+2012-08-02T10:32:57.687500Z
+19
+acheng
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+720
 
 20120711215900_create_requests.rb
 file

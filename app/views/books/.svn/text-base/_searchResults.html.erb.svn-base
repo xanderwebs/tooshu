@@ -6,4 +6,5 @@
 	<div class="row-fluid">
 		<%= render :partial => "/books/booklist", :locals => {:books => @books, :searching => true} %>		
 	</div>
+	
 <%end%>

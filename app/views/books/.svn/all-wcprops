@@ -6,8 +6,8 @@ END
 _booklist.html.erb
 K 25
 svn:wc:ra_dav:version-url
-V 58
-/svn/tooshu/!svn/ver/96/app/views/books/_booklist.html.erb
+V 59
+/svn/tooshu/!svn/ver/101/app/views/books/_booklist.html.erb
 END
 _book_owners.html.erb
 K 25
@@ -18,8 +18,8 @@ END
 _searchResults.html.erb
 K 25
 svn:wc:ra_dav:version-url
-V 63
-/svn/tooshu/!svn/ver/59/app/views/books/_searchResults.html.erb
+V 64
+/svn/tooshu/!svn/ver/101/app/views/books/_searchResults.html.erb
 END
 index.html.erb
 K 25
@@ -36,8 +36,8 @@ END
 new.html.erb
 K 25
 svn:wc:ra_dav:version-url
-V 52
-/svn/tooshu/!svn/ver/92/app/views/books/new.html.erb
+V 53
+/svn/tooshu/!svn/ver/101/app/views/books/new.html.erb
 END
 show.html.erb
 K 25

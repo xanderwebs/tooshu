@@ -48,17 +48,14 @@ class BooksController < ApplicationController
     isbn = params[:isbn]
     
     if(isbn.nil? || isbn.empty?)      
-      @books = AmazonCatalog.searchBooks(title, author)      
+      @books = AmazonCatalog.searchBooks(title, author, params[:page])
       if @books == nil
         @books = Array.new
       end
     else
-      
       puts "performing book lookup, isbn: " + isbn
-       
       @books = AmazonCatalog.lookupBook(isbn)
     end
-
     
     render :partial => "searchResults"
   end  

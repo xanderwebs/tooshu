@@ -127,3 +127,20 @@ body{
 p.loading-text {
   margin-left: 400px;
 }
+
+.searchPage {
+  text-align:center;
+  #searchResultsPage {
+    margin: 0 auto;
+    display: inline-block;
+    text-decoration: none;
+    li {
+      margin: 5px;
+      display: inline;
+    }
+  }
+}
+
+.added-display {
+  margin-bottom: 1em;
+}

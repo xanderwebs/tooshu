@@ -21,11 +21,12 @@ class AmazonCatalog
 		return req
 	end
 	
-	def self.searchBooks(title, author)
+	def self.searchBooks(title, author, page=1)
 	
 		search_hash = Hash.new         
 		search_hash['Author'] = author      
-		search_hash['Title'] = title          
+		search_hash['Title'] = title 
+		search_hash['ItemPage'] = page         
 		
 		
 		is = ItemSearch.new( 'Books', search_hash )

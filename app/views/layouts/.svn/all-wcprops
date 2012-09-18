@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
-V 41
-/svn/tooshu/!svn/ver/96/app/views/layouts
+V 42
+/svn/tooshu/!svn/ver/100/app/views/layouts
 END
 application.html.erb.bak.erb
 K 25
@@ -24,8 +24,8 @@ END
 application.html.erb
 K 25
 svn:wc:ra_dav:version-url
-V 62
-/svn/tooshu/!svn/ver/96/app/views/layouts/application.html.erb
+V 63
+/svn/tooshu/!svn/ver/100/app/views/layouts/application.html.erb
 END
 _flash_messages.html.erb
 K 25

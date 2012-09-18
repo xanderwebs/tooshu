@@ -1,7 +1,7 @@
 /**
  * @author Dennis Li
  */
-function BookSearch(title, author, asin, isbn, ean, results, button, form){
+function BookSearch(title, author, asin, isbn, ean, results, button, form, pagination){
 	
 	this.title = document.getElementById(title);
 	this.author = document.getElementById(author);
@@ -14,6 +14,8 @@ function BookSearch(title, author, asin, isbn, ean, results, button, form){
 	this.form = document.getElementById(form);
 	this.searchURL = "/books/newBooksSearch";
 	this.queryParameter = "title";
+
+	this.pagination = $('#' + pagination);
 	
 	var obj = this;
 	this.title.onkeyup = function(event){
@@ -22,7 +24,11 @@ function BookSearch(title, author, asin, isbn, ean, results, button, form){
 	this.author.onkeyup = function(event){
 		obj.checkEnter(event);
 	}
+	this.isbn.onkeyup = function(event){
+		obj.checkEnter(event);
+	}
 	this.button.onclick = function(event){
+		obj.pageNum = 1;
 		obj.search(event);
 	}
 }
@@ -38,7 +44,7 @@ BookSearch.prototype.search = function(event){
 	var xhr = new XMLHttpRequest();
  	var obj = this;
  	obj.results.innerHTML = "<div class='span12'><p class='loading-text'>loading... <img src='/assets/loading.gif' /></p></div>"
-
+ 	obj.pagination.empty();
 	xhr.onreadystatechange = function (){
 		if (xhr.readyState==4 && xhr.status==200){
 
@@ -51,7 +57,18 @@ BookSearch.prototype.search = function(event){
 				});
 				
 			});
-
+			obj.pagination.append($('<li/>').html(obj.pageNum));
+			if (obj.pageNum > 1) {
+				obj.pagination.prepend($('<li/>').html('Previous page').click(function(){
+					obj.pageNum--;
+					obj.search();
+				}));
+			}
+			obj.pagination.append($('<li/>').html('Next page').click(function(){
+				obj.pageNum++;
+				obj.search();
+			}));
+			obj.pagination.parent().addClass('added-display');
 		}
 
 	}
@@ -61,6 +78,7 @@ BookSearch.prototype.search = function(event){
 	url += "&isbn=" + encodeURIComponent(this.isbn.value);
 	url += "&ean=" + encodeURIComponent(this.ean.value);
 	url += "&asin=" + encodeURIComponent(this.asin.value);
+	url += "&page=" + encodeURIComponent(this.pageNum);
 		
 		
 		
