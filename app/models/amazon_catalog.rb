@@ -22,34 +22,33 @@ class AmazonCatalog
 	end
 	
 	def self.searchBooks(title, author, page=1)
-	
+		books_array = Array.new
 		search_hash = Hash.new         
 		search_hash['Author'] = author      
 		search_hash['Title'] = title 
-		search_hash['ItemPage'] = page         
 		
+		for page in 1..5 do
+			search_hash['ItemPage'] = page         
 		
-		is = ItemSearch.new( 'Books', search_hash )
-		is.response_group = ResponseGroup.new( 'Medium' )
-		
-		req = self.getRequest
-		
-		begin
-			resp = req.search( is )
-			items = resp.item_search_response.items.item
-		rescue
-			items = nil
-		end
-		
-		
-		books_array = Array.new
+			is = ItemSearch.new( 'Books', search_hash )
+			is.response_group = ResponseGroup.new( 'Medium' )
 			
-		if(!items.nil?)
+			req = self.getRequest
+			
+			begin
+				resp = req.search( is )
+				items = resp.item_search_response.items.item
+			rescue
+				items = nil
+			end
 		
-			items.each do|i|        
-				book = Book.new
-				book = loadBookInfo(book, i)
-				books_array.push(book)			
+			if(!items.nil?)
+			
+				items.each do|i|        
+					book = Book.new
+					book = loadBookInfo(book, i)
+					books_array.push(book)			
+				end
 			end
 		end     
 		return books_array

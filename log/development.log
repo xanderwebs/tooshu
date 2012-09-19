@@ -93542,3 +93542,1826 @@ Served asset /users.js - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-19 15:25:54 -0700
 Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/users/books" for 127.0.0.1 at 2012-09-19 15:31:03 -0700
+Processing by UsersController#books as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Rendered users/_toolbar.html.erb (0.8ms)
+  Rendered layouts/_flash_messages.html.erb (0.1ms)
+  [1m[36mBook Load (0.4ms)[0m  [1mSELECT "books".* FROM "books" INNER JOIN "books_users" ON "books"."id" = "books_users"."book_id" WHERE "books_users"."user_id" = 1 ORDER BY title ASC[0m
+  Rendered books/_booklist.html.erb (1.0ms)
+  Rendered users/books.html.erb within layouts/application (6.6ms)
+  Rendered layouts/_navbar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 34ms (Views: 31.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-19 15:31:03 -0700
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/application_feedback.css?body=1" for 127.0.0.1 at 2012-09-19 15:31:03 -0700
+Served asset /application_feedback.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2012-09-19 15:31:03 -0700
+Served asset /books.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-09-19 15:31:03 -0700
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/favoriteships.css?body=1" for 127.0.0.1 at 2012-09-19 15:31:03 -0700
+Served asset /favoriteships.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/info.css?body=1" for 127.0.0.1 at 2012-09-19 15:31:03 -0700
+Served asset /info.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/location.css?body=1" for 127.0.0.1 at 2012-09-19 15:31:03 -0700
+Served asset /location.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2012-09-19 15:31:03 -0700
+Served asset /login.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.css?body=1" for 127.0.0.1 at 2012-09-19 15:31:03 -0700
+Served asset /requests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ui-lightness/jquery-ui-1.8.21.custom.css?body=1" for 127.0.0.1 at 2012-09-19 15:31:03 -0700
+Served asset /ui-lightness/jquery-ui-1.8.21.custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-09-19 15:31:03 -0700
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-19 15:31:03 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-19 15:31:03 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-09-19 15:31:03 -0700
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-09-19 15:31:03 -0700
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-09-19 15:31:03 -0700
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-09-19 15:31:03 -0700
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-09-19 15:31:03 -0700
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-09-19 15:31:03 -0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-09-19 15:31:03 -0700
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-09-19 15:31:03 -0700
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-09-19 15:31:03 -0700
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-09-19 15:31:03 -0700
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-09-19 15:31:03 -0700
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-09-19 15:31:03 -0700
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-09-19 15:31:03 -0700
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application_feedback.js?body=1" for 127.0.0.1 at 2012-09-19 15:31:03 -0700
+Served asset /application_feedback.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bookRemover.js?body=1" for 127.0.0.1 at 2012-09-19 15:31:03 -0700
+Served asset /bookRemover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bookSearch.js?body=1" for 127.0.0.1 at 2012-09-19 15:31:03 -0700
+Served asset /bookSearch.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2012-09-19 15:31:03 -0700
+Served asset /books.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bookshelfManager.js?body=1" for 127.0.0.1 at 2012-09-19 15:31:03 -0700
+Served asset /bookshelfManager.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/favoriteships.js?body=1" for 127.0.0.1 at 2012-09-19 15:31:03 -0700
+Served asset /favoriteships.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/feedbackCollector.js?body=1" for 127.0.0.1 at 2012-09-19 15:31:03 -0700
+Served asset /feedbackCollector.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/info.js?body=1" for 127.0.0.1 at 2012-09-19 15:31:03 -0700
+Served asset /info.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/location.js?body=1" for 127.0.0.1 at 2012-09-19 15:31:03 -0700
+Served asset /location.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/locationManager.js?body=1" for 127.0.0.1 at 2012-09-19 15:31:03 -0700
+Served asset /locationManager.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2012-09-19 15:31:03 -0700
+Served asset /login.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requestMaker.js?body=1" for 127.0.0.1 at 2012-09-19 15:31:03 -0700
+Served asset /requestMaker.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requestManager.js?body=1" for 127.0.0.1 at 2012-09-19 15:31:03 -0700
+Served asset /requestManager.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.js?body=1" for 127.0.0.1 at 2012-09-19 15:31:03 -0700
+Served asset /requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/searchBar.js?body=1" for 127.0.0.1 at 2012-09-19 15:31:03 -0700
+Served asset /searchBar.js - 304 Not Modified (50ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-09-19 15:31:03 -0700
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-19 15:31:03 -0700
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/glyphicons-halflings.png" for 127.0.0.1 at 2012-09-19 15:31:03 -0700
+Served asset /glyphicons-halflings.png - 304 Not Modified (1ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2012-09-19 15:36:03 -0700
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  Rendered users/_toolbar.html.erb (0.7ms)
+  Rendered layouts/_flash_messages.html.erb (0.1ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "locations" WHERE "locations"."user_id" = 3[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users" INNER JOIN "favorites" ON "users"."id" = "favorites"."favorite_user_id" WHERE "favorites"."user_id" = 3
+  Rendered users/_user_profile_box.html.erb (9.1ms)
+  [1m[36mBook Load (0.3ms)[0m  [1mSELECT "books".* FROM "books" INNER JOIN "books_users" ON "books"."id" = "books_users"."book_id" WHERE "books_users"."user_id" = 3 ORDER BY title ASC[0m
+  Rendered users/_show_users_books.html.erb (16.4ms)
+  Rendered users/_user_profile.html.erb (34.6ms)
+  Rendered users/index.html.erb within layouts/application (35.3ms)
+Compiled bookSearch.js  (0ms)  (pid 96315)
+Compiled application.js  (16ms)  (pid 96315)
+  Rendered layouts/_navbar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 221ms (Views: 208.3ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-19 15:36:03 -0700
+Served asset /application.css - 304 Not Modified (17ms)
+
+
+Started GET "/assets/application_feedback.css?body=1" for 127.0.0.1 at 2012-09-19 15:36:03 -0700
+Served asset /application_feedback.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2012-09-19 15:36:03 -0700
+Served asset /books.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-09-19 15:36:03 -0700
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/favoriteships.css?body=1" for 127.0.0.1 at 2012-09-19 15:36:03 -0700
+Served asset /favoriteships.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/info.css?body=1" for 127.0.0.1 at 2012-09-19 15:36:03 -0700
+Served asset /info.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/location.css?body=1" for 127.0.0.1 at 2012-09-19 15:36:03 -0700
+Served asset /location.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2012-09-19 15:36:03 -0700
+Served asset /login.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.css?body=1" for 127.0.0.1 at 2012-09-19 15:36:03 -0700
+Served asset /requests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ui-lightness/jquery-ui-1.8.21.custom.css?body=1" for 127.0.0.1 at 2012-09-19 15:36:03 -0700
+Served asset /ui-lightness/jquery-ui-1.8.21.custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-09-19 15:36:03 -0700
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-19 15:36:03 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-19 15:36:03 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-09-19 15:36:03 -0700
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-09-19 15:36:03 -0700
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-09-19 15:36:03 -0700
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-09-19 15:36:03 -0700
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-09-19 15:36:03 -0700
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-09-19 15:36:03 -0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-09-19 15:36:03 -0700
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-09-19 15:36:03 -0700
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-09-19 15:36:03 -0700
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-09-19 15:36:03 -0700
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-09-19 15:36:03 -0700
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-09-19 15:36:03 -0700
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-09-19 15:36:03 -0700
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application_feedback.js?body=1" for 127.0.0.1 at 2012-09-19 15:36:03 -0700
+Served asset /application_feedback.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bookRemover.js?body=1" for 127.0.0.1 at 2012-09-19 15:36:03 -0700
+Served asset /bookRemover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bookSearch.js?body=1" for 127.0.0.1 at 2012-09-19 15:36:03 -0700
+Served asset /bookSearch.js - 200 OK (5ms)
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2012-09-19 15:36:03 -0700
+Served asset /books.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bookshelfManager.js?body=1" for 127.0.0.1 at 2012-09-19 15:36:03 -0700
+Served asset /bookshelfManager.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/favoriteships.js?body=1" for 127.0.0.1 at 2012-09-19 15:36:03 -0700
+Served asset /favoriteships.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/feedbackCollector.js?body=1" for 127.0.0.1 at 2012-09-19 15:36:03 -0700
+Served asset /feedbackCollector.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/info.js?body=1" for 127.0.0.1 at 2012-09-19 15:36:03 -0700
+Served asset /info.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/location.js?body=1" for 127.0.0.1 at 2012-09-19 15:36:03 -0700
+Served asset /location.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/locationManager.js?body=1" for 127.0.0.1 at 2012-09-19 15:36:04 -0700
+Served asset /locationManager.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2012-09-19 15:36:04 -0700
+Served asset /login.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requestMaker.js?body=1" for 127.0.0.1 at 2012-09-19 15:36:04 -0700
+Served asset /requestMaker.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requestManager.js?body=1" for 127.0.0.1 at 2012-09-19 15:36:04 -0700
+Served asset /requestManager.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.js?body=1" for 127.0.0.1 at 2012-09-19 15:36:04 -0700
+Served asset /requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/searchBar.js?body=1" for 127.0.0.1 at 2012-09-19 15:36:04 -0700
+Served asset /searchBar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-09-19 15:36:04 -0700
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-19 15:36:04 -0700
+Served asset /application.js - 304 Not Modified (53ms)
+
+
+Started GET "/assets/user.png" for 127.0.0.1 at 2012-09-19 15:36:04 -0700
+Served asset /user.png - 304 Not Modified (0ms)
+
+
+Started GET "/books/new" for 127.0.0.1 at 2012-09-19 15:36:09 -0700
+Processing by BooksController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  Rendered books/new.html.erb within layouts/application (2.9ms)
+  Rendered layouts/_navbar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 43ms (Views: 31.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-19 15:36:09 -0700
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application_feedback.css?body=1" for 127.0.0.1 at 2012-09-19 15:36:09 -0700
+Served asset /application_feedback.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2012-09-19 15:36:09 -0700
+Served asset /books.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-09-19 15:36:09 -0700
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/favoriteships.css?body=1" for 127.0.0.1 at 2012-09-19 15:36:09 -0700
+Served asset /favoriteships.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/info.css?body=1" for 127.0.0.1 at 2012-09-19 15:36:09 -0700
+Served asset /info.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/location.css?body=1" for 127.0.0.1 at 2012-09-19 15:36:09 -0700
+Served asset /location.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2012-09-19 15:36:09 -0700
+Served asset /login.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.css?body=1" for 127.0.0.1 at 2012-09-19 15:36:09 -0700
+Served asset /requests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ui-lightness/jquery-ui-1.8.21.custom.css?body=1" for 127.0.0.1 at 2012-09-19 15:36:09 -0700
+Served asset /ui-lightness/jquery-ui-1.8.21.custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-09-19 15:36:09 -0700
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-19 15:36:09 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-19 15:36:09 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-09-19 15:36:09 -0700
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-09-19 15:36:09 -0700
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-09-19 15:36:09 -0700
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-09-19 15:36:09 -0700
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-09-19 15:36:09 -0700
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-09-19 15:36:09 -0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-09-19 15:36:09 -0700
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-09-19 15:36:09 -0700
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-09-19 15:36:09 -0700
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-09-19 15:36:09 -0700
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-09-19 15:36:09 -0700
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-09-19 15:36:09 -0700
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-09-19 15:36:09 -0700
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application_feedback.js?body=1" for 127.0.0.1 at 2012-09-19 15:36:09 -0700
+Served asset /application_feedback.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bookRemover.js?body=1" for 127.0.0.1 at 2012-09-19 15:36:09 -0700
+Served asset /bookRemover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bookSearch.js?body=1" for 127.0.0.1 at 2012-09-19 15:36:09 -0700
+Served asset /bookSearch.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2012-09-19 15:36:09 -0700
+Served asset /books.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bookshelfManager.js?body=1" for 127.0.0.1 at 2012-09-19 15:36:09 -0700
+Served asset /bookshelfManager.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/favoriteships.js?body=1" for 127.0.0.1 at 2012-09-19 15:36:09 -0700
+Served asset /favoriteships.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/feedbackCollector.js?body=1" for 127.0.0.1 at 2012-09-19 15:36:09 -0700
+Served asset /feedbackCollector.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/info.js?body=1" for 127.0.0.1 at 2012-09-19 15:36:09 -0700
+Served asset /info.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/location.js?body=1" for 127.0.0.1 at 2012-09-19 15:36:09 -0700
+Served asset /location.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/locationManager.js?body=1" for 127.0.0.1 at 2012-09-19 15:36:09 -0700
+Served asset /locationManager.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2012-09-19 15:36:09 -0700
+Served asset /login.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requestMaker.js?body=1" for 127.0.0.1 at 2012-09-19 15:36:09 -0700
+Served asset /requestMaker.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requestManager.js?body=1" for 127.0.0.1 at 2012-09-19 15:36:09 -0700
+Served asset /requestManager.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.js?body=1" for 127.0.0.1 at 2012-09-19 15:36:09 -0700
+Served asset /requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/searchBar.js?body=1" for 127.0.0.1 at 2012-09-19 15:36:09 -0700
+Served asset /searchBar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-09-19 15:36:09 -0700
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-19 15:36:09 -0700
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bookSearch.js" for 127.0.0.1 at 2012-09-19 15:36:09 -0700
+Served asset /bookSearch.js - 200 OK (9ms)
+
+
+Started GET "/assets/loading.gif" for 127.0.0.1 at 2012-09-19 15:36:26 -0700
+Served asset /loading.gif - 304 Not Modified (0ms)
+
+
+Started GET "/books/newBooksSearch?title=twiliight&author=&isbn=&ean=&asin=" for 127.0.0.1 at 2012-09-19 15:36:26 -0700
+Processing by BooksController#newBooksSearch as */*
+  Parameters: {"title"=>"twiliight", "author"=>"", "isbn"=>"", "ean"=>"", "asin"=>""}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  Rendered books/_searchResults.html.erb (0.1ms)
+Completed 200 OK in 3642ms (Views: 4.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/loading.gif" for 127.0.0.1 at 2012-09-19 15:36:31 -0700
+Served asset /loading.gif - 304 Not Modified (0ms)
+
+
+Started GET "/books/newBooksSearch?title=twilight&author=&isbn=&ean=&asin=" for 127.0.0.1 at 2012-09-19 15:36:31 -0700
+Processing by BooksController#newBooksSearch as */*
+  Parameters: {"title"=>"twilight", "author"=>"", "isbn"=>"", "ean"=>"", "asin"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  Rendered books/_booklist.html.erb (10.5ms)
+  Rendered books/_searchResults.html.erb (13.6ms)
+Completed 200 OK in 5703ms (Views: 17.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/loading.gif" for 127.0.0.1 at 2012-09-19 15:38:11 -0700
+Served asset /loading.gif - 304 Not Modified (0ms)
+
+
+Started GET "/books/newBooksSearch?title=twilight&author=&isbn=&ean=&asin=" for 127.0.0.1 at 2012-09-19 15:38:11 -0700
+Processing by BooksController#newBooksSearch as */*
+  Parameters: {"title"=>"twilight", "author"=>"", "isbn"=>"", "ean"=>"", "asin"=>""}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  Rendered books/_booklist.html.erb (13.7ms)
+  Rendered books/_searchResults.html.erb (16.0ms)
+Completed 200 OK in 6837ms (Views: 19.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/books/new" for 127.0.0.1 at 2012-09-19 15:38:36 -0700
+Processing by BooksController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" 
+  Rendered books/new.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_navbar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 114ms (Views: 73.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-19 15:38:36 -0700
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/application_feedback.css?body=1" for 127.0.0.1 at 2012-09-19 15:38:36 -0700
+Served asset /application_feedback.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2012-09-19 15:38:36 -0700
+Served asset /books.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-09-19 15:38:36 -0700
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/favoriteships.css?body=1" for 127.0.0.1 at 2012-09-19 15:38:36 -0700
+Served asset /favoriteships.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/info.css?body=1" for 127.0.0.1 at 2012-09-19 15:38:36 -0700
+Served asset /info.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/location.css?body=1" for 127.0.0.1 at 2012-09-19 15:38:36 -0700
+Served asset /location.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2012-09-19 15:38:36 -0700
+Served asset /login.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.css?body=1" for 127.0.0.1 at 2012-09-19 15:38:36 -0700
+Served asset /requests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ui-lightness/jquery-ui-1.8.21.custom.css?body=1" for 127.0.0.1 at 2012-09-19 15:38:36 -0700
+Served asset /ui-lightness/jquery-ui-1.8.21.custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-09-19 15:38:36 -0700
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-19 15:38:36 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-19 15:38:36 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-09-19 15:38:36 -0700
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-09-19 15:38:36 -0700
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-09-19 15:38:36 -0700
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-09-19 15:38:36 -0700
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-09-19 15:38:36 -0700
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-09-19 15:38:36 -0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-09-19 15:38:36 -0700
+Served asset /bootstrap-modal.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-09-19 15:38:36 -0700
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-09-19 15:38:36 -0700
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-09-19 15:38:36 -0700
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-09-19 15:38:36 -0700
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-09-19 15:38:36 -0700
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-09-19 15:38:36 -0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application_feedback.js?body=1" for 127.0.0.1 at 2012-09-19 15:38:36 -0700
+Served asset /application_feedback.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bookRemover.js?body=1" for 127.0.0.1 at 2012-09-19 15:38:36 -0700
+Served asset /bookRemover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bookSearch.js?body=1" for 127.0.0.1 at 2012-09-19 15:38:36 -0700
+Served asset /bookSearch.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2012-09-19 15:38:36 -0700
+Served asset /books.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bookshelfManager.js?body=1" for 127.0.0.1 at 2012-09-19 15:38:36 -0700
+Served asset /bookshelfManager.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/favoriteships.js?body=1" for 127.0.0.1 at 2012-09-19 15:38:36 -0700
+Served asset /favoriteships.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/feedbackCollector.js?body=1" for 127.0.0.1 at 2012-09-19 15:38:36 -0700
+Served asset /feedbackCollector.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/info.js?body=1" for 127.0.0.1 at 2012-09-19 15:38:36 -0700
+Served asset /info.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/location.js?body=1" for 127.0.0.1 at 2012-09-19 15:38:36 -0700
+Served asset /location.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/locationManager.js?body=1" for 127.0.0.1 at 2012-09-19 15:38:36 -0700
+Served asset /locationManager.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2012-09-19 15:38:36 -0700
+Served asset /login.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requestMaker.js?body=1" for 127.0.0.1 at 2012-09-19 15:38:36 -0700
+Served asset /requestMaker.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requestManager.js?body=1" for 127.0.0.1 at 2012-09-19 15:38:36 -0700
+Served asset /requestManager.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.js?body=1" for 127.0.0.1 at 2012-09-19 15:38:36 -0700
+Served asset /requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/searchBar.js?body=1" for 127.0.0.1 at 2012-09-19 15:38:36 -0700
+Served asset /searchBar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-09-19 15:38:36 -0700
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-19 15:38:36 -0700
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bookSearch.js" for 127.0.0.1 at 2012-09-19 15:38:36 -0700
+Served asset /bookSearch.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/glyphicons-halflings.png" for 127.0.0.1 at 2012-09-19 15:38:37 -0700
+Served asset /glyphicons-halflings.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/loading.gif" for 127.0.0.1 at 2012-09-19 15:38:40 -0700
+Served asset /loading.gif - 304 Not Modified (0ms)
+
+
+Started GET "/books/newBooksSearch?title=twilight&author=&isbn=&ean=&asin=" for 127.0.0.1 at 2012-09-19 15:38:40 -0700
+Processing by BooksController#newBooksSearch as */*
+  Parameters: {"title"=>"twilight", "author"=>"", "isbn"=>"", "ean"=>"", "asin"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  Rendered books/_booklist.html.erb (7.5ms)
+  Rendered books/_searchResults.html.erb (9.6ms)
+Completed 200 OK in 2511ms (Views: 12.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/loading.gif" for 127.0.0.1 at 2012-09-19 15:38:53 -0700
+Served asset /loading.gif - 304 Not Modified (0ms)
+
+
+Started GET "/books/newBooksSearch?title=Parliamentary%20Versus%20Presidential%20Government%20&author=&isbn=&ean=&asin=" for 127.0.0.1 at 2012-09-19 15:38:53 -0700
+Processing by BooksController#newBooksSearch as */*
+  Parameters: {"title"=>"Parliamentary Versus Presidential Government ", "author"=>"", "isbn"=>"", "ean"=>"", "asin"=>""}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  Rendered books/_booklist.html.erb (0.6ms)
+  Rendered books/_searchResults.html.erb (3.0ms)
+Completed 200 OK in 1802ms (Views: 5.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/books?id=0198780443" for 127.0.0.1 at 2012-09-19 15:38:57 -0700
+Processing by BooksController#index as HTML
+  Parameters: {"id"=>"0198780443"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mBook Load (0.2ms)[0m  SELECT "books".* FROM "books" WHERE "books"."asin" = '0198780443' LIMIT 1
+  Rendered books/_book_info.html.erb (0.1ms)
+  Rendered books/_book_owners.html.erb (0.0ms)
+  Rendered books/index.html.erb within layouts/application (4.8ms)
+  Rendered layouts/_navbar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 276ms (Views: 26.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-19 15:38:57 -0700
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/application_feedback.css?body=1" for 127.0.0.1 at 2012-09-19 15:38:57 -0700
+Served asset /application_feedback.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2012-09-19 15:38:57 -0700
+Served asset /books.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-09-19 15:38:57 -0700
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/favoriteships.css?body=1" for 127.0.0.1 at 2012-09-19 15:38:57 -0700
+Served asset /favoriteships.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/info.css?body=1" for 127.0.0.1 at 2012-09-19 15:38:57 -0700
+Served asset /info.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/location.css?body=1" for 127.0.0.1 at 2012-09-19 15:38:57 -0700
+Served asset /location.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2012-09-19 15:38:57 -0700
+Served asset /login.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.css?body=1" for 127.0.0.1 at 2012-09-19 15:38:58 -0700
+Served asset /requests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ui-lightness/jquery-ui-1.8.21.custom.css?body=1" for 127.0.0.1 at 2012-09-19 15:38:58 -0700
+Served asset /ui-lightness/jquery-ui-1.8.21.custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-09-19 15:38:58 -0700
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-19 15:38:58 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-19 15:38:58 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-09-19 15:38:58 -0700
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-09-19 15:38:58 -0700
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-09-19 15:38:58 -0700
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-09-19 15:38:58 -0700
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-09-19 15:38:58 -0700
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-09-19 15:38:58 -0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-09-19 15:38:58 -0700
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-09-19 15:38:58 -0700
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-09-19 15:38:58 -0700
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-09-19 15:38:58 -0700
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-09-19 15:38:58 -0700
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-09-19 15:38:58 -0700
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-09-19 15:38:58 -0700
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application_feedback.js?body=1" for 127.0.0.1 at 2012-09-19 15:38:58 -0700
+Served asset /application_feedback.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bookRemover.js?body=1" for 127.0.0.1 at 2012-09-19 15:38:58 -0700
+Served asset /bookRemover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bookSearch.js?body=1" for 127.0.0.1 at 2012-09-19 15:38:58 -0700
+Served asset /bookSearch.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2012-09-19 15:38:58 -0700
+Served asset /books.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bookshelfManager.js?body=1" for 127.0.0.1 at 2012-09-19 15:38:58 -0700
+Served asset /bookshelfManager.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/favoriteships.js?body=1" for 127.0.0.1 at 2012-09-19 15:38:58 -0700
+Served asset /favoriteships.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/feedbackCollector.js?body=1" for 127.0.0.1 at 2012-09-19 15:38:58 -0700
+Served asset /feedbackCollector.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/info.js?body=1" for 127.0.0.1 at 2012-09-19 15:38:58 -0700
+Served asset /info.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/location.js?body=1" for 127.0.0.1 at 2012-09-19 15:38:58 -0700
+Served asset /location.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/locationManager.js?body=1" for 127.0.0.1 at 2012-09-19 15:38:58 -0700
+Served asset /locationManager.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2012-09-19 15:38:58 -0700
+Served asset /login.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requestMaker.js?body=1" for 127.0.0.1 at 2012-09-19 15:38:58 -0700
+Served asset /requestMaker.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requestManager.js?body=1" for 127.0.0.1 at 2012-09-19 15:38:58 -0700
+Served asset /requestManager.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.js?body=1" for 127.0.0.1 at 2012-09-19 15:38:58 -0700
+Served asset /requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/searchBar.js?body=1" for 127.0.0.1 at 2012-09-19 15:38:58 -0700
+Served asset /searchBar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-09-19 15:38:58 -0700
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-19 15:38:58 -0700
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/glyphicons-halflings.png" for 127.0.0.1 at 2012-09-19 15:38:58 -0700
+Served asset /glyphicons-halflings.png - 304 Not Modified (0ms)
+
+
+Started POST "/books?asin=0198780443" for 127.0.0.1 at 2012-09-19 15:39:01 -0700
+Processing by BooksController#create as HTML
+  Parameters: {"authenticity_token"=>"oJYLVc9J91ZDkRVpQfb9tM2VDnxAp9iZ6x8WEdwnETY=", "asin"=>"0198780443"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mBook Load (0.2ms)[0m  SELECT "books".* FROM "books" WHERE "books"."asin" = '0198780443' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "books".* FROM "books" WHERE "books"."asin" = '0198780443' LIMIT 1
+  [1m[36mSQL (2.2ms)[0m  [1mINSERT INTO "books" ("asin", "author", "cover_url", "created_at", "ean", "isbn", "link_to_amzn", "synopsis", "thumbnail_link", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["asin", "0198780443"], ["author", nil], ["cover_url", "http://ecx.images-amazon.com/images/I/51nP1C5IHLL.jpg"], ["created_at", Wed, 19 Sep 2012 22:39:02 UTC +00:00], ["ean", "9780198780441"], ["isbn", "0198780443"], ["link_to_amzn", "http://www.amazon.com/Parliamentary-Presidential-Government-Readings-Politics/dp/0198780443%3FSubscriptionId%3D1K9YKADGHF7XP77XNGG2%26tag%3Dtooshu-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D0198780443"], ["synopsis", "Parliamentary and presidential governments--exemplified by most European countries for the former and the United States and Latin America for the latter--are the two principal forms of democracy in the modern world. Their respective advantages and disadvantages have been long debated, at first mainly by British and American political observers but with increasing frequency in other parts of the world, especially in Latin America, but also in Western and Eastern Europe and Asia. The recent world-wide wave of democratization has intensified both the debate and its significance. This volume brings together the most important statement on the subject by advocates and analysts--from Montesquieu and Madison to Lipset and Linz. It also treats the merits of less frequently used democratic types, such as French-style semi-presidentialism, that may be regarded as intermediate forms between parliamentarism and presidentialism."], ["thumbnail_link", "http://ecx.images-amazon.com/images/I/51nP1C5IHLL._SL160_.jpg"], ["title", "Parliamentary Versus Presidential Government (Oxford Readings in Politics and Government)"], ["updated_at", Wed, 19 Sep 2012 22:39:02 UTC +00:00]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "books_users" ("user_id", "book_id") VALUES (3, 8)
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users
+Completed 302 Found in 866ms (ActiveRecord: 5.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2012-09-19 15:39:02 -0700
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  Rendered users/_toolbar.html.erb (0.8ms)
+  Rendered layouts/_flash_messages.html.erb (0.1ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "locations" WHERE "locations"."user_id" = 3[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users" INNER JOIN "favorites" ON "users"."id" = "favorites"."favorite_user_id" WHERE "favorites"."user_id" = 3
+  Rendered users/_user_profile_box.html.erb (8.9ms)
+  [1m[36mBook Load (0.3ms)[0m  [1mSELECT "books".* FROM "books" INNER JOIN "books_users" ON "books"."id" = "books_users"."book_id" WHERE "books_users"."user_id" = 3 ORDER BY title ASC[0m
+  Rendered users/_show_users_books.html.erb (2.1ms)
+  Rendered users/_user_profile.html.erb (22.2ms)
+  Rendered users/index.html.erb within layouts/application (22.8ms)
+  Rendered layouts/_navbar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 50ms (Views: 47.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-19 15:39:02 -0700
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/application_feedback.css?body=1" for 127.0.0.1 at 2012-09-19 15:39:02 -0700
+Served asset /application_feedback.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2012-09-19 15:39:02 -0700
+Served asset /books.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-09-19 15:39:02 -0700
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/favoriteships.css?body=1" for 127.0.0.1 at 2012-09-19 15:39:02 -0700
+Served asset /favoriteships.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/info.css?body=1" for 127.0.0.1 at 2012-09-19 15:39:02 -0700
+Served asset /info.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/location.css?body=1" for 127.0.0.1 at 2012-09-19 15:39:02 -0700
+Served asset /location.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2012-09-19 15:39:02 -0700
+Served asset /login.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.css?body=1" for 127.0.0.1 at 2012-09-19 15:39:02 -0700
+Served asset /requests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ui-lightness/jquery-ui-1.8.21.custom.css?body=1" for 127.0.0.1 at 2012-09-19 15:39:02 -0700
+Served asset /ui-lightness/jquery-ui-1.8.21.custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-09-19 15:39:02 -0700
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:02 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:02 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:02 -0700
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:02 -0700
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:02 -0700
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:02 -0700
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:02 -0700
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:02 -0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:02 -0700
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:02 -0700
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:02 -0700
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:02 -0700
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:02 -0700
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:02 -0700
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:02 -0700
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application_feedback.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:02 -0700
+Served asset /application_feedback.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bookRemover.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:02 -0700
+Served asset /bookRemover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bookSearch.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:02 -0700
+Served asset /bookSearch.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:02 -0700
+Served asset /books.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bookshelfManager.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:02 -0700
+Served asset /bookshelfManager.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/favoriteships.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:02 -0700
+Served asset /favoriteships.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/feedbackCollector.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:02 -0700
+Served asset /feedbackCollector.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/info.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:02 -0700
+Served asset /info.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/location.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:02 -0700
+Served asset /location.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/locationManager.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:02 -0700
+Served asset /locationManager.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:02 -0700
+Served asset /login.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requestMaker.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:02 -0700
+Served asset /requestMaker.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requestManager.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:02 -0700
+Served asset /requestManager.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:02 -0700
+Served asset /requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/searchBar.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:02 -0700
+Served asset /searchBar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:02 -0700
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:02 -0700
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/glyphicons-halflings.png" for 127.0.0.1 at 2012-09-19 15:39:02 -0700
+Served asset /glyphicons-halflings.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user.png" for 127.0.0.1 at 2012-09-19 15:39:02 -0700
+Served asset /user.png - 304 Not Modified (0ms)
+
+
+Started GET "/users/books" for 127.0.0.1 at 2012-09-19 15:39:08 -0700
+Processing by UsersController#books as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  Rendered users/_toolbar.html.erb (0.9ms)
+  Rendered layouts/_flash_messages.html.erb (0.1ms)
+  [1m[36mBook Load (0.4ms)[0m  [1mSELECT "books".* FROM "books" INNER JOIN "books_users" ON "books"."id" = "books_users"."book_id" WHERE "books_users"."user_id" = 3 ORDER BY title ASC[0m
+  Rendered books/_booklist.html.erb (0.4ms)
+  Rendered users/books.html.erb within layouts/application (5.5ms)
+  Rendered layouts/_navbar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 29ms (Views: 26.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-19 15:39:08 -0700
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application_feedback.css?body=1" for 127.0.0.1 at 2012-09-19 15:39:08 -0700
+Served asset /application_feedback.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2012-09-19 15:39:08 -0700
+Served asset /books.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-09-19 15:39:08 -0700
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/favoriteships.css?body=1" for 127.0.0.1 at 2012-09-19 15:39:08 -0700
+Served asset /favoriteships.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/info.css?body=1" for 127.0.0.1 at 2012-09-19 15:39:08 -0700
+Served asset /info.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/location.css?body=1" for 127.0.0.1 at 2012-09-19 15:39:08 -0700
+Served asset /location.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2012-09-19 15:39:08 -0700
+Served asset /login.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.css?body=1" for 127.0.0.1 at 2012-09-19 15:39:08 -0700
+Served asset /requests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ui-lightness/jquery-ui-1.8.21.custom.css?body=1" for 127.0.0.1 at 2012-09-19 15:39:08 -0700
+Served asset /ui-lightness/jquery-ui-1.8.21.custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-09-19 15:39:08 -0700
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:08 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:08 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:08 -0700
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:08 -0700
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:08 -0700
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:08 -0700
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:08 -0700
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:08 -0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:08 -0700
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:08 -0700
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:08 -0700
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:08 -0700
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:08 -0700
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:08 -0700
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:08 -0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application_feedback.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:08 -0700
+Served asset /application_feedback.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bookRemover.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:08 -0700
+Served asset /bookRemover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bookSearch.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:08 -0700
+Served asset /bookSearch.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:08 -0700
+Served asset /books.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bookshelfManager.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:08 -0700
+Served asset /bookshelfManager.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/favoriteships.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:08 -0700
+Served asset /favoriteships.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/feedbackCollector.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:08 -0700
+Served asset /feedbackCollector.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/info.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:08 -0700
+Served asset /info.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/location.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:08 -0700
+Served asset /location.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/locationManager.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:08 -0700
+Served asset /locationManager.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:08 -0700
+Served asset /login.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requestMaker.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:08 -0700
+Served asset /requestMaker.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requestManager.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:08 -0700
+Served asset /requestManager.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:08 -0700
+Served asset /requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/searchBar.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:08 -0700
+Served asset /searchBar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:08 -0700
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:08 -0700
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/glyphicons-halflings.png" for 127.0.0.1 at 2012-09-19 15:39:08 -0700
+Served asset /glyphicons-halflings.png - 304 Not Modified (0ms)
+
+
+Started GET "/books/new" for 127.0.0.1 at 2012-09-19 15:39:10 -0700
+Processing by BooksController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" [0m
+  Rendered books/new.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_navbar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 29ms (Views: 26.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-19 15:39:10 -0700
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/application_feedback.css?body=1" for 127.0.0.1 at 2012-09-19 15:39:10 -0700
+Served asset /application_feedback.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2012-09-19 15:39:10 -0700
+Served asset /books.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-09-19 15:39:10 -0700
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/favoriteships.css?body=1" for 127.0.0.1 at 2012-09-19 15:39:10 -0700
+Served asset /favoriteships.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/info.css?body=1" for 127.0.0.1 at 2012-09-19 15:39:10 -0700
+Served asset /info.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/location.css?body=1" for 127.0.0.1 at 2012-09-19 15:39:10 -0700
+Served asset /location.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2012-09-19 15:39:10 -0700
+Served asset /login.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.css?body=1" for 127.0.0.1 at 2012-09-19 15:39:10 -0700
+Served asset /requests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ui-lightness/jquery-ui-1.8.21.custom.css?body=1" for 127.0.0.1 at 2012-09-19 15:39:10 -0700
+Served asset /ui-lightness/jquery-ui-1.8.21.custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-09-19 15:39:10 -0700
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:10 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:10 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:10 -0700
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:10 -0700
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:10 -0700
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:10 -0700
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:10 -0700
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:10 -0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:10 -0700
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:10 -0700
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:10 -0700
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:10 -0700
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:10 -0700
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:10 -0700
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:10 -0700
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application_feedback.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:10 -0700
+Served asset /application_feedback.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bookRemover.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:10 -0700
+Served asset /bookRemover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bookSearch.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:10 -0700
+Served asset /bookSearch.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:10 -0700
+Served asset /books.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bookshelfManager.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:10 -0700
+Served asset /bookshelfManager.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/favoriteships.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:10 -0700
+Served asset /favoriteships.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/feedbackCollector.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:10 -0700
+Served asset /feedbackCollector.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/info.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:10 -0700
+Served asset /info.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/location.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:10 -0700
+Served asset /location.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/locationManager.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:10 -0700
+Served asset /locationManager.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:10 -0700
+Served asset /login.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requestMaker.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:10 -0700
+Served asset /requestMaker.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requestManager.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:10 -0700
+Served asset /requestManager.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:10 -0700
+Served asset /requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/searchBar.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:10 -0700
+Served asset /searchBar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:10 -0700
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:10 -0700
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bookSearch.js" for 127.0.0.1 at 2012-09-19 15:39:10 -0700
+Served asset /bookSearch.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/loading.gif" for 127.0.0.1 at 2012-09-19 15:39:27 -0700
+Served asset /loading.gif - 304 Not Modified (0ms)
+
+
+Started GET "/books/newBooksSearch?title=new%20directions%20in%20education%20policy%20implementation%3A%20confronting%20complexity&author=&isbn=&ean=&asin=" for 127.0.0.1 at 2012-09-19 15:39:27 -0700
+Processing by BooksController#newBooksSearch as */*
+  Parameters: {"title"=>"new directions in education policy implementation: confronting complexity", "author"=>"", "isbn"=>"", "ean"=>"", "asin"=>""}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  Rendered books/_booklist.html.erb (0.4ms)
+  Rendered books/_searchResults.html.erb (2.9ms)
+Completed 200 OK in 2697ms (Views: 7.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/books" for 127.0.0.1 at 2012-09-19 15:39:32 -0700
+Processing by BooksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oJYLVc9J91ZDkRVpQfb9tM2VDnxAp9iZ6x8WEdwnETY=", "book"=>{"title"=>"new directions in education policy implementation: confronting complexity", "author"=>"", "isbn"=>"", "asin"=>"0791468208", "ean"=>""}}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mBook Load (0.3ms)[0m  SELECT "books".* FROM "books" WHERE "books"."asin" = '0791468208' LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "books".* FROM "books" WHERE "books"."asin" = '0791468208' LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "books" ("asin", "author", "cover_url", "created_at", "ean", "isbn", "link_to_amzn", "synopsis", "thumbnail_link", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["asin", "0791468208"], ["author", nil], ["cover_url", "http://ecx.images-amazon.com/images/I/41xW5xde93L.jpg"], ["created_at", Wed, 19 Sep 2012 22:39:32 UTC +00:00], ["ean", "9780791468203"], ["isbn", "0791468208"], ["link_to_amzn", "http://www.amazon.com/New-Directions-Education-Policy-Implementation/dp/0791468208%3FSubscriptionId%3D1K9YKADGHF7XP77XNGG2%26tag%3Dtooshu-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D0791468208"], ["synopsis", "<i>Provides the most up-to-date and comprehensive review of contemporary research in education policy implementation.</i>"], ["thumbnail_link", "http://ecx.images-amazon.com/images/I/41xW5xde93L._SL160_.jpg"], ["title", "New Directions in Education Policy Implementation: Confronting Complexity"], ["updated_at", Wed, 19 Sep 2012 22:39:32 UTC +00:00]]
+  [1m[35m (2.3ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "books_users" ("user_id", "book_id") VALUES (3, 9)
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users
+Completed 302 Found in 508ms (ActiveRecord: 4.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2012-09-19 15:39:32 -0700
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  Rendered users/_toolbar.html.erb (0.7ms)
+  Rendered layouts/_flash_messages.html.erb (0.1ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "locations" WHERE "locations"."user_id" = 3[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users" INNER JOIN "favorites" ON "users"."id" = "favorites"."favorite_user_id" WHERE "favorites"."user_id" = 3
+  Rendered users/_user_profile_box.html.erb (1.7ms)
+  [1m[36mBook Load (0.3ms)[0m  [1mSELECT "books".* FROM "books" INNER JOIN "books_users" ON "books"."id" = "books_users"."book_id" WHERE "books_users"."user_id" = 3 ORDER BY title ASC[0m
+  Rendered users/_show_users_books.html.erb (1.8ms)
+  Rendered users/_user_profile.html.erb (7.6ms)
+  Rendered users/index.html.erb within layouts/application (8.2ms)
+  Rendered layouts/_navbar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 69ms (Views: 66.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-19 15:39:33 -0700
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/application_feedback.css?body=1" for 127.0.0.1 at 2012-09-19 15:39:33 -0700
+Served asset /application_feedback.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2012-09-19 15:39:33 -0700
+Served asset /books.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-09-19 15:39:33 -0700
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/favoriteships.css?body=1" for 127.0.0.1 at 2012-09-19 15:39:33 -0700
+Served asset /favoriteships.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/info.css?body=1" for 127.0.0.1 at 2012-09-19 15:39:33 -0700
+Served asset /info.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/location.css?body=1" for 127.0.0.1 at 2012-09-19 15:39:33 -0700
+Served asset /location.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2012-09-19 15:39:33 -0700
+Served asset /login.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.css?body=1" for 127.0.0.1 at 2012-09-19 15:39:33 -0700
+Served asset /requests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ui-lightness/jquery-ui-1.8.21.custom.css?body=1" for 127.0.0.1 at 2012-09-19 15:39:33 -0700
+Served asset /ui-lightness/jquery-ui-1.8.21.custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-09-19 15:39:33 -0700
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:33 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:33 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:33 -0700
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:33 -0700
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:33 -0700
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:33 -0700
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:33 -0700
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:33 -0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:33 -0700
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:33 -0700
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:33 -0700
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:33 -0700
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:33 -0700
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:33 -0700
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:33 -0700
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application_feedback.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:33 -0700
+Served asset /application_feedback.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bookRemover.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:33 -0700
+Served asset /bookRemover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bookSearch.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:33 -0700
+Served asset /bookSearch.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:33 -0700
+Served asset /books.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bookshelfManager.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:33 -0700
+Served asset /bookshelfManager.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/favoriteships.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:33 -0700
+Served asset /favoriteships.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/feedbackCollector.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:33 -0700
+Served asset /feedbackCollector.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/info.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:33 -0700
+Served asset /info.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/location.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:33 -0700
+Served asset /location.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/locationManager.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:33 -0700
+Served asset /locationManager.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:33 -0700
+Served asset /login.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requestMaker.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:33 -0700
+Served asset /requestMaker.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requestManager.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:33 -0700
+Served asset /requestManager.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:33 -0700
+Served asset /requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/searchBar.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:33 -0700
+Served asset /searchBar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:33 -0700
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-19 15:39:33 -0700
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/user.png" for 127.0.0.1 at 2012-09-19 15:39:33 -0700
+Served asset /user.png - 304 Not Modified (0ms)

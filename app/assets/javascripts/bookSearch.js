@@ -28,7 +28,7 @@ function BookSearch(title, author, asin, isbn, ean, results, button, form, pagin
 		obj.checkEnter(event);
 	}
 	this.button.onclick = function(event){
-		obj.pageNum = 1;
+		// obj.pageNum = 1;
 		obj.search(event);
 	}
 }
@@ -57,6 +57,7 @@ BookSearch.prototype.search = function(event){
 				});
 				
 			});
+			/*
 			obj.pagination.append($('<li/>').html(obj.pageNum));
 			if (obj.pageNum > 1) {
 				obj.pagination.prepend($('<li/>').html('Previous page').click(function(){
@@ -69,6 +70,7 @@ BookSearch.prototype.search = function(event){
 				obj.search();
 			}));
 			obj.pagination.parent().addClass('added-display');
+			*/
 		}
 
 	}
@@ -78,7 +80,7 @@ BookSearch.prototype.search = function(event){
 	url += "&isbn=" + encodeURIComponent(this.isbn.value);
 	url += "&ean=" + encodeURIComponent(this.ean.value);
 	url += "&asin=" + encodeURIComponent(this.asin.value);
-	url += "&page=" + encodeURIComponent(this.pageNum);
+	// url += "&page=" + encodeURIComponent(this.pageNum);
 		
 		
 		
