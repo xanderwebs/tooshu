@@ -46,50 +46,11 @@
 
 					    		<% if !@location.nil? && !@location.id.nil? %>
 					    			<%= form_for :location, :url=>"/locations/" + @location.id.to_s, :method=>"put", :html => {:class => "form-horizontal"} do |f| %> 
-										<% {:address1=>"Address 1", :address2 => "Address 2", :city => "City", :state => "State", :zipcode =>"Zip Code"}.each do |k,v| %>
-											<div class="control-group">
-												<label class="control-label"><%= v %></label>										
-												<div class="controls">
-													<% if k.eql?(:state) %>		
-														<%= f.select k, [['CA', 'CA']] %>
-													<% else %>
-														<%= f.text_field k, :class=>"input-xlarge" %>
-													<% end %>
-
-												</div>
-
-											</div>
-										<% end %>
-										<%= f.hidden_field :id %>
-										
-
-										<div class="control-group">
-											<div class="controls">
-												<%= f.submit :class=>"btn btn-primary" %>
-											</div>
-										</div>
+										<%= render :partial => "locations/location_form", :locals => {:f => f} %>
 									<% end %>
 					    		<% else %>
 					    			<%= form_for :location, :url=>"/locations", :method=>"post", :html => {:class => "form-horizontal"} do |f| %> 
-										<% {:address1=>"Address 1", :address2 => "Address 2", :city => "City", :state => "State", :zipcode =>"Zip Code"}.each do |k,v| %>
-											<div class="control-group">
-												<label class="control-label"><%= v %></label>
-												<div class="controls">
-													<% if k.eql?(:state) %>		
-														<%= f.select k, [['CA', 'CA']] %>
-													<% else %>
-														<%= f.text_field k, :class=>"input-xlarge" %>
-													<% end %>
-
-												</div>
-
-											</div>
-										<% end %>
-										<div class="control-group">
-											<div class="controls">
-												<%= f.submit :class=>"btn btn-primary" %>
-											</div>
-										</div>
+										<%= render :partial => "locations/location_form", :locals => {:f => f} %>
 									<% end %>
 
 					    		<% end %>

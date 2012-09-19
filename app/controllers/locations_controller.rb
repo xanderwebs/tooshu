@@ -17,7 +17,7 @@ class LocationsController < ApplicationController
 
 			puts "Location Failed to Save"
 			@location.errors.each do |e|
-				puts e
+				puts "error: " + e.to_s
 			end
 			flash[:error] = "There was a problem saving your location..."			
 
@@ -33,7 +33,6 @@ class LocationsController < ApplicationController
 	end
 
 	def update
-		
 		if !params[:location][:id].empty?
 			@location = Location.find(params[:location][:id])
 			if(@location.update_attributes(params[:location]))
