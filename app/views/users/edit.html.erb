@@ -46,11 +46,11 @@
 
 					    		<% if !@location.nil? && !@location.id.nil? %>
 					    			<%= form_for :location, :url=>"/locations/" + @location.id.to_s, :method=>"put", :html => {:class => "form-horizontal"} do |f| %> 
-										<%= render :partial => "locations/location_form", :locals => {:f => f} %>
+										<%= render :partial => "locations/location_form", :locals => {:f => f, :location_id => @location.id} %>
 									<% end %>
 					    		<% else %>
 					    			<%= form_for :location, :url=>"/locations", :method=>"post", :html => {:class => "form-horizontal"} do |f| %> 
-										<%= render :partial => "locations/location_form", :locals => {:f => f} %>
+										<%= render :partial => "locations/location_form", :locals => {:f => f, :location_id => nil} %>
 									<% end %>
 
 					    		<% end %>

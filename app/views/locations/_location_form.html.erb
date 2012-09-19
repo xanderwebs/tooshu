@@ -14,6 +14,10 @@
 <% end %>
 <%= hidden_field :location, :user_id, :value => @current_user.id %>
 <%= hidden_field :location, :is_default, :value => true %>
+<% if location_id %>
+	<%= hidden_field :location, :id, :value => location_id.to_i %>
+<% end %>
+	
 
 
 <div class="control-group">

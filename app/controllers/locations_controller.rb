@@ -33,7 +33,8 @@ class LocationsController < ApplicationController
 	end
 
 	def update
-		if !params[:location][:id].empty?
+
+		if params[:location][:id]
 			@location = Location.find(params[:location][:id])
 			if(@location.update_attributes(params[:location]))
 				flash[:notice] = "Your location has been saved!"
@@ -44,7 +45,7 @@ class LocationsController < ApplicationController
 			end
 
 		else 
-			flash[:error] = "There was a problem with your request..."			
+			flash[:error] = "There was a problem with your request..."	
 			redirect_to user_path(@current_user)
 		end
 

@@ -1,5 +1,5 @@
 <% books.each do |b| %>
-	<% if b.title && b.author && b.isbn && b.asin && b.thumbnail_link %>
+	<% if b.title && b.isbn && b.asin && b.thumbnail_link %>
 		<div class="bookobj clearfix">
 			<a href="/books<%= (!searching) ? '/' + b.id.to_s : '?id=' + b.asin.to_s %>" class="link">
 				<%= image_tag b.thumbnail_link, :class => "thumb span1" %>
