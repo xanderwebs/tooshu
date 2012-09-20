@@ -95365,3 +95365,215 @@ Served asset /application.js - 304 Not Modified (1ms)
 
 Started GET "/assets/user.png" for 127.0.0.1 at 2012-09-19 15:39:33 -0700
 Served asset /user.png - 304 Not Modified (0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2012-09-19 15:57:37 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-09-19 15:57:37 -0700
+Processing by UsersController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Redirected to http://localhost:3000/users
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2012-09-19 15:57:37 -0700
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Rendered users/_toolbar.html.erb (0.7ms)
+  Rendered layouts/_flash_messages.html.erb (0.1ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "locations" WHERE "locations"."user_id" = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "users" INNER JOIN "favorites" ON "users"."id" = "favorites"."favorite_user_id" WHERE "favorites"."user_id" = 1
+  Rendered users/_user_profile_box.html.erb (2.9ms)
+  [1m[36mBook Load (0.5ms)[0m  [1mSELECT "books".* FROM "books" INNER JOIN "books_users" ON "books"."id" = "books_users"."book_id" WHERE "books_users"."user_id" = 1 ORDER BY title ASC[0m
+  Rendered users/_show_users_books.html.erb (3.9ms)
+  Rendered users/_user_profile.html.erb (12.6ms)
+  Rendered users/index.html.erb within layouts/application (13.2ms)
+  Rendered layouts/_navbar.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 43ms (Views: 40.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-19 15:57:37 -0700
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/application_feedback.css?body=1" for 127.0.0.1 at 2012-09-19 15:57:37 -0700
+Served asset /application_feedback.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2012-09-19 15:57:37 -0700
+Served asset /books.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2012-09-19 15:57:37 -0700
+Served asset /bootstrap_and_overrides.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/favoriteships.css?body=1" for 127.0.0.1 at 2012-09-19 15:57:37 -0700
+Served asset /favoriteships.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/info.css?body=1" for 127.0.0.1 at 2012-09-19 15:57:37 -0700
+Served asset /info.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/location.css?body=1" for 127.0.0.1 at 2012-09-19 15:57:37 -0700
+Served asset /location.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.css?body=1" for 127.0.0.1 at 2012-09-19 15:57:37 -0700
+Served asset /login.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.css?body=1" for 127.0.0.1 at 2012-09-19 15:57:37 -0700
+Served asset /requests.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ui-lightness/jquery-ui-1.8.21.custom.css?body=1" for 127.0.0.1 at 2012-09-19 15:57:37 -0700
+Served asset /ui-lightness/jquery-ui-1.8.21.custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2012-09-19 15:57:37 -0700
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-19 15:57:37 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-19 15:57:37 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2012-09-19 15:57:37 -0700
+Served asset /bootstrap-transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2012-09-19 15:57:37 -0700
+Served asset /bootstrap-alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2012-09-19 15:57:37 -0700
+Served asset /bootstrap-button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2012-09-19 15:57:37 -0700
+Served asset /bootstrap-carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2012-09-19 15:57:37 -0700
+Served asset /bootstrap-collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2012-09-19 15:57:37 -0700
+Served asset /bootstrap-dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2012-09-19 15:57:37 -0700
+Served asset /bootstrap-modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2012-09-19 15:57:37 -0700
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2012-09-19 15:57:37 -0700
+Served asset /bootstrap-tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2012-09-19 15:57:37 -0700
+Served asset /bootstrap-tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2012-09-19 15:57:37 -0700
+Served asset /bootstrap-popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2012-09-19 15:57:37 -0700
+Served asset /bootstrap-typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-09-19 15:57:37 -0700
+Served asset /bootstrap.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application_feedback.js?body=1" for 127.0.0.1 at 2012-09-19 15:57:37 -0700
+Served asset /application_feedback.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bookRemover.js?body=1" for 127.0.0.1 at 2012-09-19 15:57:37 -0700
+Served asset /bookRemover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bookSearch.js?body=1" for 127.0.0.1 at 2012-09-19 15:57:37 -0700
+Served asset /bookSearch.js - 200 OK (0ms)
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2012-09-19 15:57:37 -0700
+Served asset /books.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bookshelfManager.js?body=1" for 127.0.0.1 at 2012-09-19 15:57:37 -0700
+Served asset /bookshelfManager.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/favoriteships.js?body=1" for 127.0.0.1 at 2012-09-19 15:57:37 -0700
+Served asset /favoriteships.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/location.js?body=1" for 127.0.0.1 at 2012-09-19 15:57:37 -0700
+Served asset /location.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/feedbackCollector.js?body=1" for 127.0.0.1 at 2012-09-19 15:57:37 -0700
+Served asset /feedbackCollector.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/info.js?body=1" for 127.0.0.1 at 2012-09-19 15:57:37 -0700
+Served asset /info.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/locationManager.js?body=1" for 127.0.0.1 at 2012-09-19 15:57:37 -0700
+Served asset /locationManager.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/login.js?body=1" for 127.0.0.1 at 2012-09-19 15:57:37 -0700
+Served asset /login.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requestMaker.js?body=1" for 127.0.0.1 at 2012-09-19 15:57:37 -0700
+Served asset /requestMaker.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requestManager.js?body=1" for 127.0.0.1 at 2012-09-19 15:57:37 -0700
+Served asset /requestManager.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/requests.js?body=1" for 127.0.0.1 at 2012-09-19 15:57:37 -0700
+Served asset /requests.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/searchBar.js?body=1" for 127.0.0.1 at 2012-09-19 15:57:37 -0700
+Served asset /searchBar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-09-19 15:57:37 -0700
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-19 15:57:37 -0700
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/glyphicons-halflings.png" for 127.0.0.1 at 2012-09-19 15:57:37 -0700
+Served asset /glyphicons-halflings.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/user.png" for 127.0.0.1 at 2012-09-19 15:57:37 -0700
+Served asset /user.png - 304 Not Modified (0ms)
