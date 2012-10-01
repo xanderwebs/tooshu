@@ -1,0 +1,15 @@
+development:  
+  access_key_id: AKIAJFHS5RR73IUVMQCA
+  secret_access_key: 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
+  bucket: dev-freestacks-profile-pictures
+
+test:
+  access_key_id: AKIAJFHS5RR73IUVMQCA
+  secret_access_key: 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
+  bucket: dev-freestacks-profile-pictures
+
+production:
+  access_key_id: AKIAJFHS5RR73IUVMQCA
+  secret_access_key: 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
+  bucket: prod-freestacks-profile-pictures
+

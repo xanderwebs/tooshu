@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120814191338) do
+ActiveRecord::Schema.define(:version => 20120928044647) do
 
   create_table "amazon_catalogs", :force => true do |t|
     t.datetime "created_at", :null => false
@@ -112,8 +112,12 @@ ActiveRecord::Schema.define(:version => 20120814191338) do
     t.string   "email"
     t.string   "password_digest"
     t.integer  "salt"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
+    t.datetime "created_at",                   :null => false
+    t.datetime "updated_at",                   :null => false
+    t.string   "profile_picture_file_name"
+    t.string   "profile_picture_content_type"
+    t.integer  "profile_picture_file_size"
+    t.datetime "profile_picture_updated_at"
   end
 
 end

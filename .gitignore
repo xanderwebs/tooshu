@@ -3,3 +3,4 @@ db/test.sqlite3
 log/
 *.DS_store
 tmp/cache/
+tmp/pids/

@@ -19,7 +19,7 @@
 					    </ul>
 					    <div class="tab-content">
 					    	<div class="tab-pane active" id="basic">
-					    		<%= form_for :user, :url=>"/users/" + @current_user.id.to_s, :method=>"put",  :html => {:class => "form-horizontal"} do |f| %> 
+					    		<%= form_for :user, :url=>"/users/" + @current_user.id.to_s, :method=>"put",  :html => {:class => "form-horizontal", :multipart => true} do |f| %> 
 									<% {:first_name=>"First Name", :last_name=>"Last Name", :email=>"Email"}.each do |k,v| %>
 										<div class="control-group">
 											<label class="control-label"><%= v %></label>
@@ -33,6 +33,16 @@
 											</div>
 
 										</div>
+									<% end %>
+									<div class="control-group">
+										<label class="control-label">Profile Picture</label>
+										<div class="controls">
+											<%= f.file_field :profile_picture %>
+										</div>
+
+									</div>
+									<% if @current_user.profile_picture.exists? %>
+										<%= image_tag @current_user.profile_picture(:large) %>
 									<% end %>
 									<%= f.hidden_field :id %>
 									<div class="control-group">

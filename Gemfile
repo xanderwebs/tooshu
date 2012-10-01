@@ -24,3 +24,6 @@ end
 
 gem 'jquery-rails'
 gem 'ruby-aaws'
+gem 'paperclip'
+gem 'aws-sdk'
+gem 'aws-s3'

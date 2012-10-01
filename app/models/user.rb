@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   # attr_accessible :title, :body
-  attr_accessible :first_name, :last_name, :email, :password, :password_confirmation
+  attr_accessible :first_name, :last_name, :email, :password, :password_confirmation, :profile_picture, :profile_picture_file_name, :profile_picture_content_type, :profile_picture_file_size, :profile_picture_updated_at
   attr_accessor :updating_password
   has_and_belongs_to_many :books, :order => "title ASC"
   has_many :received_requests, :foreign_key=>"owner_user_id", :class_name=>"Request"
@@ -8,7 +8,16 @@ class User < ActiveRecord::Base
   has_many :locations
   has_many :favorites
   has_many :favorite_users, :through => :favorites
-
+  has_attached_file :profile_picture,
+    :styles => {
+      :thumb  => "100x100",
+      :medium => "200x200",
+      :large => "600x400"
+    },
+    :storage => :s3,
+    :s3_credentials => "#{Rails.root}/config/s3.yml",
+    :path => ":attachment/:id/:style.:extension",
+    :bucket => 'freestacks-profile-pictures'
 
 
   #validates :first_name, :last_name, :email, :password, :password_confirmation, :presence => :true
