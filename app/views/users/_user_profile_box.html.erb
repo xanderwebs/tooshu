@@ -1,6 +1,6 @@
 <div class="container-fluid text-container profile-box">
-	<% if @current_user.profile_picture.exists? %>
-		<%= image_tag @current_user.profile_picture(:large), :class=>"profile-img" %>
+	<% if @user.profile_picture.exists? %>
+		<%= image_tag @user.profile_picture(:large), :class=>"profile-img" %>
 	<% else %>
 
 		<%= image_tag "user.png", :class=>"profile-img" %>
