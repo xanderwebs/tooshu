@@ -1,7 +1,8 @@
 class Book < ActiveRecord::Base
 # attr_accessible :title, :body
 	has_many :checkouts
-	has_and_belongs_to_many :users
+	has_many :libraries
+	has_many :users, :through => :libraries
 
 	validates :title, :asin, :presence => :true  
 	validate :book_must_be_unique
