@@ -105,6 +105,7 @@ GEM
     rake (0.9.2.2)
     rdoc (3.12)
       json (~> 1.4)
+    rmagick (2.13.1)
     ruby-aaws (0.7.0)
     sass (3.1.19)
     sass-rails (3.2.5)
@@ -146,6 +147,7 @@ DEPENDENCIES
   paperclip
   pg
   rails (= 3.2.1)
+  rmagick
   ruby-aaws
   sass-rails (~> 3.2.3)
   sqlite3
