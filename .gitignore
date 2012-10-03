@@ -4,3 +4,4 @@ log/
 *.DS_store
 tmp/cache/
 tmp/pids/
+log/development.log
