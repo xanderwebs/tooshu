@@ -1,1 +1,86 @@
-<%= render :partial => "user_profile" %>
+
+<% if @current_user.defaultLocation.empty? %>
+	<div class="alert alert-warning">
+		<p>In order to facilitate exchanges, you must set a location so people know where they can borrow books from you.  Click <a href="#location_modal" data-toggle="modal" onclick="l.getModal(<%= @current_user.id %>);">here</a> to get started.</p>
+	</div>
+	<script type="text/javascript">
+		var l = new LocationManager();
+	</script>
+<% end %>
+
+<!-- errors/alerts -->
+<%= render :partial => "layouts/flash_messages" %>
+
+<!-- toolbar -->
+<%= render :partial => "toolbar" %>
+
+
+
+
+<div class="container-fluid" id="profile-container">
+	<div class="row">
+		<!-- left side -->
+		<div class="span3" id="profile-details">
+			<%= render "user_profile_box"%>
+		</div>
+		
+		<!-- right main -->
+		<div class="span8" id="profile-details">
+			
+			<!-- REQUESTS TAKEN OUT FOR NOW
+			 div class="container-fluid text-container">
+				<h3 class="heading">Notifications Bookshelf</h3>
+				<!-- %= render :partial => "/bookshelf/bookshelf" %-->
+			<!-- /div -->
+		
+			<!-- user books -->
+			<div class="container-fluid text-container">
+				
+
+				
+				<div class="pull-right btn-adjust">		    	
+				    <%= link_to "Edit Library", {:controller => "users", :action => "books"}, :class => "btn btn-primary" %>
+				</div>	
+				<h3 class="heading">My Library</h3>
+			
+
+				<% if @current_user.books.empty? %>
+					<div class="empty-warning">
+						<p>
+							You don't seem to have any books in your library, click
+							<%= link_to "here", :controller => "books", :action => "new" %>
+							to add some books!
+						</p>
+					</div>
+				<% else %>					
+					<table class="table table-bordered">
+						<tr>
+							<th>Book</th>			
+							<th>Status</th>
+							<!-- REQUESTS REMOVED FOR NOW 
+							<th>Current Status</th>	
+							-->
+						</tr>
+						<% @user.libraries.each do |l| %>
+							<tr>
+								<td>
+									<%= link_to l.book.title, :controller => "books", :action => "show", :id => l.book.id %><br />
+									<em><%= l.book.author %></em>
+								</td>				
+								<td>
+									<%= l.status %>
+								</td>
+								<!-- REQUESTS REMOVED FOR NOW 
+								<td>
+									Available 
+									<% if !@user.id.eql?(@current_user.id) %> <a href="#request_maker_modal" class="btn btn-success" data-toggle="modal" onclick="r.getModal(<%=@current_user.id%>,<%=@user.id%>,<%=b.id%>)">Request</a><%end%> 
+								</td>
+								-->
+							</tr>
+						<% end %>
+					</table>
+				<% end %>
+			</div>
+		</div>
+	</div>
+</div>

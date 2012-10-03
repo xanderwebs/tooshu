@@ -1,9 +1,21 @@
-<%= render :partial => "user_profile" %>
-<!-- REQUESTS REMOVED
-script type="text/javascript">
-	var r = new RequestMaker();
-</script -->
+<!-- errors/alerts -->
+<%= render :partial => "layouts/flash_messages" %>
 
+<div class="container-fluid" id="profile-container">
+	<div class="row">
+		<!-- left side -->
+		<div class="span3" id="profile-details">
+			<%= render "user_profile_box"%>
+		</div>
+		
+		<!-- right main -->
+		<div class="span8" id="profile-details">
+			<div class="container-fluid text-container">
+				<%= render :partial => "show_users_books" %>
+			</div>
+		</div>
+	</div>
+</div>
 
 
 

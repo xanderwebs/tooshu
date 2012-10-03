@@ -1,0 +1,25 @@
+<%= form_for(:request, :url => :requests, :method =>:post, :html=>{:class=>"form-horizontal", :id=>"request_form"}) do |f| %>
+	<div class="modal-header">  
+		<a class="close" data-dismiss="modal">×</a>  
+		<h3>Respond to <%= request.requester.first_name%>'s request for <%= request.book.title %>...</h3>  
+	</div>  
+	<div class="modal-body">  
+		
+		
+		<% if !flash[:error].nil? %>
+			<div class="alert alert-error">
+				<%= flash[:error] %>
+			</div>
+		<% end %>		
+		<p>Do you want to let <%= request.requester.first_name%> borrow <%= request.book.title %>?</p> 				
+		
+		<%= f.hidden_field :request_id, :id=>"request_id", :value => request.id %>
+		
+		
+	</div>  
+	<div class="modal-footer">  
+		<a href="#" id="yes" class="btn btn-success">Yes</a>  
+		<a href="#" id="no" class="btn btn-danger">No</a>  
+	</div>  
+<%end%>
+					

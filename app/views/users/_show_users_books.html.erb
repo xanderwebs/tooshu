@@ -19,19 +19,26 @@
 		</p>
 	</div>
 <% else %>
-
+	<script type="text/javascript">
+		var r = new RequestMaker();
+	</script>
 	<table class="table table-bordered">
 		<tr>
-			<th>Title</th>
-			<th>Author</th>
+			<th>Book</th>			
+			<th>Status</th>
 			<!-- REQUESTS REMOVED FOR NOW 
 			<th>Current Status</th>	
 			-->
 		</tr>
 		<% @user.books.each do |b| %>
 			<tr>
-				<td><%= link_to b.title, :controller => "books", :action => "show", :id => b.id %></td>
-				<td><%= b.author%></td>
+				<td>
+					<%= link_to b.title, :controller => "books", :action => "show", :id => b.id %><br />
+					<em><%= b.author %></em>
+				</td>				
+				<td>
+					<a href="#request_maker_modal" class="btn btn-success" data-toggle="modal" onclick="r.getModal(<%=@current_user.id%>,<%=@user.id%>,<%=b.id%>)">Request</a>
+				</td>
 				<!-- REQUESTS REMOVED FOR NOW 
 				<td>
 					Available 
