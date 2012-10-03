@@ -11,6 +11,7 @@ end
 group :production do
   gem 'pg'
   gem 'thin'
+  gem 'rmagick'
 end
 
 # Gems used only for assets and not required
@@ -25,6 +26,5 @@ end
 gem 'jquery-rails'
 gem 'ruby-aaws'
 gem 'paperclip'
-gem 'rmagick'
 gem 'aws-sdk'
 gem 'aws-s3'

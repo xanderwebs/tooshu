@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120928044647) do
+ActiveRecord::Schema.define(:version => 20121002230408) do
 
   create_table "amazon_catalogs", :force => true do |t|
     t.datetime "created_at", :null => false
@@ -40,11 +40,6 @@ ActiveRecord::Schema.define(:version => 20120928044647) do
     t.string   "link_to_amzn"
   end
 
-  create_table "books_users", :force => true do |t|
-    t.integer "book_id"
-    t.integer "user_id"
-  end
-
   create_table "checkouts", :force => true do |t|
     t.integer  "user_id"
     t.integer  "book_id"
@@ -71,6 +66,11 @@ ActiveRecord::Schema.define(:version => 20120928044647) do
     t.integer  "favorite_user_id"
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
+  end
+
+  create_table "libraries", :force => true do |t|
+    t.integer "book_id"
+    t.integer "user_id"
   end
 
   create_table "locations", :force => true do |t|

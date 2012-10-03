@@ -2,7 +2,8 @@ class User < ActiveRecord::Base
   # attr_accessible :title, :body
   attr_accessible :first_name, :last_name, :email, :password, :password_confirmation, :profile_picture, :profile_picture_file_name, :profile_picture_content_type, :profile_picture_file_size, :profile_picture_updated_at
   attr_accessor :updating_password
-  has_and_belongs_to_many :books, :order => "title ASC"
+  has_many :libraries
+  has_many :books, :through => :libraries, :order => "title ASC"
   has_many :received_requests, :foreign_key=>"owner_user_id", :class_name=>"Request"
   has_many :submitted_requests, :foreign_key=>"requester_user_id", :class_name=>"Request"
   has_many :locations
