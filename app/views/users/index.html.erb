@@ -61,7 +61,7 @@
 							<th>Current Status</th>	
 							-->
 						</tr>
-						<% @user.libraries.each do |l| %>
+						<% @user.library_records.each do |l| %>
 							<tr>
 								<td>
 									<%= link_to l.book.title, :controller => "books", :action => "show", :id => l.book.id %><br />

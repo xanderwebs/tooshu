@@ -38,9 +38,17 @@ class RequestsController < ApplicationController
 			end
 			flash[:error] = "There was a problem with your request..."			
 
+			@book = Book.find(@request.book_id)
+
+			render :partial => "request_modal" , :locals => {
+				:requester_user_id => params[:request][:requester_user_id], 
+				:owner_user_id => params[:request][:owner_user_id] , 
+				:book_id => params[:request][:book_id]
+			}     
 
 
-			render :partial => "request_modal" , :locals => {:requester_user_id => params[:request][:requester_user_id], :owner_user_id => params[:request][:owner_user_id] , :book_id => params[:request][:book_id]}     
+			
+
 		end
 		
 		

@@ -55,6 +55,7 @@ RequestMessenger.prototype.setModalContentAndAction = function(data){
 				$.post("/requests", $("#request_form").serialize(), function(data){
 					obj.setModalContentAndAction(data);
 				});				
+				window.location.reload();
 			}
 		);	
 	}
@@ -83,8 +84,9 @@ RequestMessenger.prototype.setModalContentAndAction = function(data){
 		$('#send').click(
 			function(){
 				$.post("/requests/send", $("#request_form").serialize(), function(data){
-					obj.setModalContentAndAction(data);
-				});				
+					obj.setModalContentAndAction(data);					
+				});
+				window.location.reload();				
 			}
 		);	
 	}
