@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121002230408) do
+ActiveRecord::Schema.define(:version => 20121002232829) do
 
   create_table "amazon_catalogs", :force => true do |t|
     t.datetime "created_at", :null => false
@@ -71,6 +71,7 @@ ActiveRecord::Schema.define(:version => 20121002230408) do
   create_table "libraries", :force => true do |t|
     t.integer "book_id"
     t.integer "user_id"
+    t.string  "status"
   end
 
   create_table "locations", :force => true do |t|
