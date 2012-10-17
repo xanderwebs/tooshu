@@ -9,6 +9,8 @@ Tooshu::Application.routes.draw do
 
   get "books/index"
 
+  get "users/requests"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -82,6 +84,11 @@ Tooshu::Application.routes.draw do
   match 'search/searchBarSearch' => 'search#searchBarSearch'
   
   match 'requests/modal' => 'requests#get_modal'  
+  match 'requests/acceptRejectModal' => 'requests#get_accept_reject_modal'
+  match 'requests/accept' => 'requests#accept', :via => [:post]
+  match 'requests/reject' => 'requests#reject'
+  match 'requests/send' => 'requests#send_message'
+  match 'requests/messengerModal' => 'requests#get_messenger_modal'
 
   match 'locations/modal' => 'locations#get_modal'  
 

@@ -1,0 +1,94 @@
+	<!-- toolbar -->
+	<%= render :partial => "toolbar" %>
+
+	<!-- main stuff -->
+	<%= render :partial => "layouts/flash_messages" %>
+	
+	<div class="container-fluid" id="profile-container">
+		<div class="row-fluid">
+			<div class="span12 container-fluid text-container" id="profile-details">
+				
+				<h3 class="heading">My  Requests</h3>
+				<script type="text/javascript">
+					var r = new RequestMessenger();
+				</script>
+				
+				<div class="row-fluid">								
+					<% if !@current_user.received_requests.nil? && !@current_user.received_requests.empty? %>	
+						<h4>Received Requests</h4>
+						<% @current_user.received_requests.each do |r| %>
+							<% if r.book.title && r.book.isbn && r.book.asin && r.book.thumbnail_link %>
+								<div class="bookobj clearfix">
+									<a href="/books/<%=  r.book.id.to_s %>" class="link">
+										<%= image_tag r.book.thumbnail_link, :class => "thumb span1" %>
+										<div class="book-info span9 offset1">
+											<h4><%= r.book.title %></h4>
+											<em><%= r.book.author %></em><br />			<p><br />Request Status: <%= r.status %></p>				
+										</div>
+									</a>
+
+									<div class="span2 offset10">					
+										<% if r.status.eql?("Awaiting Response") %>
+											<a class="btn btn-success" data-toggle="modal" href="#request_messenger_modal" onclick="r.getAcceptRejectModal(<%= r.id %>);">
+												Respond
+											</a>
+											<a class="btn btn-primary" data-toggle="modal" href="#request_messenger_modal" onclick="r.getMessengerModal(<%= r.id %>, <%= r.owner.id %>, true);">
+												View Messages
+											</a>		
+										<% elsif r.status.eql?("Accepted") %>
+											<a class="btn btn-primary" data-toggle="modal" href="#request_messenger_modal" onclick="r.getMessengerModal(<%= r.id %>, <%= r.owner.id %>, true);">
+												View Messages
+											</a>		
+										<% elsif r.status.eql?("Denied") %>			
+											<a class="btn btn-primary" data-toggle="modal" href="#request_messenger_modal" onclick="r.getMessengerModal(<%= r.id %>, <%= r.owner.id %>, true);">
+												View Messages
+											</a>				
+										<% end %>
+									</div>
+								</div>
+							<% end %>
+						<% end %>
+					<% end %>
+					<% if !@current_user.submitted_requests.nil? && !@current_user.submitted_requests.empty? %>	
+						<h4>Submitted Requests</h4>
+						<% @current_user.submitted_requests.each do |r| %>
+							<% if r.book.title && r.book.isbn && r.book.asin && r.book.thumbnail_link %>
+								<div class="bookobj clearfix">
+									<a href="/books/<%=  r.book.id.to_s %>" class="link">
+										<%= image_tag r.book.thumbnail_link, :class => "thumb span1" %>
+										<div class="book-info span9 offset1">
+											<h4><%= r.book.title %></h4>
+											<em><%= r.book.author %></em><br />			<p><br />Request Status: <%= r.status %></p>				
+										</div>
+									</a>
+
+									<div class="span2 offset10">					
+										<% if r.status.eql?("Awaiting Response") %>
+											<a class="btn btn-primary" data-toggle="modal" href="#request_messenger_modal" onclick="r.getMessengerModal(<%= r.id %>, <%= r.requester.id %>, true);">
+												View Messages
+											</a>	
+										<% elsif r.status.eql?("Accepted") %>
+											<a class="btn btn-primary" data-toggle="modal" href="#request_messenger_modal" onclick="r.getMessengerModal(<%= r.id %>, <%= r.requester.id %>, true);">
+												View Messages
+											</a>		
+										<% elsif r.status.eql?("Denied") %>			
+											<a class="btn btn-primary" data-toggle="modal" href="#request_messenger_modal" onclick="r.getMessengerModal(<%= r.id %>, <%= r.requester.id %>, true);">
+												View Messages
+											</a>				
+										<% end %>
+									</div>
+								</div>
+							<% end %>
+						<% end %>
+					<%end%>
+
+					<% if (@current_user.submitted_requests.nil? || @current_user.submitted_requests.empty?) && (@current_user.received_requests.nil? || @current_user.received_requests.empty?) %>	
+						<div class="empty-warning">
+							<p>You currently have no requests.</p>
+						</div>
+					<% end %>
+					
+				</div>
+			</div>
+		</div>
+	</div>

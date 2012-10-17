@@ -109,7 +109,7 @@ class AmazonCatalog
 
 	def self.loadBookInfo(book, i)
 		if(!i.item_attributes.title.nil?)
-			book.title = i.item_attributes.title[0].to_s
+			book.title = CGI.unescapeHTML(i.item_attributes.title[0].to_s)
 		end
 		if(!i.item_attributes.author.nil?)
 			book.author = i.item_attributes.author[0].to_s

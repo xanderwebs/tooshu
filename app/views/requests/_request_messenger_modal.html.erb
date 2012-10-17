@@ -1,0 +1,41 @@
+<%= form_for(:request, :url => :requests, :method =>:post, :html=>{:class=>"form-horizontal", :id=>"request_form"}) do |f| %>
+	<div class="modal-header">  
+		<a class="close" data-dismiss="modal">×</a>  
+		<h3><%= message_header %></h3>  
+	</div>  
+	<div class="modal-body">  
+		
+		<% if showPreviousMessages %>
+			<div class="well">
+				<h3>Previous Messages:</h3>
+
+				<% request.request_comments.each do |c| %>
+
+					<div>
+						<p><b><%= c.user.first_name %></b>: <%= c.comment %>  </p>
+						
+
+					</div>	
+
+				<% end %>
+			</div>
+
+		<% end %>
+		
+		<% if !flash[:error].nil? %>
+			<div class="alert alert-error">
+				<%= flash[:error] %>
+			</div>
+		<% end %>		
+		<p><%= message_prompt %></p> 			
+		<%= text_area :request_comment, :comment, :id=>"comment", :class=>"input-xlarge", :rows=>7, :style=>"width:520px", :value=> default_message %>
+		<%= hidden_field :request_comment, :user_id, :id=>"request_comment_user_id", :value => sender.id %>		
+		<%= hidden_field :request_comment, :request_id, :id=>"request_id", :value => request.id %>
+
+		
+	</div>  
+	<div class="modal-footer">  
+		<a href="#" id="send" class="btn btn-success">Send</a>  		
+	</div>  
+<%end%>
+					

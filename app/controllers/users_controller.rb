@@ -189,4 +189,13 @@ class UsersController < ApplicationController
 		end
 		@books = @user.books
 	end
+
+	def requests
+		if params[:id].nil? || params[:id].to_i.eql?(@current_user.id) 
+			@user = current_user
+		else
+			@user = User.find(params[:id])
+		end
+		@books = @user.books
+	end
 end

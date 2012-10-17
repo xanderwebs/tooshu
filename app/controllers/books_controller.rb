@@ -31,11 +31,12 @@ class BooksController < ApplicationController
       @book = Book.find_by_asin(@book.asin)    	
   	end
   	
-  	if(@current_user.books.nil?)
-		  @current_user.books = Array.new
-    end
-           
-    @current_user.books.push(@book)
+    @library_record = LibraryRecord.new
+    @library_record.book_id = @book.id
+    @library_record.user_id = @current_user.id
+    @library_record.status = "Available"
+
+    @library_record.save
                 
     redirect_to users_path, :flash => {:notice => "Book added!"}
 

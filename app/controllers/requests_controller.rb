@@ -4,8 +4,9 @@ class RequestsController < ApplicationController
 	
 		@request = Request.new(params[:request])	
 		@request.status = "Awaiting Response"
+		@request.requested_days = 0
 
-
+		
 		
 		if(@request.save)
 			puts "Request Successfully Saved"
@@ -37,9 +38,17 @@ class RequestsController < ApplicationController
 			end
 			flash[:error] = "There was a problem with your request..."			
 
+			@book = Book.find(@request.book_id)
+
+			render :partial => "request_modal" , :locals => {
+				:requester_user_id => params[:request][:requester_user_id], 
+				:owner_user_id => params[:request][:owner_user_id] , 
+				:book_id => params[:request][:book_id]
+			}     
 
 
-			render :partial => "request_modal" , :locals => {:requester_user_id => params[:request][:requester_user_id], :owner_user_id => params[:request][:owner_user_id] , :book_id => params[:request][:book_id]}     
+			
+
 		end
 		
 		
@@ -186,6 +195,8 @@ class RequestsController < ApplicationController
 	end
 
 	def index
+
+=begin		
 		requestType = params[:requestType]
 		user = User.find(params[:userId])
 
@@ -211,12 +222,96 @@ class RequestsController < ApplicationController
 		end
 
 		render :json => a.to_json
-
+=end		
+		@requests = @current_user.requests
 	end
 
 	def get_modal
 		
+		@user = User.find(params[:ownerUserId])
+		@book = Book.find(params[:bookId])
 		render :partial => "request_modal" , :locals => {:requester_user_id => params[:requesterUserId], :owner_user_id => params[:ownerUserId] , :book_id => params[:bookId]}     
 	end
-	
+
+	def get_accept_reject_modal
+
+		request = Request.find (params[:requestId])
+		render :partial => "request_accept_reject_modal" , :locals => {			
+			:request => request}     
+
+	end
+
+	def accept
+		request = Request.find(params[:request][:request_id])
+		request.status = "Accepted"
+		request.save
+
+		render :partial => "request_messenger_modal", :locals => {						
+			:request => request, 
+			:sender => request.owner, 			
+			:default_message => "Yes, you can borrow " + request.book.title + ".\n\nMeet me at (PICK A LOCATION) at (PICK A TIME) to borrow it!\n\n-" + request.owner.first_name + "",
+			:message_header => "Specify a Time/Place to Meet",
+			:message_prompt =>"",
+			:showPreviousMessages => false
+		}     
+	end
+
+	def reject
+
+		request = Request.find(params[:request][:request_id])
+		request.status = "Denied"
+		request.save
+
+		render :partial => "request_messenger_modal", :locals => {						
+			:request => request, 
+			:sender => request.owner, 			
+			:default_message => "Sorry, you can't borrow " + request.book.title + " because... \n\n-" + request.owner.first_name + "",
+			:message_header => "Give a Reason Why",
+			:message_prompt =>"",
+			:showPreviousMessages => false
+		}     
+
+	end
+
+	def send_message
+
+		
+
+		request_comment = RequestComment.new(params[:request_comment])
+
+		if(!request_comment.comment.empty?)		
+
+			if(request_comment.save)
+				puts "Request comment successfully saved"
+			else
+				puts "Failed to save request comment"
+				request_comment.errors.each do |e|
+					puts e
+				end
+			end
+
+			render :partial => "request_saved"
+		end
+	end
+
+	def get_messenger_modal
+		request = Request.find(params[:requestId])
+		sender = User.find(params[:senderId])
+		showPreviousMessages = params[:showPreviousMessages]
+
+		if(sender.id.eql?request.owner.id)
+			receiver = request.requester
+		else
+			receiver = request.owner
+		end
+
+		render :partial => "request_messenger_modal", :locals => {			
+			:request => request, 
+			:sender => sender, 			
+			:default_message => "",
+			:message_header => "Send " + receiver.first_name + " a Message",
+			:message_prompt =>"",
+			:showPreviousMessages => showPreviousMessages
+		}     
+	end
 end
