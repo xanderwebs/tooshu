@@ -20,7 +20,7 @@
 	</div>
 <% else %>
 	<script type="text/javascript">
-		var r = new RequestMaker();
+		var r = new RequestMessenger();
 	</script>
 	<table class="table table-bordered">
 		<tr>
@@ -30,21 +30,21 @@
 			<th>Current Status</th>	
 			-->
 		</tr>
-		<% @user.books.each do |b| %>
+		<% @user.library_records.each do |l| %>
 			<tr>
 				<td>
-					<%= link_to b.title, :controller => "books", :action => "show", :id => b.id %><br />
-					<em><%= b.author %></em>
+					<%= link_to l.book.title, :controller => "books", :action => "show", :id => l.book.id %><br />
+					<em><%= l.book.author %></em>
 				</td>				
 				<td>
-					<a href="#request_maker_modal" class="btn btn-success" data-toggle="modal" onclick="r.getModal(<%=@current_user.id%>,<%=@user.id%>,<%=b.id%>)">Request</a>
-				</td>
-				<!-- REQUESTS REMOVED FOR NOW 
-				<td>
-					Available 
-					<% if !@user.id.eql?(@current_user.id) %> <a href="#request_maker_modal" class="btn btn-success" data-toggle="modal" onclick="r.getModal(<%=@current_user.id%>,<%=@user.id%>,<%=b.id%>)">Request</a><%end%> 
-				</td>
-				-->
+					<% if l.status.eql?("Available") && Request.where("requester_user_id = ? AND owner_user_id = ? AND library_record_id = ?", @current_user.id, @user.id, l.id).empty? %>
+					<a href="#request_messenger_modal" class="btn btn-success" data-toggle="modal" onclick="r.getRequestModal(<%=@current_user.id%>,<%=@user.id%>,<%=l.id%>)">Request</a>
+					<% elsif !Request.where("requester_user_id = ? AND owner_user_id = ? AND library_record_id = ? AND status = ?", @current_user.id, @user.id, l.id, "Awaiting Response").empty? %>
+						Requested
+					<% else %>
+						<%=  l.status %>
+					<% end %>
+				</td>				
 			</tr>
 		<% end %>
 	</table>

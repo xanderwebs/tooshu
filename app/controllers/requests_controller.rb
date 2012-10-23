@@ -40,6 +40,8 @@ class RequestsController < ApplicationController
 
 			@book = Book.find(@request.book_id)
 
+			@user = User.find(params[:request][:owner_user_id])			
+
 			render :partial => "request_modal" , :locals => {
 				:requester_user_id => params[:request][:requester_user_id], 
 				:owner_user_id => params[:request][:owner_user_id] , 
@@ -228,9 +230,14 @@ class RequestsController < ApplicationController
 
 	def get_modal
 		
-		@user = User.find(params[:ownerUserId])
-		@book = Book.find(params[:bookId])
-		render :partial => "request_modal" , :locals => {:requester_user_id => params[:requesterUserId], :owner_user_id => params[:ownerUserId] , :book_id => params[:bookId]}     
+		user = User.find(params[:ownerUserId])
+		library_record = LibraryRecord.find(params[:libraryRecordId])
+		book = library_record.book
+		render :partial => "request_modal" , :locals => {
+			:requester => @current_user, 
+			:owner => user , 
+			:library_record => library_record
+		}     
 	end
 
 	def get_accept_reject_modal
@@ -244,6 +251,8 @@ class RequestsController < ApplicationController
 	def accept
 		request = Request.find(params[:request][:request_id])
 		request.status = "Accepted"
+		request.library_record.status = "On Loan"
+		request.library_record.save
 		request.save
 
 		render :partial => "request_messenger_modal", :locals => {						

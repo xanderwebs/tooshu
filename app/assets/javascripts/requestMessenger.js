@@ -12,10 +12,10 @@
 
 }
 
-RequestMessenger.prototype.getRequestModal = function(requesterUserId, ownerUserId, bookId){
+RequestMessenger.prototype.getRequestModal = function(requesterUserId, ownerUserId, libraryRecordId){
 	var obj = this;
 
-	$.get('/requests/modal?requesterUserId=' + requesterUserId+ "&ownerUserId=" + ownerUserId + "&bookId=" + bookId, function(data) {
+	$.get('/requests/modal?requesterUserId=' + requesterUserId+ "&ownerUserId=" + ownerUserId + "&libraryRecordId=" + libraryRecordId, function(data) {
 			
 		obj.setModalContentAndAction(data);
 		
@@ -55,7 +55,7 @@ RequestMessenger.prototype.setModalContentAndAction = function(data){
 				$.post("/requests", $("#request_form").serialize(), function(data){
 					obj.setModalContentAndAction(data);
 				});				
-				window.location.reload();
+				//window.location.reload();
 			}
 		);	
 	}
