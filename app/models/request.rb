@@ -7,7 +7,13 @@ class Request < ActiveRecord::Base
 	belongs_to :book
 	belongs_to :library_record
 	
-	validates :requester_user_id, :owner_user_id, :book_id, :status, :requested_days, :library_record_id, :presence => :true  
+	validates :requester_user_id, 
+		:owner_user_id, 
+		:book_id, 
+		:status, 
+		:requested_days, 
+		:library_record_id, 
+		:presence => :true  
 	validate :owner_existence
 	validate :book_existence
 	validate :requester_existence

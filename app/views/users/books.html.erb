@@ -20,7 +20,7 @@
 				
 				<div class="row-fluid">			
 					<% if !@books.nil? && !@books.empty? %>	
-						<%= render :partial => "/books/booklist", :locals => {:books => @books, :searching => false} %>				
+						<%= render :partial => "/books/booklist", :locals => {:library_records => @current_user.library_records, :searching => false} %>				
 					<% else %>
 						<div class="empty-warning">
 							<p>You don't seem to have any books in your library, add some books <%= link_to "here", :controller => "books", :action => "new" %>!</p>

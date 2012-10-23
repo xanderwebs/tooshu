@@ -1,27 +1,45 @@
-<% books.each do |b| %>
-	<% if b.title && b.isbn && b.asin && b.thumbnail_link %>
+<% library_records.each do |l| %>
+	<% if l.book.title && l.book.isbn && l.book.asin && l.book.thumbnail_link %>
 		<div class="bookobj clearfix">
-			<a href="/books<%= (!searching) ? '/' + b.id.to_s : '?id=' + b.asin.to_s %>" class="link">
-				<%= image_tag b.thumbnail_link, :class => "thumb span1" %>
+			<a href="/books<%= (!searching) ? '/' + l.book.id.to_s : '?id=' + l.book.asin.to_s %>" class="link">
+				<%= image_tag l.book.thumbnail_link, :class => "thumb span1" %>
 				<div class="book-info span9 offset1">
-					<h4><%= b.title %></h4>
-					<em><%= b.author %></em>
+					<h4><%= l.book.title %></h4>
+					<em><%= l.book.author %></em>
 					<% # <p>Status: Available</p> %>
-					<% if searching %><p>ISBN: <%= b.isbn %></p> <% end %>
+					<% if searching %><p>ISBN: <%= l.book.isbn %></p> <% end %>
+					<% if l.status.eql?("On Loan") %>
+						<% 
+							@request = Request.where("library_record_id = ? AND status = ?", l.id, "Accepted")
+							@requester = @request[0].requester
+						%>
+						<h6>
+							<%= l.status %> to <%= @requester.first_name + " " + @requester.last_name %>						 
+						</h6>
+					<% else %>
+						<h6>
+							<%= l.status %>
+						</h6>
+					<% end %>
 				</div>
 			</a>
 
 			<div class="span2 offset10">
 				<% if searching %>
-					<a class="btn btn-primary add_book_button" href="#" id="<%= b.asin %>">Add Book</a>
+					<a class="btn btn-primary add_book_button" href="#" id="<%= l.book.asin %>">Add Book</a>
 				<% elsif !@user.id.eql?(@current_user.id) %> 
 					<% # requests were here, but are no longer an option %>
 				<% else %>
-					<a class="btn btn-danger" data-toggle="modal" href="#remove_book_modal" onclick="br.getModal(<%= b.id %>)">Remove Book</a>
+					<% if l.status.eql?("On Loan") %>
+						<a href="#" id="returned_button" class="btn btn-success">Returned</a>
+					<% else %> 
+						<a class="btn btn-danger" data-toggle="modal" href="#remove_book_modal" onclick="br.getModal(<%= l.book.id %>)">Remove Book</a>
+					<% end %>
 				<% end %>
 			</div>
 		</div>
 	<% end %>
+	
 <% end %>
 
 <% if !searching %>
