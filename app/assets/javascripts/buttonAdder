@@ -1,0 +1,8 @@
+/**
+ * ButtonEnabler shows the remove books button in the My Library section.
+ * @author Alex Cheng
+ */
+
+ function ButtonAdder(clickable){
+ 	
+ }
