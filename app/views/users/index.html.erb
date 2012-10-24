@@ -39,8 +39,8 @@
 
 				
 				<div class="pull-right btn-adjust">		    						
-					<%= link_to "Add to Library", {:controller => "books", :action => "new"}, :class => "btn btn-primary" %>
-				    <%= link_to "Manage Library", {:controller => "users", :action => "books"}, :class => "btn btn-primary" %>
+					<%= link_to "Add to Library", new_book_path, :class => "btn btn-primary" %>
+				    <%= link_to "Manger Library", {:controller => "users", :action => "books"}, :class => "btn btn-primary" %>
 				</div>	
 				<h3 class="heading">My Library</h3>
 			
@@ -59,14 +59,14 @@
 							<tr>
 								<td class="bdisplay">
 									<div class="">
-										<a href="/books<%= '/' + l.book.id.to_s %>" class="">
-											<%= image_tag l.book.thumbnail_link, :class => "thumb" %>
-											<div class="">
-												<h4><%= l.book.title %></h4>
-												<em><%= l.book.author %></em>					
-											</div>
-										</a>
-									</div>									
+										<%= link_to book_path(l.book.id) do %>
+											<%= image_tag l.book.thumbnail_link, :class => "thumb in-profile" %>
+										<% end %>
+									</div>
+									<div class="title-offset">
+										<%= link_to l.book.title, book_path(l.book.id), :class => "btitle" %><br />
+										<em><%= l.book.author %></em>					
+									</div>								
 								</td>												
 							</tr>
 						<% end %>

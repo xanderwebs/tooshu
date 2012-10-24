@@ -271,11 +271,18 @@
 /* User's Library CSS */
 
 td.bdisplay {
+	overflow: visible;
+	white-space: nowrap;
 	div {
 		float: left;
 	}
 	div.title-offset {
 		margin-left: 10px;
+		text-overflow: ellipsis;
+		.btitle {
+			font-size: 14px;
+			font-weight: bold;
+		}
 	}
 }
 
