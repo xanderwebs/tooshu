@@ -40,7 +40,7 @@
 				
 				<div class="pull-right btn-adjust">		    						
 					<%= link_to "Add to Library", {:controller => "books", :action => "new"}, :class => "btn btn-primary" %>
-				    <%= link_to "Manage Library", {:controller => "users", :action => "books"}, :class => "btn btn-primary" %>
+				    <%= link_to "Manger Library", {:controller => "users", :action => "books"}, :class => "btn btn-primary" %>
 				</div>	
 				<h3 class="heading">My Library</h3>
 			
@@ -58,10 +58,10 @@
 						<% @user.library_records.each do |l| %>
 							<tr>
 								<td>
-									<div class="bookobj clearfix" style="margin:0px; border:0px;">
+									<div class="clearfix">
 										<a href="/books<%= '/' + l.book.id.to_s %>" class="link">
-											<%= image_tag l.book.thumbnail_link, :class => "thumb span1" %>
-											<div class="book-info span7 offset" style="padding-left:10px;">
+											<%= image_tag l.book.thumbnail_link, :class => "thumb" %>
+											<div class="book-info">
 												<h4><%= l.book.title %></h4>
 												<em><%= l.book.author %></em>					
 											</div>
