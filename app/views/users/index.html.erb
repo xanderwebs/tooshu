@@ -58,10 +58,10 @@
 						<% @user.library_records.each do |l| %>
 							<tr>
 								<td>
-									<div class="bookobj clearfix" style="margin:0px; border:0px;">
-										<a href="/books<%= '/' + l.book.id.to_s %>" class="link">
-											<%= image_tag l.book.thumbnail_link, :class => "thumb span1" %>
-											<div class="book-info span7 offset" style="padding-left:10px;">
+									<div class="">
+										<a href="/books<%= '/' + l.book.id.to_s %>" class="">
+											<%= image_tag l.book.thumbnail_link, :class => "thumb" %>
+											<div class="">
 												<h4><%= l.book.title %></h4>
 												<em><%= l.book.author %></em>					
 											</div>
