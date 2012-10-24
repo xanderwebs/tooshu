@@ -26,7 +26,7 @@
 			<div class="container-fluid text-container">
 				<div class="pull-right library-options-adjust">		    						
 					<%= link_to "[add to library]", new_book_path, :class => "" %>
-				    <%= link_to "[manage library]", {:controller => "users", :action => "books"}, :class => "", :id => "manageButton" %>
+				    <%= link_to "[manage library]", '#', :class => "", :id => "manageButton" %>
 				</div>	
 				<h3 class="heading">My Library</h3>
 				<% if @current_user.books.empty? %>
@@ -48,11 +48,11 @@
 												<%= image_tag l.book.thumbnail_link, :class => "thumb in-profile" %>
 											<% end %>
 										</div>
-										<div id="" class="title-offset ti-long">
+										<div class="title-offset ti-long">
 											<%= link_to l.book.title, book_path(l.book.id), :class => "btitle" %><br />
 											<em><%= l.book.author %></em>					
 										</div>
-										<div id="" class="button-listing button-hide clearfix">
+										<div class="button-listing button-hide clearfix">
 											<a class="btn btn-danger" href="#">Remove Book</a>
 										</div>	
 									</div>							
@@ -65,3 +65,7 @@
 		</div>
 	</div>
 </div>
+
+<script type="text/javascript">
+	var xkcd = new ButtonAdder();
+</script>

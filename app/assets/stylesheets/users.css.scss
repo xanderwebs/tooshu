@@ -279,7 +279,6 @@ div.book-listing {
 	div.title-offset {
 		margin-left: 10px;
 		text-overflow: ellipsis;
-		border:1px solid green;
 		overflow: hidden;
 		.btitle {
 			font-size: 14px;
@@ -288,15 +287,15 @@ div.book-listing {
 	}
 
 	div.button-listing {
-		border: 1px solid blue;
 		float: right;
 		margin-right: 10px;
 		margin-top: 20px;
+		display: none;
 	}
 	div.title-offset.ti-long { width: 89%; }
 	div.title-offset.ti-short { width: 68%; }
 	div.button-show { width: 17%; }
-	div.button-hide { width: 0%; display: none; } 
+	div.button-hide { width: 0%;  } 
 }
 
 
