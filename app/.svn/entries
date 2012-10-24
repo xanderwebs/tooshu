@@ -1,46 +1,0 @@
-10
-
-dir
-100
-https://tooshu.dyndns.org/svn/tooshu/app
-https://tooshu.dyndns.org/svn/tooshu
-
-
-
-2012-09-17T18:10:47.968750Z
-100
-dennisli
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-0e97d490-3e82-d94e-860c-ad8566961471
-
-assets
-dir
-
-helpers
-dir
-
-models
-dir
-
-controllers
-dir
-
-mailers
-dir
-
-views
-dir
-
