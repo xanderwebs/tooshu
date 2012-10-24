@@ -13,10 +13,6 @@
 
 <!-- toolbar -->
 <%= render :partial => "toolbar" %>
-
-
-
-
 <div class="container-fluid" id="profile-container">
 	<div class="row">
 		<!-- left side -->
@@ -26,25 +22,13 @@
 		
 		<!-- right main -->
 		<div class="span8" id="profile-details">
-			
-			<!-- REQUESTS TAKEN OUT FOR NOW
-			 div class="container-fluid text-container">
-				<h3 class="heading">Notifications Bookshelf</h3>
-				<!-- %= render :partial => "/bookshelf/bookshelf" %-->
-			<!-- /div -->
-		
 			<!-- user books -->
 			<div class="container-fluid text-container">
-				
-
-				
-				<div class="pull-right btn-adjust">		    						
-					<%= link_to "Add to Library", new_book_path, :class => "btn btn-primary" %>
-				    <%= link_to "Manger Library", {:controller => "users", :action => "books"}, :class => "btn btn-primary" %>
+				<div class="pull-right library-options-adjust">		    						
+					<%= link_to "[add to library]", new_book_path, :class => "" %>
+				    <%= link_to "[manage library]", {:controller => "users", :action => "books"}, :class => "", :id => "manageButton" %>
 				</div>	
 				<h3 class="heading">My Library</h3>
-			
-
 				<% if @current_user.books.empty? %>
 					<div class="empty-warning">
 						<p>
@@ -54,20 +38,25 @@
 						</p>
 					</div>
 				<% else %>					
-					<table class="table table-bordered">						
+					<table class="table table-bordered book-display">					
 						<% @user.library_records.each do |l| %>
 							<tr>
 								<td class="bdisplay">
-									<div class="">
-										<%= link_to book_path(l.book.id) do %>
-											<%= image_tag l.book.thumbnail_link, :class => "thumb in-profile" %>
-										<% end %>
-									</div>
-									<div class="title-offset">
-										<%= link_to l.book.title, book_path(l.book.id), :class => "btitle" %><br />
-										<em><%= l.book.author %></em>					
-									</div>								
-								</td>												
+									<div class="book-listing clearfix">
+										<div class="book-thumb">
+											<%= link_to book_path(l.book.id) do %>
+												<%= image_tag l.book.thumbnail_link, :class => "thumb in-profile" %>
+											<% end %>
+										</div>
+										<div class="title-offset ti-long">
+											<%= link_to l.book.title, book_path(l.book.id), :class => "btitle" %><br />
+											<em><%= l.book.author %></em>					
+										</div>
+										<div class="button-listing button-hide clearfix">
+											<a class="btn btn-danger" href="#">Remove Book</a>
+										</div>	
+									</div>							
+								</td>
 							</tr>
 						<% end %>
 					</table>					
