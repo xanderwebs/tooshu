@@ -57,7 +57,7 @@
 					<table class="table table-bordered">						
 						<% @user.library_records.each do |l| %>
 							<tr>
-								<td>
+								<td class="bdisplay">
 									<div class="">
 										<a href="/books<%= '/' + l.book.id.to_s %>" class="">
 											<%= image_tag l.book.thumbnail_link, :class => "thumb" %>
