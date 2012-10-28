@@ -35,12 +35,12 @@
 }
 
 #profile-container {
+	padding-top: 10px;
 	padding-bottom: 10px;
 }
 
-
 #options {
-	margin: 10px 20px;
+	margin: 10px 20px 0px;
 	border-radius: 5px;
 	padding: 5px;
 }
@@ -268,6 +268,45 @@
 	}
 }
 
+/* User's Library CSS */
+
+div.book-listing {
+	display: inline-block;
+	width: 100%;
+	vertical-align: top;
+	white-space: nowrap;
+	div { float: left; }
+	div.title-offset {
+		margin-left: 10px;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		.btitle {
+			font-size: 14px;
+			font-weight: bold;
+		}
+	}
+
+	div.button-listing {
+		float: right;
+		margin-right: 10px;
+		margin-top: 20px;
+		display: none;
+	}
+	div.title-offset.ti-long { width: 89%; }
+	div.title-offset.ti-short { width: 68%; }
+	div.button-show { width: 17%; }
+	div.button-hide { width: 0%;  } 
+}
+
+
+.library-options-adjust {
+	margin: 15px 0;
+	text-decoration: none;
+	a { 
+		color: black; 
+		font-size: 15px;
+	}
+}
 
 /* CLEARFIX PROBLEM */
 
