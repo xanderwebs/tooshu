@@ -4,7 +4,30 @@
 	</div>	
 <%else%>
 	<div class="row-fluid">
-		<%= render :partial => "/books/booklist", :locals => {:books => @books, :searching => true} %>		
+
+		<% @books.each do |b| %>
+	<% if b.title && b.isbn && b.asin && b.thumbnail_link %>
+		<div class="bookobj clearfix">
+			<a href="/books?id='<%= b.asin.to_s %>" class="link">
+				<%= image_tag b.thumbnail_link, :class => "thumb span1" %>
+				<div class="book-info span9 offset1">
+					<h4><%= b.title %></h4>
+					<em><%= b.author %></em>
+					<% # <p>Status: Available</p> %>
+					<p>ISBN: <%= b.isbn %></p>					
+				</div>
+			</a>
+
+			<div class="span2 offset10">				
+				<a class="btn btn-primary add_book_button" href="#" id="<%= b.asin %>">Add Book</a>
+				
+			</div>
+		</div>
+	<% end %>
+	
+<% end %>
+
+
 	</div>
 	
 <%end%>

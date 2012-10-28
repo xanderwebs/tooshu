@@ -24,7 +24,7 @@
 		<div class="span8" id="profile-details">
 			<!-- user books -->
 			<div class="container-fluid text-container">
-<<<<<<< .merge_file_XcLDWO
+<<<<<<< .merge_file_BP6O4P
 				<div class="pull-right library-options-adjust">		    						
 					<%= link_to "[add to library]", new_book_path, :class => "" %>
 				    <%= link_to "[manage library]", '#', :class => "", :id => "manageButton" %>
@@ -35,7 +35,7 @@
 				<div class="pull-right btn-adjust">		    						
 					<%= link_to "Add to Library", {:controller => "books", :action => "new"}, :class => "btn btn-primary" %>
 				    <%= link_to "Manger Library", {:controller => "users", :action => "books"}, :class => "btn btn-primary" %>
->>>>>>> .merge_file_F1RJ6q
+>>>>>>> .merge_file_3wCoy8
 				</div>	
 				<h3 class="heading">My Library</h3>
 				<% if @current_user.books.empty? %>
@@ -50,7 +50,7 @@
 					<table class="table table-bordered book-display">					
 						<% @user.library_records.each do |l| %>
 							<tr>
-<<<<<<< .merge_file_XcLDWO
+<<<<<<< .merge_file_BP6O4P
 								<td class="bdisplay">
 									<div class="book-listing clearfix">
 										<div class="book-thumb">
@@ -79,7 +79,7 @@
 										</a>
 									</div>									
 								</td>												
->>>>>>> .merge_file_F1RJ6q
+>>>>>>> .merge_file_3wCoy8
 							</tr>
 						<% end %>
 					</table>					
