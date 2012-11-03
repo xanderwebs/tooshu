@@ -271,18 +271,17 @@
 /* User's Library CSS */
 
 div.book-listing {
-	display: inline-block;
-	width: 100%;
-	vertical-align: top;
-	white-space: nowrap;
 	div { float: left; }
 	div.title-offset {
 		margin-left: 10px;
-		text-overflow: ellipsis;
-		overflow: hidden;
-		.btitle {
+
+		a.btitle {
+			// white-space: nowrap;
 			font-size: 14px;
 			font-weight: bold;
+			text-overflow: ellipsis;
+			overflow: hidden;
+			width: 200px;
 		}
 	}
 
@@ -291,9 +290,10 @@ div.book-listing {
 		margin-right: 10px;
 		margin-top: 20px;
 		display: none;
+		white-space: nowrap;
 	}
-	div.title-offset.ti-long { width: 89%; }
-	div.title-offset.ti-short { width: 68%; }
+	div.title-offset.ti-long { width: 85%; }
+	div.title-offset.ti-short { width: 65%; }
 	div.button-show { width: 17%; }
 	div.button-hide { width: 0%;  } 
 }
@@ -303,8 +303,8 @@ div.book-listing {
 	margin: 15px 0;
 	text-decoration: none;
 	a { 
-		color: black; 
-		font-size: 15px;
+		// color: black; 
+		font-size: 13px;
 	}
 }
 

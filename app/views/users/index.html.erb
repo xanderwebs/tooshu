@@ -25,8 +25,8 @@
 			<!-- user books -->
 			<div class="container-fluid text-container">
 				<div class="pull-right library-options-adjust">		    						
-					<%= link_to "[add to library]", new_book_path, :class => "" %>
-				    <%= link_to "[manage library]", '#', :class => "", :id => "manageButton" %>
+					<%= link_to "Add to Library", new_book_path, :class => "" %>
+				    <%= link_to "Manage Library", '#', :class => "", :id => "manageButton" %>
 
 				</div>	
 				<h3 class="heading">My Library</h3>
@@ -50,7 +50,8 @@
 											<% end %>
 										</div>
 										<div class="title-offset ti-long">
-											<%= link_to l.book.title, book_path(l.book.id), :class => "btitle" %><br />
+											<%= link_to l.book.title, book_path(l.book.id), :class => "btitle" %>
+											<br />
 											<em><%= l.book.author %></em>					
 										</div>
 										<div class="button-listing button-hide clearfix">
