@@ -55,7 +55,7 @@
 											<em><%= l.book.author %></em>					
 										</div>
 										<div class="button-listing button-hide clearfix">
-											<a class="btn btn-danger" href="#">Remove Book</a>
+											<a class="btn btn-danger" data-toggle="modal" href="#remove_book_modal" onclick="br.getModal(<%= l.book.id %>)">Remove Book</a>
 										</div>	
 									</div>							
 								</td>
@@ -69,5 +69,6 @@
 </div>
 
 <script type="text/javascript">
-	var xkcd = new ButtonAdder();
+	var xkcd = new ButtonAdder('editButton', 'Edit');
+	var br = new BookRemover(<%= @current_user.id %>);	
 </script>
