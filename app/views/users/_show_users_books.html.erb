@@ -5,7 +5,6 @@
 	    <%= link_to "Edit Library", {:controller => "users", :action => "books"}, :class => "btn btn-primary" %>
 	</div>	
 	<h3 class="heading">My Library</h3>
-<!-- DEPRACATED CODE POSSIBLY, since it no longer links to this page from the other users' toolbar. -->
 <% else %>
 	<h3 class="heading"><%= @user.possessive %> Library</h3>
 <% end %>

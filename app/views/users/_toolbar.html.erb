@@ -6,6 +6,5 @@
 		<li class="divider-vertical"></li>
 		<li><%= link_to ((!@current_user.id.eql?(@user.id)) ? @user.possessive : "My") + " Requests", :controller => "users", :action => "requests"%></a></li>
 		<li class="divider-vertical"></li>
-		<!-- TEMPORARILY REMOVED li><a href="#"><%= @user.possessive %> Transactions</a></li -->
 	</ul>
 </div>

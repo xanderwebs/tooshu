@@ -105,7 +105,7 @@ ActiveRecord::Schema.define(:version => 20121003235243) do
     t.date     "return_date"
     t.datetime "created_at",        :null => false
     t.datetime "updated_at",        :null => false
-    t.integer  "library_id"
+    t.integer  "library_record_id"
   end
 
   create_table "users", :force => true do |t|
