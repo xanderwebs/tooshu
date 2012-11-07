@@ -7,76 +7,26 @@
 <div class="container-fluid" id="profile-container">
 	<div class="row-fluid">
 		<div class="span12 container-fluid text-container" id="profile-details">
-			
 			<h3 class="heading">My Requests</h3>	
-			<div class="row-fluid">								
-				<% if !@current_user.received_requests.nil? && !@current_user.received_requests.empty? %>	
-					<h4>Received Requests</h4>
-					<% @current_user.received_requests.each do |r| %>
-						<% if r.book.title && r.book.isbn && r.book.asin && r.book.thumbnail_link %>
-							<div class="bookobj clearfix">
-								<%= link_to book_path(r.book.id), :class => "link" do %>
-									<%= image_tag r.book.thumbnail_link, :class => "thumb span1" %>
-									<div class="book-info span9 offset1">
-										<h4><%= r.book.title %></h4>
-										<em><%= r.book.author %></em><br />			
-										<p><br />Request Status: <%= r.status %></p>				
-									</div>
-								<% end %>
-								<div class="span2 offset10">					
-									<% if r.status.eql?("Awaiting Response") %>
-										<a class="btn btn-success" data-toggle="modal" href="#request_messenger_modal" onclick="r.getAcceptRejectModal(<%= r.id %>);">
-											Respond
-										</a>
-									<% end %>
-									<a class="btn btn-primary" data-toggle="modal" href="#request_messenger_modal" onclick="r.getMessengerModal(<%= r.id %>, <%= r.owner.id %>, true);">
-										View Messages
-									</a>		
-								</div>
-							</div>
-						<% end %>
-					<% end %>
-				<% end %>
-				<% if !@current_user.submitted_requests.nil? && !@current_user.submitted_requests.empty? %>	
-					<h4>Submitted Requests</h4>
-					<% @current_user.submitted_requests.each do |r| %>
-						<% if r.book.title && r.book.isbn && r.book.asin && r.book.thumbnail_link %>
-							<div class="bookobj clearfix">
-								<a href="/books/<%=  r.book.id.to_s %>" class="link">
-									<%= image_tag r.book.thumbnail_link, :class => "thumb span1" %>
-									<div class="book-info span9 offset1">
-										<h4><%= r.book.title %></h4>
-										<em><%= r.book.author %></em><br />
-										<p><br />Request Status: <%= r.status %></p>				
-									</div>
-								</a>
+			<div class="row-fluid tabbable">		
+				<ul class="nav nav-pills" id="requestsTabs">
+					<li class="active"><a href="#active" data-toggle="tab">Active</a></li>
+					<li><a href="#inactive" data-toggle="tab">Inactive</a></li>
+					<li><a href="#loaned" data-toggle="tab">On Loan</a></li>
+					<li><a href="#completed" data-toggle="tab">Completed</a></li>
+				</ul>
 
-								<div class="span2 offset10">					
-									<% if r.status.eql?("Awaiting Response") %>
-										<a class="btn btn-primary" data-toggle="modal" href="#request_messenger_modal" onclick="r.getMessengerModal(<%= r.id %>, <%= r.requester.id %>, true);">
-											View Messages
-										</a>	
-									<% elsif r.status.eql?("Accepted") %>
-										<a class="btn btn-primary" data-toggle="modal" href="#request_messenger_modal" onclick="r.getMessengerModal(<%= r.id %>, <%= r.requester.id %>, true);">
-											View Messages
-										</a>		
-									<% elsif r.status.eql?("Denied") %>			
-										<a class="btn btn-primary" data-toggle="modal" href="#request_messenger_modal" onclick="r.getMessengerModal(<%= r.id %>, <%= r.requester.id %>, true);">
-											View Messages
-										</a>				
-									<% end %>
-								</div>
-							</div>
-						<% end %>
-					<% end %>
-				<%end%>
-
-				<% if (@current_user.submitted_requests.nil? || @current_user.submitted_requests.empty?) && (@current_user.received_requests.nil? || @current_user.received_requests.empty?) %>	
-					<div class="empty-warning">
-						<p>You currently have no requests.</p>
-					</div>
-				<% end %>
-				
+				<div class="tab-content">
+		    	<div class="tab-pane active" id="active">
+		    		<% @active_requests.each do |r| %>
+		    			<h4><%= r.book.title %></h4>
+		    		<% end %>
+		    	</div>
+		    	<div class="tab-pane" id="inactive"></div>
+		    	<div class="tab-pane" id="loaned"></div>
+		    	<div class="tab-pane" id="completed"></div>
+		    </div>
+		
 			</div>
 		</div>
 	</div>

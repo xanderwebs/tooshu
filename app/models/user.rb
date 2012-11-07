@@ -57,10 +57,7 @@ class User < ActiveRecord::Base
     self.password_digest = Digest::SHA1.hexdigest(pw + self.salt.to_s)
   end
   
-  def isValid(pw)
-    #puts "password digest: #{self.password_digest}"
-    #puts "test digest: #{Digest::SHA1.hexdigest(pw + self.salt.to_s)}"
-    #puts self.password_digest.to_s.eql?(Digest::SHA1.hexdigest(pw + self.salt.to_s)).to_s 
+  def isValid(pw) 
     self.password_digest.to_s.eql?(Digest::SHA1.hexdigest(pw + self.salt.to_s))
   end
 

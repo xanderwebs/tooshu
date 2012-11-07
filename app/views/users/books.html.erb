@@ -10,8 +10,8 @@
 				<% if @current_user.id.to_i.eql?(@user.id.to_i) %>
 					<div class="pull-right">
 						<form action="/books/new">			    	
-					    	<button type="submit" class="btn btn-primary btn-adjust">Add to Library</button>
-					    </form>
+				    	<button type="submit" class="btn btn-primary btn-adjust">Add to Library</button>
+				    </form>
 					</div>	
 					<h3 class="heading"><%= (!@current_user.id.eql?(@user.id)) ? @name : "My " %>Library</h3>
 				<% else %>
