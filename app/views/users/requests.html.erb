@@ -22,9 +22,21 @@
 		    			<h4><%= r.book.title %></h4>
 		    		<% end %>
 		    	</div>
-		    	<div class="tab-pane" id="inactive"></div>
-		    	<div class="tab-pane" id="loaned"></div>
-		    	<div class="tab-pane" id="completed"></div>
+		    	<div class="tab-pane" id="inactive">
+		    		<% @inactive_requests.each do |r| %>
+		    			<h4><%= r.book.title %></h4>
+		    		<% end %>
+		    	</div>
+		    	<div class="tab-pane" id="loaned">
+		    		<% @loaned.each do |r| %>
+		    			<h4><%= r.book.title %></h4>
+		    		<% end %>
+		    	</div>
+		    	<div class="tab-pane" id="completed">
+		    		<% @completed.each do |r| %>
+		    			<h4><%= r.book.title %></h4>
+		    		<% end %>
+		    	</div>
 		    </div>
 		
 			</div>
