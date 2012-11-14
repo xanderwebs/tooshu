@@ -146,9 +146,9 @@ class UsersController < ApplicationController
   	# Also, what the heck, @books isn't being used here at all... why is it here???
 
   	@user = current_user || User.find(params[:id]) # I'm not even sure if the second part is needed here.
-
-  	@active_requests = Request.where('requester_user_id = ? AND status = ?', @user.id, "Awaiting Response")
-  	@inactive_requests = Request.where('requester_user_id != ? AND status = ?', @user.id, "Awaiting Response")
-  	
+  	@active_requests = Request.where('requester_user_id != ? AND status = ?', @user.id, "Awaiting Response")
+  	@inactive_requests = Request.where('requester_user_id = ? AND status = ?', @user.id, "Awaiting Response")
+  	@loaned = Request.where('(requester_user_id = ? OR owner_user_id = ?) AND status = ?', @user.id, @user.id, "Accepted")
+  	@completed = Request.where('(requester_user_id = ? OR owner_user_id = ?) AND (status != ? AND status != ?)', @user.id, @user.id, "Awaiting Response", "Accepted")
   end
 end

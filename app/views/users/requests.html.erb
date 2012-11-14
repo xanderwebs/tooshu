@@ -18,27 +18,18 @@
 
 				<div class="tab-content">
 		    	<div class="tab-pane active" id="active">
-		    		<% @active_requests.each do |r| %>
-		    			<h4><%= r.book.title %></h4>
-		    		<% end %>
+		    		<%= render :partial => "book_entries", :locals => { :request_set => @active_requests } %>
 		    	</div>
 		    	<div class="tab-pane" id="inactive">
-		    		<% @inactive_requests.each do |r| %>
-		    			<h4><%= r.book.title %></h4>
-		    		<% end %>
+		    		<%= render :partial => "book_entries", :locals => { :request_set => @inactive_requests } %>
 		    	</div>
 		    	<div class="tab-pane" id="loaned">
-		    		<% @loaned.each do |r| %>
-		    			<h4><%= r.book.title %></h4>
-		    		<% end %>
+		    		<%= render :partial => "book_entries", :locals => { :request_set => @loaned } %>
 		    	</div>
 		    	<div class="tab-pane" id="completed">
-		    		<% @completed.each do |r| %>
-		    			<h4><%= r.book.title %></h4>
-		    		<% end %>
+		    		<%= render :partial => "book_entries", :locals => { :request_set => @completed } %>
 		    	</div>
 		    </div>
-		
 			</div>
 		</div>
 	</div>

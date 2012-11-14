@@ -67,7 +67,7 @@
 
 .heading {
 	margin-top: 2px;
-	padding-bottom: 8px;
+	padding-bottom: 5px;
 	padding-top: 5px;
 }
 
@@ -310,6 +310,39 @@ div.book-listing {
 		font-size: 13px;
 	}
 }
+
+/* Requests! */
+
+.tabbable ul {
+	margin-bottom: 3px;
+}
+
+.modal-body {
+	padding-top:5px;
+}
+
+.well {
+	padding-top: 10px
+}
+
+.bookEntry {
+	p { margin-bottom: 0; }
+	p.status { 
+		margin-top: 0.4em;
+		font-size: 11px;
+		a {
+			color: rgba(0,0,0,0.7);
+		}
+		.owner {
+			color: rgba(0, 153, 204, 0.7);
+		}
+	}
+	p.lastUpdated {
+		font-size: 10px;
+		color: rgba(0,0,0,0.4)
+	}
+}
+
 
 /* CLEARFIX PROBLEM */
 

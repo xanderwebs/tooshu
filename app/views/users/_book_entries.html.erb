@@ -1,0 +1,32 @@
+<% # For use only on the requests page! %>
+<% request_set.each do |r| %>
+	<div class="bookobj clearfix">
+		<%= link_to book_path(r.book.id), :class => "link" do %>
+			<%= image_tag r.book.thumbnail_link, :class => "thumb span1" %>
+			<div class="bookEntry span8 offset1">
+				<h4><%= r.book.title %></h4>
+				<em><%= r.book.author %></em>			
+				<p class="status">
+					<%= r.status %> 
+					<%= " from " if r.status.eql? "Awaiting Response" %> 
+					<% # the logic here needs to change to WHOEVER IS NOT THE LAST TO RESPOND! %>
+					<%= link_to r.owner.full_name, user_path(r.owner.id), :class => "owner" if r.status.eql?("Awaiting Response") %> </p>	
+				<p class='lastUpdated'>Last message: x days ago</p>			
+			</div>
+			<div class="pull-right">
+				<% if r.owner.eql?(@user) && r.status.eql?("Awaiting Response") %>
+					<a class="btn btn-success" data-toggle="modal" href="#request_messenger_modal" onclick="r.getAcceptRejectModal(<%= r.id %>);">
+						Respond
+					</a>
+				<% elsif r.status.eql?("Accepted") %>
+					<a class="btn btn-warning" data-toggle="modal" href="" onclick="">
+						Returned?
+					</a>
+				<% end %>
+				<a class="btn btn-primary" data-toggle="modal" href="#request_messenger_modal" onclick="r.getMessengerModal(<%= r.id %>, <%= r.owner.id %>, true);">
+					Messages
+				</a>
+			</div>			
+		<% end %>
+	</div>
+<% end %>
