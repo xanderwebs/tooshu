@@ -143,10 +143,14 @@ class UsersController < ApplicationController
 
   def requests
   	# I'm going to violate the fat model, skinny controller rule here. Need to refactor later.
-  	# Also, what the heck, @books isn't being used here at all... why is it here???
-
+  	# Also, what the heck, @books wasn't being used here at all... why is it here???
   	@user = current_user || User.find(params[:id]) # I'm not even sure if the second part is needed here.
-  	@active_requests = Request.where('requester_user_id != ? AND status = ?', @user.id, "Awaiting Response")
+  	
+  	# So active and inactive right now just means that is whatever requests that you've made vs others.
+  	# But what I think would make more sense is to have an addition of a column in the back-end so that it records
+  	# WHO made the last contact, and then active would simply be requests that need response from CURRENT USER
+  	# and inactive would be requests that involve current user that need the other use to respond.
+  	@active_requests = Request.where('owner_user_id == ? AND status = ?', @user.id, "Awaiting Response")
   	@inactive_requests = Request.where('requester_user_id = ? AND status = ?', @user.id, "Awaiting Response")
   	@loaned = Request.where('(requester_user_id = ? OR owner_user_id = ?) AND status = ?', @user.id, @user.id, "Accepted")
   	@completed = Request.where('(requester_user_id = ? OR owner_user_id = ?) AND (status != ? AND status != ?)', @user.id, @user.id, "Awaiting Response", "Accepted")
