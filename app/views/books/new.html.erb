@@ -1,26 +1,44 @@
-<div class="container">				
-	<div class="span12 container-fluid" id="search-book">
-		<h3>Search For a Book to Add:</h3>
+<div class="container-fluid">				
+	<div class="span12 row-fluid" id="search-book">
+		<h2>Add To Your Collection</h2>
+		<p>
+			Adding books is easy!  Just type in part of the title or author of your book, and search.  A list of books will be returned and you can select yours and add it to your collection.
+		</p>
+		<p>
+			Alternatively, you can search for your book by the 10 or 13 digit ISBN number on the barcode.
+		</p>
 		<%= form_for(:book, :url => :books, :method =>:post, :html=>{:class=>"form-horizontal", :id=>"search_form"}) do |f| %>
 			<div class="control-group">
 				<%= label_tag 'title', 'Title', :class=>"control-label", :for=>"book[title]"%>	
 				<div class="controls">
 					<%= text_field :book, :title, :class=>"input-xlarge", :id=>"book_title" %>				
 				</div>
-
+			</div>
+			<div class="control-group">
 				<%= label_tag 'author', 'Author', :class=>"control-label", :for=>"book[author]"%>	
 				<div class="controls">
 					<%= text_field :book, :author, :class=>"input-xlarge", :id=>"book_author" %>				
 				</div>
-				<h6>or</h6>
+			</div>
+
+			<div class="control-group">
+				
+				<%= label_tag 'author', 'or', :class=>"control-label", :for=>"book[author]", :style=>"color: #999999; font-size: 11px; text-transform: uppercase; font-weight:bold"%>	
+				
+			</div>
+				
+
+			<div class="control-group">
 				<%= label_tag 'isbn', 'ISBN', :class=>"control-label", :for=>"book[isbn]"%>	
 				<div class="controls">
 					<%= text_field :book, :isbn, :class=>"input-xlarge", :id=>"book_isbn" %>				
 				</div>
-
+			</div>
+			<div class="control-group">
 				<div class="controls">
 					<button type="button" class="btn btn-primary" id="search_button">Search</button>				
 				</div>
+			</div>
 				<%= hidden_field :book, :asin, :id=>"book_asin" %>						
 				<%= hidden_field :book, :ean, :id=>"book_ean" %>
 
@@ -34,11 +52,12 @@
 		<%end%>				
 	
 	</div>	
+	<div class="row-fluid">
+		<div class="span12" id="searchResultsDiv"></div>
+		<div class="searchPage"><ul id="searchResultsPage"></ul></div>
+	</div>	
 </div>
-<div class="row">
-	<div class="span12" id="searchResultsDiv"></div>
-	<div class="searchPage"><ul id="searchResultsPage"></ul></div>
-</div>	
+
 
 <script type="text/javascript">
 	var s = new BookSearch("book_title", "book_author", "book_asin", "book_isbn", "book_ean", "searchResultsDiv", "search_button", "search_form", "searchResultsPage");	

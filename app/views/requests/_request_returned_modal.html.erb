@@ -1,0 +1,26 @@
+<%= form_for(:request, :url => :requests, :method =>:post, :html=>{:class=>"form-horizontal", :id=>"request_form"}) do |f| %>
+	<div class="modal-header">  
+		<a class="close" data-dismiss="modal">×</a>  
+		<h3>Mark <%= request.book.title %> as returned?</h3>  
+	</div>  
+	<div class="modal-body">  
+		
+		
+		<% if !flash[:error].nil? %>
+			<div class="alert alert-error">
+				<%= flash[:error] %>
+			</div>
+		<% end %>		
+		<p>Did <%= clickingUser.eql?(request.requester) ? "you" : request.requester.first_name %> return <%= request.book.title %> to <%= clickingUser.eql?(request.requester) ? request.owner.first_name : "you"%> ?</p> 				
+		
+		<%= f.hidden_field :request_id, :id=>"request_id", :value => request.id %>
+		<%= f.hidden_field :clicking_user_id, :id=>"clicking_user_id", :value => clickingUser.id %>
+		
+		
+	</div>  
+	<div class="modal-footer">  
+		<a href="#" id="yes_returned" class="btn btn-success">Yes</a>  
+		<a href="#" id="no_returned" data-dismiss="modal" class="btn btn-danger">No</a>  
+	</div>  
+<%end%>
+					

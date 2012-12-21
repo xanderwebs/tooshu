@@ -36,16 +36,32 @@ RequestMessenger.prototype.getMessengerModal = function(requestId, senderId, sho
 	var obj = this;
 
 	$.get('/requests/messengerModal?requestId=' + requestId + '&senderId=' + senderId + '&showPreviousMessages=' + showPreviousMessages, function(data) {
-			
+				
 		obj.setModalContentAndAction(data);
-		
+			
 	})
+
+
+}
+
+RequestMessenger.prototype.getReturnedModal = function (requestId, clickingUserId) {
+	
+	var obj = this;
+
+	$.get('/requests/returnedModal?requestId=' + requestId + '&clickingUserId=' + clickingUserId, function(data) {
+				
+		obj.setModalContentAndAction(data);
+			
+	})
+
 }
 
 
 RequestMessenger.prototype.setModalContentAndAction = function(data){
 
-	this.modal.html(data);
+	if(data){
+		this.modal.html(data);
+	}
 
 	var obj = this;
 
@@ -55,7 +71,7 @@ RequestMessenger.prototype.setModalContentAndAction = function(data){
 				$.post("/requests", $("#request_form").serialize(), function(data){
 					obj.setModalContentAndAction(data);
 				});				
-				//window.location.reload();
+				window.location.reload();
 			}
 		);	
 	}
@@ -90,5 +106,50 @@ RequestMessenger.prototype.setModalContentAndAction = function(data){
 			}
 		);	
 	}
+
+	if($('#yes_returned').size() > 0 ){
+
+		$('#yes_returned').click(
+			function(){
+
+				$.post("/requests/returned", $("#request_form").serialize(), function(data){
+					obj.setModalContentAndAction(data);					
+				});
+				window.location.reload();				
+			}
+		);	
+	}
+
+	if($('#messages_toggle').size() > 0 ){
+		$('#messages_toggle').unbind('click');
+		$('#messages_toggle').click(
+			function(){
+				//change the footer
+				console.log($('#modal_footer'));
+				console.log('Messages Clicked');
+				$('#modal_footer').empty();				
+				$('#modal_footer').append('<a href="#" id="send" class="btn btn-success">Send</a>')		
+				$('#modal_footer').append('<a href="#" class="btn" data-dismiss="modal">Cancel</a>')		
+				obj.setModalContentAndAction();
+			}
+		);	
+	}
+
+	if($('#respond_toggle').size() > 0 ){
+		$('#respond_toggle').unbind('click');
+		$('#respond_toggle').click(
+			function(){
+				//change the footer
+				console.log($('#modal_footer'));
+				console.log('Respond Clicked');
+				$('#modal_footer').empty();		
+				$('#modal_footer').append('<a href="#" id="yes" class="btn btn-success">Yes</a>')		
+				$('#modal_footer').append('<a href="#" id="no" class="btn btn-danger">No</a>')		
+				obj.setModalContentAndAction();					
+			}
+		);	
+	}
+
+
 
 }

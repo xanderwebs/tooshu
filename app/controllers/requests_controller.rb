@@ -282,6 +282,24 @@ class RequestsController < ApplicationController
 
 	end
 
+	def returned
+
+		request = Request.find(params[:request][:request_id])
+		clickingUser = User.find(params[:request][:clicking_user_id])
+		
+		if(clickingUser.eql?(request.owner))
+			request.status = "Completed"
+		elsif (clickingUser.eql?(request.requester))
+			request.status = "Returned"
+			request.library_record.status = "Available"
+		end
+			
+		request.save
+
+		render :partial => "request_saved"
+
+	end
+
 	def send_message
 
 		
@@ -321,6 +339,15 @@ class RequestsController < ApplicationController
 			:message_header => "Send " + receiver.first_name + " a Message",
 			:message_prompt =>"",
 			:showPreviousMessages => showPreviousMessages
+		}     
+	end
+
+	def get_returned_modal
+		request = Request.find (params[:requestId])
+		clickingUser = User.find(params[:clickingUserId])
+		render :partial => "request_returned_modal" , :locals => {			
+			:request => request,
+			:clickingUser => clickingUser
 		}     
 	end
 end

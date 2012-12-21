@@ -7,29 +7,151 @@
 <div class="container-fluid" id="profile-container">
 	<div class="row-fluid">
 		<div class="span12 container-fluid text-container" id="profile-details">
-			<h3 class="heading">My Requests</h3>	
-			<div class="row-fluid tabbable">		
-				<ul class="nav nav-pills" id="requestsTabs">
-					<li class="active"><a href="#active" data-toggle="tab">Active</a></li>
-					<li><a href="#inactive" data-toggle="tab">Inactive</a></li>
-					<li><a href="#loaned" data-toggle="tab">On Loan</a></li>
-					<li><a href="#completed" data-toggle="tab">Completed</a></li>
+					
+			<div class="row-fluid tabbable" style="margin:10px;">		
+				<ul class="nav nav-tabs" id="requestsTabs">
+					<li class="dropdown active">
+						<a class="dropdown-toggle" href="#" data-toggle="dropdown">Submitted Requests <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="#all_submitted" data-toggle="tab">All</a></li>
+							<li><a href="#awaiting_response_submitted" data-toggle="tab">Awaiting Response</a></li>
+							<li><a href="#accepted_submitted" data-toggle="tab">Accepted</a></li>			
+							<li><a href="#denied_submitted" data-toggle="tab">Denied</a></li>			
+							<li><a href="#returned_submitted" data-toggle="tab">Returned</a></li>			
+							<li><a href="#completed_submitted" data-toggle="tab">Completed</a></li>			
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a class="dropdown-toggle" href="#" data-toggle="dropdown">Received Requests <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="#all_received" data-toggle="tab">All</a></li>
+							<li><a href="#awaiting_response_received" data-toggle="tab">Awaiting Response</a></li>
+							<li><a href="#accepted_received" data-toggle="tab">Accepted</a></li>
+							<li><a href="#denied_received" data-toggle="tab">Denied</a></li>			
+							<li><a href="#returned_received" data-toggle="tab">Returned</a></li>			
+							<li><a href="#completed_received" data-toggle="tab">Completed</a></li>			
+						</ul>
+					</li>
+					
 				</ul>
 
 				<div class="tab-content">
-		    	<div class="tab-pane active" id="active">
-		    		<%= render :partial => "book_entries", :locals => { :request_set => @active_requests } %>
-		    	</div>
-		    	<div class="tab-pane" id="inactive">
-		    		<%= render :partial => "book_entries", :locals => { :request_set => @inactive_requests } %>
-		    	</div>
-		    	<div class="tab-pane" id="loaned">
-		    		<%= render :partial => "book_entries", :locals => { :request_set => @loaned } %>
-		    	</div>
-		    	<div class="tab-pane" id="completed">
-		    		<%= render :partial => "book_entries", :locals => { :request_set => @completed } %>
-		    	</div>
-		    </div>
+
+					<div class="tab-pane active" id="all_submitted">
+						
+						<% @submitted_requests.each do |r| %>							
+								<%= render :partial => "book_entries", :locals => { :request => r } %>		
+						<% end %> 						    	
+						    
+			    	</div>
+
+					<div class="tab-pane" id="awaiting_response_submitted">
+						
+						<% @submitted_requests.each do |r| %>
+							<% if r.status.eql?("Awaiting Response") %>
+								<%= render :partial => "book_entries", :locals => { :request => r } %>
+							<% end %>
+						<% end %> 						    	
+						    
+			    	</div>
+			    	
+			    	<div class="tab-pane" id="accepted_submitted">
+						
+						<% @submitted_requests.each do |r| %>
+							<% if r.status.eql?("Accepted") %>
+								<%= render :partial => "book_entries", :locals => { :request => r } %>
+							<% end %>
+						<% end %> 						    	
+						    
+			    	</div>
+
+			    	<div class="tab-pane" id="denied_submitted">
+						
+						<% @submitted_requests.each do |r| %>
+							<% if r.status.eql?("Denied") %>
+								<%= render :partial => "book_entries", :locals => { :request => r } %>
+							<% end %>
+						<% end %> 						    	
+						    
+			    	</div>
+
+			    	<div class="tab-pane" id="returned_submitted">
+						
+						<% @submitted_requests.each do |r| %>
+							<% if r.status.eql?("Returned") %>
+								<%= render :partial => "book_entries", :locals => { :request => r } %>
+							<% end %>
+						<% end %> 						    	
+						    
+			    	</div>
+
+			    	<div class="tab-pane" id="completed_submitted">
+						
+						<% @submitted_requests.each do |r| %>
+							<% if r.status.eql?("Completed") %>
+								<%= render :partial => "book_entries", :locals => { :request => r } %>
+							<% end %>
+						<% end %> 						    	
+						    
+			    	</div>
+
+			    	<div class="tab-pane" id="all_received">
+						
+						<% @received_requests.each do |r| %>							
+								<%= render :partial => "book_entries", :locals => { :request => r } %>		
+						<% end %> 						    	
+						    
+			    	</div>
+
+			    	<div class="tab-pane" id="awaiting_response_received">
+			    		<% @received_requests.each do |r| %>
+							<% if r.status.eql?("Awaiting Response") %>
+								<%= render :partial => "book_entries", :locals => { :request => r } %>
+							<% end %>
+						<% end %>							    					    
+			    	</div>
+
+			    	<div class="tab-pane" id="accepted_received">
+						
+						<% @received_requests.each do |r| %>
+							<% if r.status.eql?("Accepted") %>
+								<%= render :partial => "book_entries", :locals => { :request => r } %>
+							<% end %>
+						<% end %> 						    	
+						    
+			    	</div>
+
+			    	<div class="tab-pane" id="denied_received">
+						
+						<% @received_requests.each do |r| %>
+							<% if r.status.eql?("Denied") %>
+								<%= render :partial => "book_entries", :locals => { :request => r } %>
+							<% end %>
+						<% end %> 						    	
+						    
+			    	</div>
+
+			    	<div class="tab-pane" id="returned_received">
+						
+						<% @received_requests.each do |r| %>
+							<% if r.status.eql?("Returned") %>
+								<%= render :partial => "book_entries", :locals => { :request => r } %>
+							<% end %>
+						<% end %> 						    	
+						    
+			    	</div>
+
+			    	<div class="tab-pane" id="completed_received">
+						
+						<% @received_requests.each do |r| %>
+							<% if r.status.eql?("Completed") %>
+								<%= render :partial => "book_entries", :locals => { :request => r } %>
+							<% end %>
+						<% end %> 						    	
+						    
+			    	</div>
+
+			    </div>
 			</div>
 		</div>
 	</div>

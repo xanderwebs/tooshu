@@ -1,32 +1,65 @@
-<% # For use only on the requests page! %>
-<% request_set.each do |r| %>
+<% # For use only on with requests.html.erb page! %>
+	
+
+
+
 	<div class="bookobj clearfix">
-		<%= link_to book_path(r.book.id), :class => "link" do %>
-			<%= image_tag r.book.thumbnail_link, :class => "thumb span1" %>
+
+		<%= link_to book_path(request.book.id), :class => "link" do %>
+			<%= image_tag request.book.thumbnail_link, :class => "thumb span1" %>
 			<div class="bookEntry span8 offset1">
-				<h4><%= r.book.title %></h4>
-				<em><%= r.book.author %></em>			
+				<h4><%= request.book.title %></h4>
+				<em><%= request.book.author %></em>			
 				<p class="status">
-					<%= r.status %> 
-					<%= " from " if r.status.eql? "Awaiting Response" %> 
+					
+
+
+					<%= request.status %> 
+
+					<%= " loan from " if (request.status.eql?("Completed") && request.requester.eql?(@current_user) ) %> 
+					<%= link_to request.owner.full_name, user_path(request.owner.id), :class => "owner" if (request.status.eql?("Completed") && request.requester.eql?(@current_user)) %>
+					
+
+					<%= " loan to " if (request.status.eql?("Completed") && request.owner.eql?(@current_user) ) %> 
+					<%= link_to request.requester.full_name, user_path(request.requester.id), :class => "owner" if (request.status.eql?("Completed") && request.owner.eql?(@current_user)) %>
+					
+					<%= " from " if (request.status.eql?("Awaiting Response")) %>  
 					<% # the logic here needs to change to WHOEVER IS NOT THE LAST TO RESPOND! %>
-					<%= link_to r.owner.full_name, user_path(r.owner.id), :class => "owner" if r.status.eql?("Awaiting Response") %> </p>	
-				<p class='lastUpdated'>Last message: x days ago</p>			
+					<%= link_to request.owner.full_name, user_path(request.owner.id), :class => "owner" if (request.status.eql?("Awaiting Response"))%> 
+
+					<%= " by " if (request.status.eql?("Accepted") || request.status.eql?("Denied") ) %>
+					<%= link_to request.owner.full_name, user_path(request.owner.id), :class => "owner" if (request.status.eql?("Accepted") || request.status.eql?("Denied") ) %>
+				</p>	
+				<p class='lastUpdated'>
+					Last message: 
+					<% update_diff = (Time.now - request.request_comments[request.request_comments.size-1].updated_at)/(60*60*24) %> 
+					<%= update_diff > 1 ? (update_diff.round(0).to_s +  " days ago") : "" %>
+					<%= (update_diff*24) > 1  && (update_diff) < 1 ? (update_diff*24).round(0).to_s +  " hours ago" : "" %>
+					<%= (update_diff*24*60) > 1  && (update_diff*24) < 1 ? (update_diff*24*60).round(0).to_s +  " minutes ago" : "" %>
+					<%= (update_diff*24*60*60) > 1  && (update_diff*24*60) < 1 ? (update_diff*24*60*60).round(0).to_s +  " seconds ago" : "" %>
+				</p>			
 			</div>
+
+
 			<div class="pull-right">
-				<% if r.owner.eql?(@user) && r.status.eql?("Awaiting Response") %>
-					<a class="btn btn-success" data-toggle="modal" href="#request_messenger_modal" onclick="r.getAcceptRejectModal(<%= r.id %>);">
+				<% if request.owner.eql?(@current_user) && request.status.eql?("Awaiting Response") %>
+					<a class="btn btn-success" data-toggle="modal" href="#request_messenger_modal" onclick="r.getAcceptRejectModal(<%= request.id %>);">
 						Respond
 					</a>
-				<% elsif r.status.eql?("Accepted") %>
-					<a class="btn btn-warning" data-toggle="modal" href="" onclick="">
+				<% elsif request.status.eql?("Accepted")%>
+					<a class="btn btn-warning" data-toggle="modal" href="#request_messenger_modal" onclick="r.getReturnedModal(<%= request.id %>, <%= @current_user.id %> );">
 						Returned?
 					</a>
+				<% elsif request.status.eql?("Returned")%>
+					<a class="btn btn-warning" data-toggle="modal" href="#request_messenger_modal" onclick="r.getReturnedModal(<%= request.id %>, <%= @current_user.id %> );">
+						Mark Complete?
+					</a>				
 				<% end %>
-				<a class="btn btn-primary" data-toggle="modal" href="#request_messenger_modal" onclick="r.getMessengerModal(<%= r.id %>, <%= r.owner.id %>, true);">
+				<a class="btn btn-primary" data-toggle="modal" href="#request_messenger_modal" onclick="r.getMessengerModal(<%= request.id %>, <%= @current_user.id %>, true);">
 					Messages
 				</a>
 			</div>			
+
+
 		<% end %>
 	</div>
-<% end %>

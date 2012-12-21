@@ -6,10 +6,16 @@
 	<div class="modal-body">  
 		<%= render :partial => "layouts/flash_messages" %>
 		<div class="row-fluid tabbable">		
-			<ul class="nav nav-pills" id="requestsTabs">
-				<li class="active"><a href="#messaging" data-toggle="tab">Messages</a></li>
-				<li><a href="#responding" data-toggle="tab">Respond</a></li>
-			</ul>
+			<% if request.status.eql?("Awaiting Response")  && request.owner.eql?(@current_user) %>
+				<ul class="nav nav-pills" id="requestsTabs">
+					<li class="active">
+						<a id="messages_toggle" href="#messaging" data-toggle="tab">Messages</a>
+					</li>
+					<li>
+						<a id="respond_toggle" href="#responding" data-toggle="tab">Respond</a>
+					</li>
+				</ul>
+			<% end %>
 			<% if showPreviousMessages %>
 				<div class="well">
 					<h3>Previous Messages:</h3>
@@ -28,14 +34,14 @@
 					<%= hidden_field :request_comment, :request_id, :id=>"request_id", :value => request.id %>
 				</div>
 				<div id="responding" class="tab-pane">
-					Whatever this should look like. This should depend on what stage the request is on...
-					so if the request is awaiting this user to accept, it should load the accept dialog. etc. 
-					That means that whatever the right button is should ALSO go here, except it would change what's active.
+					<p>Do you want to let <%= request.requester.first_name%> borrow <%= request.book.title %>?</p> 				
+		
+					<%= f.hidden_field :request_id, :id=>"request_id", :value => request.id %>
 				</div>
 			</div>
 		</div>	
 	</div>  
-	<div class="modal-footer">  
+	<div class="modal-footer" id="modal_footer">  
 		<a href="#" id="send" class="btn btn-success">Send</a>  	
 		<a href="#" class="btn" data-dismiss="modal">Cancel</a>  	
 	</div>  

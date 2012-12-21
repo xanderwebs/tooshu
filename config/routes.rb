@@ -89,6 +89,8 @@ Tooshu::Application.routes.draw do
   match 'requests/reject' => 'requests#reject'
   match 'requests/send' => 'requests#send_message'
   match 'requests/messengerModal' => 'requests#get_messenger_modal'
+  match 'requests/returnedModal' => 'requests#get_returned_modal'
+  match 'requests/returned' => 'requests#returned', :via => [:post]
 
   match 'locations/modal' => 'locations#get_modal'  
 
